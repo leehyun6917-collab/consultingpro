@@ -350,6 +350,65 @@
     document.head.appendChild(style);
 
     // ========================================
+    // Testimonials Slider
+    // ========================================
+    const testimonialCards = document.querySelectorAll('.testimonial-card');
+    const indicators = document.querySelectorAll('.indicator');
+    let currentTestimonial = 0;
+    let testimonialInterval;
+
+    function showTestimonial(index) {
+        // Remove active class from all cards and indicators
+        testimonialCards.forEach(card => card.classList.remove('active'));
+        indicators.forEach(indicator => indicator.classList.remove('active'));
+
+        // Add active class to current card and indicator
+        if (testimonialCards[index]) {
+            testimonialCards[index].classList.add('active');
+        }
+        if (indicators[index]) {
+            indicators[index].classList.add('active');
+        }
+    }
+
+    function nextTestimonial() {
+        currentTestimonial = (currentTestimonial + 1) % testimonialCards.length;
+        showTestimonial(currentTestimonial);
+    }
+
+    // Set up auto-slide every 3 seconds
+    function startTestimonialSlider() {
+        testimonialInterval = setInterval(nextTestimonial, 3000);
+    }
+
+    // Stop auto-slide when user interacts
+    function stopTestimonialSlider() {
+        clearInterval(testimonialInterval);
+    }
+
+    // Add click handlers to indicators
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', function() {
+            stopTestimonialSlider();
+            currentTestimonial = index;
+            showTestimonial(currentTestimonial);
+            startTestimonialSlider(); // Restart auto-slide
+        });
+    });
+
+    // Start the testimonial slider if elements exist
+    if (testimonialCards.length > 0) {
+        startTestimonialSlider();
+
+        // Pause on hover
+        const sliderWrapper = document.querySelector('.testimonials-slider-wrapper');
+        if (sliderWrapper) {
+            sliderWrapper.addEventListener('mouseenter', stopTestimonialSlider);
+            sliderWrapper.addEventListener('mouseleave', startTestimonialSlider);
+        }
+    }
+
+    // ========================================
     // Initialize on DOM Ready
     // ========================================
     console.log('컨설팅 프로 - 사이트가 성공적으로 로드되었습니다.');
