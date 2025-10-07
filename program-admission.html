@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입시 과정 | 컨설팅 프로</title>
+    <meta name="description" content="전략적인 입시 준비와 포트폴리오 구성. 목표 대학 합격을 위한 맞춤형 컨설팅.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="입시 과정 - 컨설팅 프로">
+    <meta property="og:description" content="대학 입시 성공을 위한 체계적인 준비 프로그램">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXX');
+    </script>
+
+    <style>
+        .program-hero {
+            padding: 120px 0 80px;
+            background: linear-gradient(135deg, #4caf50 0%, #8bc34a 100%);
+            color: var(--white);
+        }
+
+        .program-hero .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .admission-types {
+            padding: var(--spacing-xxl) 0;
+            background: var(--gray-light);
+        }
+
+        .type-tabs {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-xl);
+            flex-wrap: wrap;
+        }
+
+        .type-tab {
+            padding: 0.75rem 1.5rem;
+            background: var(--white);
+            border: 2px solid var(--gray-light);
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .type-tab.active {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+
+        .type-content {
+            display: none;
+        }
+
+        .type-content.active {
+            display: block;
+        }
+
+        .service-features {
+            padding: var(--spacing-xxl) 0;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: 12px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #4caf50, #8bc34a);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .curriculum-section {
+            padding: var(--spacing-xxl) 0;
+            background: var(--gray-light);
+        }
+
+        .curriculum-timeline {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .curriculum-item {
+            display: flex;
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+            align-items: flex-start;
+        }
+
+        .curriculum-month {
+            background: var(--primary);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .curriculum-content {
+            flex: 1;
+            background: var(--white);
+            padding: var(--spacing-md);
+            border-radius: 8px;
+        }
+
+        .success-stats {
+            padding: var(--spacing-xl) 0;
+            background: var(--dark);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .stats-row {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-xxl);
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--primary);
+        }
+
+        .stat-label {
+            margin-top: var(--spacing-xs);
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header (동일) -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">컨설팅 프로</span>
+                </a>
+                <button class="menu-toggle" aria-label="메뉴 열기">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li class="nav-group">
+                        <span>컨설팅프로</span>
+                        <ul>
+                            <li><a href="about.html">컨설팅 프로 소개</a></li>
+                            <li><a href="history.html">컨설팅 이력</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-group">
+                        <span>프로그램 안내</span>
+                        <ul>
+                            <li><a href="program-job-leave.html">구직청원휴가 과정</a></li>
+                            <li><a href="program-admission.html">입시 과정</a></li>
+                            <li><a href="program-employment.html">취업 과정</a></li>
+                            <li><a href="program-startup.html">창업 과정</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-group">
+                        <span>과정 후기</span>
+                        <ul>
+                            <li><a href="reviews.html">리뷰 & 후기</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-cta">
+                        <a href="http://pf.kakao.com/_cbBxcn" class="btn btn-primary"
+                           onclick="gtag('event', 'click_kakao_cta', {'cta_position': 'header'});">
+                            상담 신청
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu (동일) -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <span class="logo-text">컨설팅 프로</span>
+            <button class="menu-close">×</button>
+        </div>
+        <div class="mobile-menu-content">
+            <div class="menu-section">
+                <h3>컨설팅프로</h3>
+                <ul>
+                    <li><a href="about.html">컨설팅 프로 소개</a></li>
+                    <li><a href="history.html">컨설팅 이력</a></li>
+                </ul>
+            </div>
+            <div class="menu-section">
+                <h3>프로그램 안내</h3>
+                <ul>
+                    <li><a href="program-job-leave.html">구직청원휴가 과정</a></li>
+                    <li><a href="program-admission.html">입시 과정</a></li>
+                    <li><a href="program-employment.html">취업 과정</a></li>
+                    <li><a href="program-startup.html">창업 과정</a></li>
+                </ul>
+            </div>
+            <div class="menu-section">
+                <h3>과정 후기</h3>
+                <ul>
+                    <li><a href="reviews.html">리뷰 & 후기</a></li>
+                </ul>
+            </div>
+            <div class="menu-section">
+                <a href="http://pf.kakao.com/_cbBxcn" class="btn btn-primary btn-block"
+                   onclick="gtag('event', 'click_kakao_cta', {'cta_position': 'mobile_menu'});">
+                    상담 신청
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="program-hero">
+        <div class="container">
+            <span class="badge">🎓 대학 입시 전문 프로그램</span>
+            <h1>입시 과정</h1>
+            <p class="hero-subtitle">
+                수시, 정시, 편입까지<br>
+                체계적인 입시 전략으로 목표 대학 합격을 이끕니다.
+            </p>
+        </div>
+    </section>
+
+    <!-- Admission Types -->
+    <section class="admission-types">
+        <div class="container">
+            <h2 class="section-title">입시 유형별 맞춤 컨설팅</h2>
+            <div class="type-tabs">
+                <button class="type-tab active" data-type="regular">수시 전형</button>
+                <button class="type-tab" data-type="jeongsi">정시 전형</button>
+                <button class="type-tab" data-type="transfer">편입 전형</button>
+                <button class="type-tab" data-type="special">특별 전형</button>
+            </div>
+            <div class="type-content active" id="regular">
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>학생부 종합전형</h3>
+                        <p>생활기록부 분석 및 보완 전략</p>
+                        <ul>
+                            <li>세특 스토리텔링 구성</li>
+                            <li>자소서 개별 첨삭</li>
+                            <li>면접 대비 트레이닝</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <h3>학생부 교과전형</h3>
+                        <p>내신 성적 기반 지원 전략</p>
+                        <ul>
+                            <li>대학별 환산점수 분석</li>
+                            <li>지원 가능 대학 선정</li>
+                            <li>수능 최저 대비 전략</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <h3>논술 전형</h3>
+                        <p>대학별 논술 유형 분석</p>
+                        <ul>
+                            <li>기출 문제 분석</li>
+                            <li>논술 작성법 트레이닝</li>
+                            <li>첨삭 및 피드백</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="type-content" id="jeongsi">
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>정시 지원 전략</h3>
+                        <p>수능 성적 기반 최적 지원</p>
+                        <ul>
+                            <li>가/나/다군 전략 수립</li>
+                            <li>표준점수 환산 분석</li>
+                            <li>경쟁률 예측 및 대응</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="type-content" id="transfer">
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>편입 준비</h3>
+                        <p>일반/학사 편입 맞춤 전략</p>
+                        <ul>
+                            <li>편입 영어/수학 대비</li>
+                            <li>전적대 성적 관리</li>
+                            <li>편입 면접 준비</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="type-content" id="special">
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>특별 전형</h3>
+                        <p>재외국민, 기회균형 등</p>
+                        <ul>
+                            <li>지원 자격 검토</li>
+                            <li>필요 서류 준비</li>
+                            <li>전형별 맞춤 대비</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Features -->
+    <section class="service-features">
+        <div class="container">
+            <h2 class="section-title">입시 컨설팅 서비스</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>입시 전략 수립</h3>
+                    <p>개인별 성적과 강점을 분석하여 최적의 입시 전략을 수립합니다.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📝</div>
+                    <h3>자기소개서 컨설팅</h3>
+                    <p>대학별 인재상에 맞춘 차별화된 자기소개서를 완성합니다.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>생기부 관리</h3>
+                    <p>학년별 생활기록부 관리 및 보완 전략을 제시합니다.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>면접 대비</h3>
+                    <p>대학별 면접 유형에 맞춘 실전 트레이닝을 진행합니다.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>포트폴리오 제작</h3>
+                    <p>예체능 및 특수 전형을 위한 포트폴리오를 구성합니다.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>모의 지원</h3>
+                    <p>실제와 동일한 환경에서 모의 지원을 진행합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum -->
+    <section class="curriculum-section">
+        <div class="container">
+            <h2 class="section-title">연간 커리큘럼</h2>
+            <div class="curriculum-timeline">
+                <div class="curriculum-item">
+                    <div class="curriculum-month">3-4월</div>
+                    <div class="curriculum-content">
+                        <h4>기초 진단 및 목표 설정</h4>
+                        <p>현재 성적 분석, 목표 대학 설정, 연간 학습 계획 수립</p>
+                    </div>
+                </div>
+                <div class="curriculum-item">
+                    <div class="curriculum-month">5-6월</div>
+                    <div class="curriculum-content">
+                        <h4>1학기 내신 대비</h4>
+                        <p>중간고사 대비, 수행평가 관리, 생기부 점검</p>
+                    </div>
+                </div>
+                <div class="curriculum-item">
+                    <div class="curriculum-month">7-8월</div>
+                    <div class="curriculum-content">
+                        <h4>자소서 작성 시작</h4>
+                        <p>자기소개서 초안 작성, 활동 정리, 스토리 구성</p>
+                    </div>
+                </div>
+                <div class="curriculum-item">
+                    <div class="curriculum-month">9-10월</div>
+                    <div class="curriculum-content">
+                        <h4>수시 원서 접수</h4>
+                        <p>최종 지원 전략 수립, 자소서 완성, 면접 준비</p>
+                    </div>
+                </div>
+                <div class="curriculum-item">
+                    <div class="curriculum-month">11-12월</div>
+                    <div class="curriculum-content">
+                        <h4>면접 및 수능 대비</h4>
+                        <p>대학별 면접 실전 대비, 수능 최저 관리</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stats -->
+    <section class="success-stats">
+        <div class="container">
+            <div class="stats-row">
+                <div class="stat">
+                    <div class="stat-value">87%</div>
+                    <div class="stat-label">목표 대학 합격률</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">245명</div>
+                    <div class="stat-label">2024 합격생</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">TOP 10</div>
+                    <div class="stat-label">주요 대학 합격</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">목표 대학 합격의 <span class="highlight">첫 걸음</span></h2>
+                <p class="cta-subtitle">
+                    체계적인 입시 전략과 1:1 맞춤 컨설팅으로<br>
+                    당신의 꿈을 현실로 만들어드립니다.
+                </p>
+                <a href="http://pf.kakao.com/_cbBxcn" class="btn btn-primary btn-xl"
+                   onclick="gtag('event', 'click_kakao_cta', {'cta_position': 'bottom_cta'});">
+                    입시 상담 신청 →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (동일) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">컨설팅 프로</h3>
+                    <p class="footer-tagline">커리어의 시작과 성장을 함께합니다</p>
+                </div>
+                <div class="footer-info">
+                    <div class="footer-section">
+                        <h4>연락처</h4>
+                        <p>📞 02-6402-3113</p>
+                        <p>📧 consultingpro@career.com</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>운영시간</h4>
+                        <p>평일 09:00 - 18:00</p>
+                        <p>주말 및 공휴일 휴무</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>SNS</h4>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook">f</a>
+                            <a href="#" aria-label="Instagram">📷</a>
+                            <a href="#" aria-label="YouTube">▶</a>
+                            <a href="http://pf.kakao.com/_cbBxcn" aria-label="KakaoTalk">💬</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 컨설팅 프로. All rights reserved.</p>
+                <p class="footer-disclaimer">본 안내는 법률 자문이 아니며, 제도 요약 정보입니다.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        // Tab functionality
+        document.querySelectorAll('.type-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Remove active class from all tabs
+                document.querySelectorAll('.type-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.type-content').forEach(c => c.classList.remove('active'));
+
+                // Add active class to clicked tab
+                this.classList.add('active');
+                const type = this.dataset.type;
+                document.getElementById(type).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

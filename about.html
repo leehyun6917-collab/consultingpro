@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>컨설팅 프로 소개 | 컨설팅 프로</title>
+    <meta name="description" content="컨설팅이 아니라, 경로 설계입니다. 맞춤형 프로그램으로 당신의 커리어를 설계합니다.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="컨설팅 프로 소개">
+    <meta property="og:description" content="전문가 팀과 체계적인 프로세스로 최고의 컨설팅 서비스를 제공합니다.">
+    <meta property="og:type" content="website">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXX');
+    </script>
+
+    <style>
+        .about-hero {
+            position: relative;
+            padding: 120px 0 80px;
+            background: linear-gradient(135deg, var(--dark) 0%, #2A2A2A 100%);
+            color: var(--white);
+        }
+
+        .about-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .about-intro {
+            padding: var(--spacing-xxl) 0;
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-xl);
+            margin-top: var(--spacing-xl);
+        }
+
+        .intro-card {
+            text-align: center;
+        }
+
+        .intro-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto var(--spacing-md);
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: var(--white);
+        }
+
+        .vs-section {
+            padding: var(--spacing-xxl) 0;
+            background: var(--gray-light);
+        }
+
+        .vs-table {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2px;
+            background: var(--gray);
+            border-radius: 16px;
+            overflow: hidden;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .vs-cell {
+            background: var(--white);
+            padding: var(--spacing-lg);
+        }
+
+        .vs-header {
+            background: var(--dark);
+            color: var(--white);
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .vs-pro {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .values-section {
+            padding: var(--spacing-xxl) 0;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .value-item {
+            padding: var(--spacing-lg);
+            text-align: center;
+        }
+
+        .value-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--primary);
+            margin-bottom: var(--spacing-sm);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header (동일) -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">컨설팅 프로</span>
+                </a>
+                <button class="menu-toggle" aria-label="메뉴 열기">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li class="nav-group">
+                        <span>컨설팅프로</span>
+                        <ul>
+                            <li><a href="about.html">컨설팅 프로 소개</a></li>
+                            <li><a href="history.html">컨설팅 이력</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-group">
+                        <span>프로그램 안내</span>
+                        <ul>
+                            <li><a href="program-job-leave.html">구직청원휴가 과정</a></li>
+                            <li><a href="program-admission.html">입시 과정</a></li>
+                            <li><a href="program-employment.html">취업 과정</a></li>
+                            <li><a href="program-startup.html">창업 과정</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-group">
+                        <span>과정 후기</span>
+                        <ul>
+                            <li><a href="reviews.html">리뷰 & 후기</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-cta">
+                        <a href="http://pf.kakao.com/_cbBxcn" class="btn btn-primary"
+                           onclick="gtag('event', 'click_kakao_cta', {'cta_position': 'header'});">
+                            상담 신청
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu (동일) -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <span class="logo-text">컨설팅 프로</span>
+            <button class="menu-close">×</button>
+        </div>
+        <div class="mobile-menu-content">
+            <div class="menu-section">
+                <h3>컨설팅프로</h3>
+                <ul>
+                    <li><a href="about.html">컨설팅 프로 소개</a></li>
+                    <li><a href="history.html">컨설팅 이력</a></li>
+                </ul>
+            </div>
+            <div class="menu-section">
+                <h3>프로그램 안내</h3>
+                <ul>
+                    <li><a href="program-job-leave.html">구직청원휴가 과정</a></li>
+                    <li><a href="program-admission.html">입시 과정</a></li>
+                    <li><a href="program-employment.html">취업 과정</a></li>
+                    <li><a href="program-startup.html">창업 과정</a></li>
+                </ul>
+            </div>
+            <div class="menu-section">
+                <h3>과정 후기</h3>
+                <ul>
+                    <li><a href="reviews.html">리뷰 & 후기</a></li>
+                </ul>
+            </div>
+            <div class="menu-section">
+                <a href="http://pf.kakao.com/_cbBxcn" class="btn btn-primary btn-block"
+                   onclick="gtag('event', 'click_kakao_cta', {'cta_position': 'mobile_menu'});">
+                    상담 신청
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>컨설팅이 아니라,<br><span class="highlight">경로 설계</span>입니다.</h1>
+            <p class="hero-subtitle">
+                단순한 조언을 넘어, 실행 가능한 로드맵과<br>
+                지속적인 피드백으로 목표 달성을 보장합니다.
+            </p>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="about-intro">
+        <div class="container">
+            <h2 class="section-title">컨설팅 프로만의 차별점</h2>
+            <div class="intro-grid">
+                <div class="intro-card">
+                    <div class="intro-icon">👥</div>
+                    <h3>전문 코치진</h3>
+                    <p>각 분야 10년 이상 경력의 전문가들이 직접 컨설팅을 진행합니다.</p>
+                </div>
+                <div class="intro-card">
+                    <div class="intro-icon">📊</div>
+                    <h3>데이터 기반 분석</h3>
+                    <p>657명의 성공 사례를 바탕으로 검증된 방법론을 제공합니다.</p>
+                </div>
+                <div class="intro-card">
+                    <div class="intro-icon">🎯</div>
+                    <h3>맞춤형 솔루션</h3>
+                    <p>개인의 상황과 목표에 맞는 1:1 맞춤 컨설팅을 제공합니다.</p>
+                </div>
+                <div class="intro-card">
+                    <div class="intro-icon">🔄</div>
+                    <h3>사후 관리</h3>
+                    <p>목표 달성까지 지속적인 모니터링과 피드백을 제공합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VS Comparison Section -->
+    <section class="vs-section">
+        <div class="container">
+            <h2 class="section-title">일반 컨설팅 vs 컨설팅 프로</h2>
+            <div class="vs-table">
+                <div class="vs-cell vs-header">일반 컨설팅</div>
+                <div class="vs-cell vs-header vs-pro">컨설팅 프로</div>
+
+                <div class="vs-cell">일회성 상담</div>
+                <div class="vs-cell">지속적 관리 시스템</div>
+
+                <div class="vs-cell">일반적인 조언</div>
+                <div class="vs-cell">실행 가능한 로드맵</div>
+
+                <div class="vs-cell">단편적 피드백</div>
+                <div class="vs-cell">체계적 성과 추적</div>
+
+                <div class="vs-cell">획일화된 프로그램</div>
+                <div class="vs-cell">개인 맞춤형 설계</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="values-section">
+        <div class="container">
+            <h2 class="section-title">핵심 가치</h2>
+            <div class="values-grid">
+                <div class="value-item">
+                    <div class="value-number">01</div>
+                    <h3>신뢰</h3>
+                    <p>투명한 프로세스와 정직한 커뮤니케이션으로 신뢰를 쌓습니다.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-number">02</div>
+                    <h3>전문성</h3>
+                    <p>각 분야 최고의 전문가들이 체계적인 솔루션을 제공합니다.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-number">03</div>
+                    <h3>혁신</h3>
+                    <p>끊임없는 연구와 개선으로 최신 트렌드를 반영합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">당신의 성공 파트너, <span class="highlight">컨설팅 프로</span></h2>
+                <p class="cta-subtitle">
+                    지금 시작하면, 3개월 후 달라진 당신을 만날 수 있습니다.
+                </p>
+                <a href="http://pf.kakao.com/_cbBxcn" class="btn btn-primary btn-xl"
+                   onclick="gtag('event', 'click_kakao_cta', {'cta_position': 'bottom_cta'});">
+                    무료 상담 신청하기 →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (동일) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">컨설팅 프로</h3>
+                    <p class="footer-tagline">커리어의 시작과 성장을 함께합니다</p>
+                </div>
+                <div class="footer-info">
+                    <div class="footer-section">
+                        <h4>연락처</h4>
+                        <p>📞 02-6402-3113</p>
+                        <p>📧 consultingpro@career.com</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>운영시간</h4>
+                        <p>평일 09:00 - 18:00</p>
+                        <p>주말 및 공휴일 휴무</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>SNS</h4>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook">f</a>
+                            <a href="#" aria-label="Instagram">📷</a>
+                            <a href="#" aria-label="YouTube">▶</a>
+                            <a href="http://pf.kakao.com/_cbBxcn" aria-label="KakaoTalk">💬</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 컨설팅 프로. All rights reserved.</p>
+                <p class="footer-disclaimer">본 안내는 법률 자문이 아니며, 제도 요약 정보입니다.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

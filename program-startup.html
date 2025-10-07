@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>창업 과정 | 컨설팅 프로</title>
+    <meta name="description" content="아이디어부터 실행까지 창업 전과정 지원. 정부 지원금부터 MVP 개발까지 체계적인 창업 컨설팅.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="창업 과정 - 컨설팅 프로">
+    <meta property="og:description" content="성공적인 창업을 위한 체계적인 준비 프로그램">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXX');
+    </script>
+
+    <style>
+        .program-hero {
+            padding: 120px 0 80px;
+            background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%);
+            color: var(--white);
+        }
+
+        .program-hero .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .startup-stages {
+            padding: var(--spacing-xxl) 0;
+            background: var(--gray-light);
+        }
+
+        .stages-timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: var(--spacing-xl) 0;
+        }
+
+        .stage-item {
+            display: flex;
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-xl);
+            align-items: center;
+        }
+
+        .stage-number {
+            width: 80px;
+            height: 80px;
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 900;
+            flex-shrink: 0;
+        }
+
+        .stage-content {
+            flex: 1;
+            background: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: 12px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+        }
+
+        .support-programs {
+            padding: var(--spacing-xxl) 0;
+        }
+
+        .program-tabs {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-xl);
+            flex-wrap: wrap;
+        }
+
+        .program-tab {
+            padding: 0.75rem 1.5rem;
+            background: var(--white);
+            border: 2px solid var(--gray-light);
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .program-tab.active {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+
+        .program-content {
+            display: none;
+            background: var(--white);
+            padding: var(--spacing-xl);
+            border-radius: 12px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+        }
+
+        .program-content.active {
+            display: block;
+        }
+
+        .funding-section {
+            padding: var(--spacing-xxl) 0;
+            background: var(--gray-light);
+        }
+
+        .funding-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+        }
+
+        .funding-card {
+            background: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: 12px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .funding-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .funding-amount {
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--primary);
+            margin: var(--spacing-sm) 0;
+        }
+
+        .mvp-development {
+            padding: var(--spacing-xxl) 0;
+        }
+
+        .mvp-process {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+        }
+
+        .mvp-step {
+            text-align: center;
+            padding: var(--spacing-lg);
+            background: var(--white);
+            border: 2px solid var(--gray-light);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .mvp-step:hover {
+            border-color: var(--primary);
+            transform: scale(1.05);
+        }
+
+        .mvp-icon {
+            font-size: 3rem;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .success-stories {
+            padding: var(--spacing-xxl) 0;
+            background: var(--dark);
+            color: var(--white);
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+        }
+
+        .story-card {
+            background: rgba(255,255,255,0.1);
+            padding: var(--spacing-lg);
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .story-category {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--white);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            margin-bottom: var(--spacing-sm);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header (동일) -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">컨설팅 프로</span>
+                </a>
+                <button class="menu-toggle" aria-label="메뉴 열기">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li class="nav-group">
+                        <span>컨설팅프로</span>
+                        <ul>
+                            <li><a href="about.html">컨설팅 프로 소개</a></li>
+                            <li><a href="history.html">컨설팅 이력</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-group">
+                        <span>프로그램 안내</span>
+                        <ul>
+                            <li><a href="program-job-leave.html">구직청원휴가 과정</a></li>
+                            <li><a href="program-admission.html">입시 과정</a></li>
+                            <li><a href="program-employment.html">취업 과정</a></li>
+                            <li><a href="program-startup.html">창업 과정</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-group">
+                        <span>과정 후기</span>
+                        <ul>
+                            <li><a href="reviews.html">리뷰 & 후기</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-cta">
+                        <a href="http://pf.kakao.com/_cbBxcn" class="btn btn-primary"
+                           onclick="gtag('event', 'click_kakao_cta', {'cta_position': 'header'});">
+                            상담 신청
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu (동일) -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <span class="logo-text">컨설팅 프로</span>
+            <button class="menu-close">×</button>
+        </div>
+        <div class="mobile-menu-content">
+            <div class="menu-section">
+                <h3>컨설팅프로</h3>
+                <ul>
+                    <li><a href="about.html">컨설팅 프로 소개</a></li>
+                    <li><a href="history.html">컨설팅 이력</a></li>
+                </ul>
+            </div>
+            <div class="menu-section">
+                <h3>프로그램 안내</h3>
+                <ul>
+                    <li><a href="program-job-leave.html">구직청원휴가 과정</a></li>
+                    <li><a href="program-admission.html">입시 과정</a></li>
+                    <li><a href="program-employment.html">취업 과정</a></li>
+                    <li><a href="program-startup.html">창업 과정</a></li>
+                </ul>
+            </div>
+            <div class="menu-section">
+                <h3>과정 후기</h3>
+                <ul>
+                    <li><a href="reviews.html">리뷰 & 후기</a></li>
+                </ul>
+            </div>
+            <div class="menu-section">
+                <a href="http://pf.kakao.com/_cbBxcn" class="btn btn-primary btn-block"
+                   onclick="gtag('event', 'click_kakao_cta', {'cta_position': 'mobile_menu'});">
+                    상담 신청
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="program-hero">
+        <div class="container">
+            <span class="badge">🚀 창업 성공 전문 프로그램</span>
+            <h1>창업 과정</h1>
+            <p class="hero-subtitle">
+                아이디어 검증부터 사업화까지<br>
+                체계적인 창업 로드맵을 제공합니다.
+            </p>
+        </div>
+    </section>
+
+    <!-- Startup Stages -->
+    <section class="startup-stages">
+        <div class="container">
+            <h2 class="section-title">창업 단계별 컨설팅</h2>
+            <div class="stages-timeline">
+                <div class="stage-item">
+                    <div class="stage-number">1</div>
+                    <div class="stage-content">
+                        <h3>아이디어 검증</h3>
+                        <p>시장 조사, 고객 니즈 분석, 경쟁사 분석을 통한 사업 아이디어 검증</p>
+                        <ul>
+                            <li>시장 규모 및 성장성 분석</li>
+                            <li>타겟 고객 정의 및 페르소나 설정</li>
+                            <li>비즈니스 모델 캔버스 작성</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="stage-item">
+                    <div class="stage-number">2</div>
+                    <div class="stage-content">
+                        <h3>사업 계획 수립</h3>
+                        <p>구체적인 사업 계획서 작성 및 초기 자금 계획 수립</p>
+                        <ul>
+                            <li>사업 계획서 작성 지원</li>
+                            <li>재무 계획 및 손익 분석</li>
+                            <li>자금 조달 전략 수립</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="stage-item">
+                    <div class="stage-number">3</div>
+                    <div class="stage-content">
+                        <h3>MVP 개발</h3>
+                        <p>최소 기능 제품(MVP) 개발 및 시장 테스트</p>
+                        <ul>
+                            <li>MVP 기획 및 개발 지원</li>
+                            <li>베타 테스트 및 피드백 수집</li>
+                            <li>제품 개선 및 피벗 전략</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="stage-item">
+                    <div class="stage-number">4</div>
+                    <div class="stage-content">
+                        <h3>사업화 실행</h3>
+                        <p>본격적인 사업 런칭 및 초기 운영 지원</p>
+                        <ul>
+                            <li>마케팅 전략 수립 및 실행</li>
+                            <li>판매 채널 구축</li>
+                            <li>운영 프로세스 최적화</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="stage-item">
+                    <div class="stage-number">5</div>
+                    <div class="stage-content">
+                        <h3>성장 가속화</h3>
+                        <p>스케일업을 위한 전략 수립 및 투자 유치 지원</p>
+                        <ul>
+                            <li>성장 전략 수립</li>
+                            <li>투자 유치 IR 준비</li>
+                            <li>파트너십 구축 지원</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Programs -->
+    <section class="support-programs">
+        <div class="container">
+            <h2 class="section-title">정부 지원 사업 컨설팅</h2>
+            <div class="program-tabs">
+                <button class="program-tab active" data-program="early">예비창업패키지</button>
+                <button class="program-tab" data-program="initial">초기창업패키지</button>
+                <button class="program-tab" data-program="tips">TIPS</button>
+                <button class="program-tab" data-program="youth">청년창업사관학교</button>
+            </div>
+            <div class="program-content active" id="early">
+                <h3>예비창업패키지</h3>
+                <p>예비창업자를 위한 사업화 자금 최대 1억원 지원</p>
+                <ul>
+                    <li>지원 대상: 예비창업자 또는 창업 3년 이내 기업</li>
+                    <li>지원 내용: 시제품 제작, 마케팅, 지식재산권 등</li>
+                    <li>선정 평가 항목별 맞춤 컨설팅</li>
+                    <li>사업 계획서 작성 전문 지원</li>
+                </ul>
+            </div>
+            <div class="program-content" id="initial">
+                <h3>초기창업패키지</h3>
+                <p>창업 3년 이내 기업 대상 최대 1억원 지원</p>
+                <ul>
+                    <li>지원 대상: 창업 3년 이내 기업</li>
+                    <li>지원 내용: 시제품 고도화, 마케팅 등</li>
+                    <li>성과 지표 달성 전략 수립</li>
+                    <li>후속 지원 연계 컨설팅</li>
+                </ul>
+            </div>
+            <div class="program-content" id="tips">
+                <h3>TIPS 프로그램</h3>
+                <p>기술창업 기업 대상 최대 5억원 지원</p>
+                <ul>
+                    <li>지원 대상: 기술력 보유 창업기업</li>
+                    <li>지원 내용: R&D 자금, 엔젤투자 연계</li>
+                    <li>기술 사업화 전략 수립</li>
+                    <li>운영사 매칭 및 IR 준비</li>
+                </ul>
+            </div>
+            <div class="program-content" id="youth">
+                <h3>청년창업사관학교</h3>
+                <p>만 39세 이하 청년 창업자 집중 육성</p>
+                <ul>
+                    <li>지원 대상: 만 39세 이하 예비/초기 창업자</li>
+                    <li>지원 내용: 창업 교육, 멘토링, 사업화 자금</li>
+                    <li>입교 심사 대비 컨설팅</li>
+                    <li>졸업 후 성장 전략 수립</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Funding Section -->
+    <section class="funding-section">
+        <div class="container">
+            <h2 class="section-title">자금 조달 지원</h2>
+            <div class="funding-grid">
+                <div class="funding-card">
+                    <h3>정부 지원금</h3>
+                    <div class="funding-amount">~5억원</div>
+                    <p>창업 지원 사업별 맞춤 컨설팅</p>
+                    <ul>
+                        <li>사업 계획서 작성</li>
+                        <li>발표 자료 준비</li>
+                        <li>심사 대응 전략</li>
+                    </ul>
+                </div>
+                <div class="funding-card">
+                    <h3>엔젤 투자</h3>
+                    <div class="funding-amount">~10억원</div>
+                    <p>초기 투자 유치 전략 수립</p>
+                    <ul>
+                        <li>IR 자료 제작</li>
+                        <li>피칭 트레이닝</li>
+                        <li>투자자 네트워킹</li>
+                    </ul>
+                </div>
+                <div class="funding-card">
+                    <h3>정책 자금</h3>
+                    <div class="funding-amount">~30억원</div>
+                    <p>신용보증기금, 기술보증기금 등</p>
+                    <ul>
+                        <li>대출 조건 분석</li>
+                        <li>신청 서류 준비</li>
+                        <li>심사 대응 지원</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MVP Development -->
+    <section class="mvp-development">
+        <div class="container">
+            <h2 class="section-title">MVP 개발 프로세스</h2>
+            <div class="mvp-process">
+                <div class="mvp-step">
+                    <div class="mvp-icon">💡</div>
+                    <h3>아이디어 구체화</h3>
+                    <p>핵심 기능 정의 및 우선순위 설정</p>
+                </div>
+                <div class="mvp-step">
+                    <div class="mvp-icon">🎨</div>
+                    <h3>프로토타입 설계</h3>
+                    <p>UI/UX 디자인 및 사용자 경험 설계</p>
+                </div>
+                <div class="mvp-step">
+                    <div class="mvp-icon">⚙️</div>
+                    <h3>개발 및 구현</h3>
+                    <p>핵심 기능 중심의 빠른 개발</p>
+                </div>
+                <div class="mvp-step">
+                    <div class="mvp-icon">🧪</div>
+                    <h3>테스트 및 검증</h3>
+                    <p>시장 반응 테스트 및 피드백 수집</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section class="success-stories">
+        <div class="container">
+            <h2 class="section-title" style="color: var(--white);">창업 성공 사례</h2>
+            <div class="story-grid">
+                <div class="story-card">
+                    <span class="story-category">IT/플랫폼</span>
+                    <h3>A사 - 온라인 교육 플랫폼</h3>
+                    <p>예비창업패키지 선정, 시드 투자 3억 유치</p>
+                    <p style="margin-top: var(--spacing-sm); opacity: 0.8;">6개월 만에 MAU 10만 달성</p>
+                </div>
+                <div class="story-card">
+                    <span class="story-category">헬스케어</span>
+                    <h3>B사 - 디지털 헬스케어</h3>
+                    <p>TIPS 프로그램 선정, Series A 20억 유치</p>
+                    <p style="margin-top: var(--spacing-sm); opacity: 0.8;">대형 병원 3곳과 파트너십 체결</p>
+                </div>
+                <div class="story-card">
+                    <span class="story-category">커머스</span>
+                    <h3>C사 - D2C 패션 브랜드</h3>
+                    <p>청년창업사관학교 졸업, 월 매출 5억 달성</p>
+                    <p style="margin-top: var(--spacing-sm); opacity: 0.8;">온라인 몰 3개 입점 성공</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">당신의 아이디어를 <span class="highlight">사업으로</span></h2>
+                <p class="cta-subtitle">
+                    체계적인 창업 컨설팅으로<br>
+                    성공적인 스타트업을 만들어갑니다.
+                </p>
+                <a href="http://pf.kakao.com/_cbBxcn" class="btn btn-primary btn-xl"
+                   onclick="gtag('event', 'click_kakao_cta', {'cta_position': 'bottom_cta'});">
+                    창업 상담 받기 →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (동일) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">컨설팅 프로</h3>
+                    <p class="footer-tagline">커리어의 시작과 성장을 함께합니다</p>
+                </div>
+                <div class="footer-info">
+                    <div class="footer-section">
+                        <h4>연락처</h4>
+                        <p>📞 02-6402-3113</p>
+                        <p>📧 consultingpro@career.com</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>운영시간</h4>
+                        <p>평일 09:00 - 18:00</p>
+                        <p>주말 및 공휴일 휴무</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>SNS</h4>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook">f</a>
+                            <a href="#" aria-label="Instagram">📷</a>
+                            <a href="#" aria-label="YouTube">▶</a>
+                            <a href="http://pf.kakao.com/_cbBxcn" aria-label="KakaoTalk">💬</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 컨설팅 프로. All rights reserved.</p>
+                <p class="footer-disclaimer">본 안내는 법률 자문이 아니며, 제도 요약 정보입니다.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        // Tab functionality for support programs
+        document.querySelectorAll('.program-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.program-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.program-content').forEach(c => c.classList.remove('active'));
+
+                this.classList.add('active');
+                const program = this.dataset.program;
+                document.getElementById(program).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

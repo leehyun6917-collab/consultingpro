@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구직청원휴가 과정 | 컨설팅 프로</title>
+    <meta name="description" content="군 복무자를 위한 구직청원휴가 제도 활용법. 체계적인 컨설팅으로 성공적인 취업을 준비하세요.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="구직청원휴가 과정 - 컨설팅 프로">
+    <meta property="og:description" content="군 복무자 전용 취업 준비 프로그램">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXX');
+    </script>
+
+    <style>
+        .program-hero {
+            padding: 120px 0 80px;
+            background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
+            color: var(--white);
+        }
+
+        .program-hero .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .target-section {
+            padding: var(--spacing-xxl) 0;
+            background: var(--gray-light);
+        }
+
+        .target-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+        }
+
+        .target-card {
+            background: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: 12px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .target-icon {
+            font-size: 3rem;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .process-detail {
+            padding: var(--spacing-xxl) 0;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+        }
+
+        .process-card {
+            background: var(--white);
+            border: 2px solid var(--gray-light);
+            border-radius: 12px;
+            padding: var(--spacing-lg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .process-card::before {
+            content: attr(data-step);
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: var(--primary);
+            color: var(--white);
+            padding: 0.5rem 1.5rem;
+            font-weight: 700;
+            border-bottom-left-radius: 12px;
+        }
+
+        .checklist-section {
+            padding: var(--spacing-xxl) 0;
+            background: var(--white);
+        }
+
+        .checklist-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-md);
+            padding: var(--spacing-md);
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .check-icon {
+            width: 30px;
+            height: 30px;
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .document-section {
+            padding: var(--spacing-xxl) 0;
+            background: var(--gray-light);
+        }
+
+        .document-table {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+        }
+
+        .document-row {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            padding: var(--spacing-md);
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .document-row:last-child {
+            border-bottom: none;
+        }
+
+        .document-header {
+            background: var(--primary);
+            color: var(--white);
+            font-weight: 700;
+        }
+
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: var(--spacing-md);
+            margin: var(--spacing-lg) 0;
+            border-radius: 4px;
+        }
+
+        .warning-box h4 {
+            color: #ff9800;
+            margin-bottom: var(--spacing-xs);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header (동일) -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">컨설팅 프로</span>
+                </a>
+                <button class="menu-toggle" aria-label="메뉴 열기">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li class="nav-group">
+                        <span>컨설팅프로</span>
+                        <ul>
+                            <li><a href="about.html">컨설팅 프로 소개</a></li>
+                            <li><a href="history.html">컨설팅 이력</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-group">
+                        <span>프로그램 안내</span>
+                        <ul>
+                            <li><a href="program-job-leave.html">구직청원휴가 과정</a></li>
+                            <li><a href="program-admission.html">입시 과정</a></li>
+                            <li><a href="program-employment.html">취업 과정</a></li>
+                            <li><a href="program-startup.html">창업 과정</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-group">
+                        <span>과정 후기</span>
+                        <ul>
+                            <li><a href="reviews.html">리뷰 & 후기</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-cta">
+                        <a href="http://pf.kakao.com/_cbBxcn" class="btn btn-primary"
+                           onclick="gtag('event', 'click_kakao_cta', {'cta_position': 'header'});">
+                            상담 신청
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu (동일) -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <span class="logo-text">컨설팅 프로</span>
+            <button class="menu-close">×</button>
+        </div>
+        <div class="mobile-menu-content">
+            <div class="menu-section">
+                <h3>컨설팅프로</h3>
+                <ul>
+                    <li><a href="about.html">컨설팅 프로 소개</a></li>
+                    <li><a href="history.html">컨설팅 이력</a></li>
+                </ul>
+            </div>
+            <div class="menu-section">
+                <h3>프로그램 안내</h3>
+                <ul>
+                    <li><a href="program-job-leave.html">구직청원휴가 과정</a></li>
+                    <li><a href="program-admission.html">입시 과정</a></li>
+                    <li><a href="program-employment.html">취업 과정</a></li>
+                    <li><a href="program-startup.html">창업 과정</a></li>
+                </ul>
+            </div>
+            <div class="menu-section">
+                <h3>과정 후기</h3>
+                <ul>
+                    <li><a href="reviews.html">리뷰 & 후기</a></li>
+                </ul>
+            </div>
+            <div class="menu-section">
+                <a href="http://pf.kakao.com/_cbBxcn" class="btn btn-primary btn-block"
+                   onclick="gtag('event', 'click_kakao_cta', {'cta_position': 'mobile_menu'});">
+                    상담 신청
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="program-hero">
+        <div class="container">
+            <span class="badge">🎖️ 군 복무자 전용 프로그램</span>
+            <h1>구직청원휴가 과정</h1>
+            <p class="hero-subtitle">
+                제대 전 취업 준비의 골든타임,<br>
+                체계적인 컨설팅으로 성공적인 사회 복귀를 준비하세요.
+            </p>
+        </div>
+    </section>
+
+    <!-- Target Audience -->
+    <section class="target-section">
+        <div class="container">
+            <h2 class="section-title">이런 분들께 추천합니다</h2>
+            <div class="target-cards">
+                <div class="target-card">
+                    <div class="target-icon">🪖</div>
+                    <h3>전역 예정 장병</h3>
+                    <p>6개월 이내 전역 예정이며 취업 준비가 필요한 분</p>
+                </div>
+                <div class="target-card">
+                    <div class="target-icon">📋</div>
+                    <h3>제도 활용 희망자</h3>
+                    <p>구직청원휴가 제도를 효과적으로 활용하고 싶은 분</p>
+                </div>
+                <div class="target-card">
+                    <div class="target-icon">💼</div>
+                    <h3>체계적 준비 필요</h3>
+                    <p>이력서부터 면접까지 체계적인 준비가 필요한 분</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Detail -->
+    <section class="process-detail">
+        <div class="container">
+            <h2 class="section-title">컨설팅 프로세스</h2>
+            <div class="process-grid">
+                <div class="process-card" data-step="STEP 1">
+                    <h3>제도 이해 및 신청</h3>
+                    <p>구직청원휴가 제도 상세 설명</p>
+                    <ul>
+                        <li>신청 자격 요건 확인</li>
+                        <li>필요 서류 준비 가이드</li>
+                        <li>신청 절차 안내</li>
+                    </ul>
+                </div>
+                <div class="process-card" data-step="STEP 2">
+                    <h3>커리어 진단</h3>
+                    <p>개인 역량 및 적성 분석</p>
+                    <ul>
+                        <li>군 경력 민간 전환 방안</li>
+                        <li>희망 직무 적합도 평가</li>
+                        <li>경력 개발 로드맵 수립</li>
+                    </ul>
+                </div>
+                <div class="process-card" data-step="STEP 3">
+                    <h3>서류 준비</h3>
+                    <p>이력서 및 자소서 작성</p>
+                    <ul>
+                        <li>군 경력 어필 포인트 발굴</li>
+                        <li>직무별 맞춤 이력서 작성</li>
+                        <li>자기소개서 스토리텔링</li>
+                    </ul>
+                </div>
+                <div class="process-card" data-step="STEP 4">
+                    <h3>면접 대비</h3>
+                    <p>실전 면접 트레이닝</p>
+                    <ul>
+                        <li>빈출 질문 대응 전략</li>
+                        <li>모의 면접 및 피드백</li>
+                        <li>PT/토론 면접 준비</li>
+                    </ul>
+                </div>
+                <div class="process-card" data-step="STEP 5">
+                    <h3>기업 매칭</h3>
+                    <p>적합 기업 추천 및 지원</p>
+                    <ul>
+                        <li>군 경력 우대 기업 연결</li>
+                        <li>채용 정보 실시간 제공</li>
+                        <li>지원 전략 컨설팅</li>
+                    </ul>
+                </div>
+                <div class="process-card" data-step="STEP 6">
+                    <h3>사후 관리</h3>
+                    <p>입사 후 적응 지원</p>
+                    <ul>
+                        <li>합격 후 연봉 협상 가이드</li>
+                        <li>조기 적응 멘토링</li>
+                        <li>경력 개발 지속 상담</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checklist Section -->
+    <section class="checklist-section">
+        <div class="container">
+            <h2 class="section-title">구직청원휴가 체크리스트</h2>
+            <div class="checklist-container">
+                <div class="warning-box">
+                    <h4>⚠️ 주의사항</h4>
+                    <p>본 안내는 법률 자문이 아니며, 제도 요약 정보입니다. 정확한 내용은 부대 인사과에 문의하시기 바랍니다.</p>
+                </div>
+
+                <div class="checklist-item">
+                    <div class="check-icon">✓</div>
+                    <div>
+                        <h4>전역 6개월 전 신청 가능</h4>
+                        <p>전역 예정일 6개월 전부터 신청 가능하며, 최대 3개월까지 사용 가능</p>
+                    </div>
+                </div>
+                <div class="checklist-item">
+                    <div class="check-icon">✓</div>
+                    <div>
+                        <h4>복무기간 1년 이상 필수</h4>
+                        <p>실 복무기간이 1년 이상이어야 신청 자격 충족</p>
+                    </div>
+                </div>
+                <div class="checklist-item">
+                    <div class="check-icon">✓</div>
+                    <div>
+                        <h4>부대장 승인 필요</h4>
+                        <p>소속 부대장의 승인을 받아야 하며, 부대 상황에 따라 제한될 수 있음</p>
+                    </div>
+                </div>
+                <div class="checklist-item">
+                    <div class="check-icon">✓</div>
+                    <div>
+                        <h4>구직활동 증빙 제출</h4>
+                        <p>면접 일정표, 채용공고 등 구직활동 증빙 자료 제출 필요</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Document Section -->
+    <section class="document-section">
+        <div class="container">
+            <h2 class="section-title">필요 서류 안내</h2>
+            <div class="document-table">
+                <div class="document-row document-header">
+                    <div>서류명</div>
+                    <div>설명</div>
+                    <div>발급처</div>
+                </div>
+                <div class="document-row">
+                    <div>구직청원휴가 신청서</div>
+                    <div>부대별 양식에 따라 작성, 구직 계획 상세 기재</div>
+                    <div>소속부대</div>
+                </div>
+                <div class="document-row">
+                    <div>구직활동 계획서</div>
+                    <div>희망 직종, 지원 예정 기업, 활동 일정 등 기재</div>
+                    <div>자체 작성</div>
+                </div>
+                <div class="document-row">
+                    <div>이력서/자기소개서</div>
+                    <div>지원 기업별 맞춤형 서류 준비</div>
+                    <div>자체 작성</div>
+                </div>
+                <div class="document-row">
+                    <div>면접 확인서</div>
+                    <div>기업 면접 일정 확인 서류(해당 시)</div>
+                    <div>지원 기업</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">전역 후 <span class="highlight">성공적인 시작</span>을 준비하세요</h2>
+                <p class="cta-subtitle">
+                    구직청원휴가 제도를 200% 활용하는 방법,<br>
+                    컨설팅 프로가 함께합니다.
+                </p>
+                <a href="http://pf.kakao.com/_cbBxcn" class="btn btn-primary btn-xl"
+                   onclick="gtag('event', 'click_kakao_cta', {'cta_position': 'bottom_cta'});">
+                    무료 상담 받기 →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (동일) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">컨설팅 프로</h3>
+                    <p class="footer-tagline">커리어의 시작과 성장을 함께합니다</p>
+                </div>
+                <div class="footer-info">
+                    <div class="footer-section">
+                        <h4>연락처</h4>
+                        <p>📞 02-6402-3113</p>
+                        <p>📧 consultingpro@career.com</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>운영시간</h4>
+                        <p>평일 09:00 - 18:00</p>
+                        <p>주말 및 공휴일 휴무</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>SNS</h4>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook">f</a>
+                            <a href="#" aria-label="Instagram">📷</a>
+                            <a href="#" aria-label="YouTube">▶</a>
+                            <a href="http://pf.kakao.com/_cbBxcn" aria-label="KakaoTalk">💬</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 컨설팅 프로. All rights reserved.</p>
+                <p class="footer-disclaimer">본 안내는 법률 자문이 아니며, 제도 요약 정보입니다.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>취업 과정 | 컨설팅 프로</title>
+    <meta name="description" content="NCS부터 실무 면접까지 완벽 대비. 대기업, 공기업, 중견기업 맞춤형 취업 컨설팅.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="취업 과정 - 컨설팅 프로">
+    <meta property="og:description" content="체계적인 취업 준비로 원하는 기업에 합격하세요">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXX');
+    </script>
+
+    <style>
+        .program-hero {
+            padding: 120px 0 80px;
+            background: linear-gradient(135deg, #2196f3 0%, #03a9f4 100%);
+            color: var(--white);
+        }
+
+        .program-hero .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .company-types {
+            padding: var(--spacing-xxl) 0;
+            background: var(--gray-light);
+        }
+
+        .company-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+        }
+
+        .company-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .company-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .company-header {
+            padding: var(--spacing-lg);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+        }
+
+        .company-body {
+            padding: var(--spacing-lg);
+        }
+
+        .prep-process {
+            padding: var(--spacing-xxl) 0;
+        }
+
+        .prep-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-sm);
+            max-width: 1000px;
+            margin: var(--spacing-xl) auto 0;
+        }
+
+        .prep-step {
+            text-align: center;
+            padding: var(--spacing-lg);
+            background: var(--white);
+            border: 2px solid var(--gray-light);
+            border-radius: 12px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .prep-step:hover {
+            border-color: var(--primary);
+            transform: scale(1.05);
+        }
+
+        .prep-step-number {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary);
+            color: var(--white);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+
+        .interview-types {
+            padding: var(--spacing-xxl) 0;
+            background: var(--gray-light);
+        }
+
+        .interview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+        }
+
+        .interview-card {
+            background: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .interview-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .interview-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto var(--spacing-md);
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+
+        .skill-development {
+            padding: var(--spacing-xxl) 0;
+        }
+
+        .skill-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+        }
+
+        .skill-category {
+            background: var(--white);
+            border: 2px solid var(--gray-light);
+            border-radius: 12px;
+            padding: var(--spacing-lg);
+        }
+
+        .skill-list {
+            list-style: none;
+            margin-top: var(--spacing-md);
+        }
+
+        .skill-list li {
+            padding: var(--spacing-xs) 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .skill-list li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .success-rate {
+            background: var(--dark);
+            color: var(--white);
+            padding: var(--spacing-xl) 0;
+            text-align: center;
+        }
+
+        .rate-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-lg);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .rate-item {
+            padding: var(--spacing-md);
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 8px;
+        }
+
+        .rate-value {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--primary);
+            margin-bottom: var(--spacing-xs);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header (동일) -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">컨설팅 프로</span>
+                </a>
+                <button class="menu-toggle" aria-label="메뉴 열기">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li class="nav-group">
+                        <span>컨설팅프로</span>
+                        <ul>
+                            <li><a href="about.html">컨설팅 프로 소개</a></li>
+                            <li><a href="history.html">컨설팅 이력</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-group">
+                        <span>프로그램 안내</span>
+                        <ul>
+                            <li><a href="program-job-leave.html">구직청원휴가 과정</a></li>
+                            <li><a href="program-admission.html">입시 과정</a></li>
+                            <li><a href="program-employment.html">취업 과정</a></li>
+                            <li><a href="program-startup.html">창업 과정</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-group">
+                        <span>과정 후기</span>
+                        <ul>
+                            <li><a href="reviews.html">리뷰 & 후기</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-cta">
+                        <a href="http://pf.kakao.com/_cbBxcn" class="btn btn-primary"
+                           onclick="gtag('event', 'click_kakao_cta', {'cta_position': 'header'});">
+                            상담 신청
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu (동일) -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <span class="logo-text">컨설팅 프로</span>
+            <button class="menu-close">×</button>
+        </div>
+        <div class="mobile-menu-content">
+            <div class="menu-section">
+                <h3>컨설팅프로</h3>
+                <ul>
+                    <li><a href="about.html">컨설팅 프로 소개</a></li>
+                    <li><a href="history.html">컨설팅 이력</a></li>
+                </ul>
+            </div>
+            <div class="menu-section">
+                <h3>프로그램 안내</h3>
+                <ul>
+                    <li><a href="program-job-leave.html">구직청원휴가 과정</a></li>
+                    <li><a href="program-admission.html">입시 과정</a></li>
+                    <li><a href="program-employment.html">취업 과정</a></li>
+                    <li><a href="program-startup.html">창업 과정</a></li>
+                </ul>
+            </div>
+            <div class="menu-section">
+                <h3>과정 후기</h3>
+                <ul>
+                    <li><a href="reviews.html">리뷰 & 후기</a></li>
+                </ul>
+            </div>
+            <div class="menu-section">
+                <a href="http://pf.kakao.com/_cbBxcn" class="btn btn-primary btn-block"
+                   onclick="gtag('event', 'click_kakao_cta', {'cta_position': 'mobile_menu'});">
+                    상담 신청
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="program-hero">
+        <div class="container">
+            <span class="badge">💼 취업 성공 전문 프로그램</span>
+            <h1>취업 과정</h1>
+            <p class="hero-subtitle">
+                서류부터 최종 면접까지<br>
+                체계적인 준비로 원하는 기업에 합격하세요.
+            </p>
+        </div>
+    </section>
+
+    <!-- Company Types -->
+    <section class="company-types">
+        <div class="container">
+            <h2 class="section-title">기업별 맞춤 취업 전략</h2>
+            <div class="company-grid">
+                <div class="company-card">
+                    <div class="company-header">
+                        <h3>대기업</h3>
+                        <p>삼성, LG, SK, 현대 등</p>
+                    </div>
+                    <div class="company-body">
+                        <ul>
+                            <li>직무 적합성 평가 대비</li>
+                            <li>인적성 검사 집중 트레이닝</li>
+                            <li>그룹사별 면접 특화 준비</li>
+                            <li>GSAT, HMAT 등 대비</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="company-card">
+                    <div class="company-header">
+                        <h3>공기업</h3>
+                        <p>한전, 가스공사, 수자원공사 등</p>
+                    </div>
+                    <div class="company-body">
+                        <ul>
+                            <li>NCS 필기 완벽 대비</li>
+                            <li>직무 수행 계획서 작성</li>
+                            <li>토론/PT 면접 실전 연습</li>
+                            <li>블라인드 자소서 전략</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="company-card">
+                    <div class="company-header">
+                        <h3>외국계</h3>
+                        <p>구글, 애플, P&G, 맥킨지 등</p>
+                    </div>
+                    <div class="company-body">
+                        <ul>
+                            <li>영문 이력서/커버레터</li>
+                            <li>영어 면접 집중 트레이닝</li>
+                            <li>케이스 인터뷰 대비</li>
+                            <li>컬처핏 어필 전략</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preparation Process -->
+    <section class="prep-process">
+        <div class="container">
+            <h2 class="section-title">취업 준비 5단계 프로세스</h2>
+            <div class="prep-steps">
+                <div class="prep-step">
+                    <span class="prep-step-number">1</span>
+                    <h4>직무 분석</h4>
+                    <p>적성 검사 및 희망 직무 매칭</p>
+                </div>
+                <div class="prep-step">
+                    <span class="prep-step-number">2</span>
+                    <h4>서류 작성</h4>
+                    <p>이력서, 자소서 맞춤 작성</p>
+                </div>
+                <div class="prep-step">
+                    <span class="prep-step-number">3</span>
+                    <h4>필기 대비</h4>
+                    <p>NCS, 인적성 시험 준비</p>
+                </div>
+                <div class="prep-step">
+                    <span class="prep-step-number">4</span>
+                    <h4>면접 준비</h4>
+                    <p>1차, 2차 면접 실전 대비</p>
+                </div>
+                <div class="prep-step">
+                    <span class="prep-step-number">5</span>
+                    <h4>최종 점검</h4>
+                    <p>모의 면접 및 피드백</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interview Types -->
+    <section class="interview-types">
+        <div class="container">
+            <h2 class="section-title">면접 유형별 대비</h2>
+            <div class="interview-grid">
+                <div class="interview-card">
+                    <div class="interview-icon">👤</div>
+                    <h3>인성 면접</h3>
+                    <p>자기소개, 지원동기, 장단점 등 기본 질문 완벽 대비</p>
+                </div>
+                <div class="interview-card">
+                    <div class="interview-icon">💡</div>
+                    <h3>역량 면접</h3>
+                    <p>STAR 기법을 활용한 경험 중심 답변 구성</p>
+                </div>
+                <div class="interview-card">
+                    <div class="interview-icon">📊</div>
+                    <h3>PT 면접</h3>
+                    <p>주제 분석부터 발표까지 체계적인 준비</p>
+                </div>
+                <div class="interview-card">
+                    <div class="interview-icon">🗣️</div>
+                    <h3>토론 면접</h3>
+                    <p>논리적 주장과 경청 스킬 트레이닝</p>
+                </div>
+                <div class="interview-card">
+                    <div class="interview-icon">🔍</div>
+                    <h3>압박 면접</h3>
+                    <p>예상 질문 대비와 멘탈 관리법</p>
+                </div>
+                <div class="interview-card">
+                    <div class="interview-icon">🌐</div>
+                    <h3>영어 면접</h3>
+                    <p>외국계 기업 영어 면접 집중 대비</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skill Development -->
+    <section class="skill-development">
+        <div class="container">
+            <h2 class="section-title">핵심 역량 개발</h2>
+            <div class="skill-categories">
+                <div class="skill-category">
+                    <h3>서류 작성 스킬</h3>
+                    <ul class="skill-list">
+                        <li>ATS 통과 이력서 작성법</li>
+                        <li>직무별 키워드 활용법</li>
+                        <li>스토리텔링 자소서 구성</li>
+                        <li>포트폴리오 제작(필요시)</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>커뮤니케이션 스킬</h3>
+                    <ul class="skill-list">
+                        <li>논리적 말하기 훈련</li>
+                        <li>비언어적 소통 개선</li>
+                        <li>질문 의도 파악법</li>
+                        <li>임팩트 있는 자기 표현</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>실무 역량</h3>
+                    <ul class="skill-list">
+                        <li>기업/산업 분석 능력</li>
+                        <li>문제 해결 능력 개발</li>
+                        <li>데이터 분석 기초</li>
+                        <li>프로젝트 경험 구성</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Rate -->
+    <section class="success-rate">
+        <div class="container">
+            <h2 style="color: var(--white); margin-bottom: var(--spacing-lg);">2024년 취업 성과</h2>
+            <div class="rate-grid">
+                <div class="rate-item">
+                    <div class="rate-value">92%</div>
+                    <div>서류 합격률</div>
+                </div>
+                <div class="rate-item">
+                    <div class="rate-value">78%</div>
+                    <div>최종 합격률</div>
+                </div>
+                <div class="rate-item">
+                    <div class="rate-value">3.2개월</div>
+                    <div>평균 준비 기간</div>
+                </div>
+                <div class="rate-item">
+                    <div class="rate-value">127개</div>
+                    <div>협력 기업</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">취업 성공의 <span class="highlight">확실한 파트너</span></h2>
+                <p class="cta-subtitle">
+                    657명이 검증한 취업 컨설팅,<br>
+                    당신도 원하는 기업에 합격할 수 있습니다.
+                </p>
+                <a href="http://pf.kakao.com/_cbBxcn" class="btn btn-primary btn-xl"
+                   onclick="gtag('event', 'click_kakao_cta', {'cta_position': 'bottom_cta'});">
+                    취업 상담 시작하기 →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (동일) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">컨설팅 프로</h3>
+                    <p class="footer-tagline">커리어의 시작과 성장을 함께합니다</p>
+                </div>
+                <div class="footer-info">
+                    <div class="footer-section">
+                        <h4>연락처</h4>
+                        <p>📞 02-6402-3113</p>
+                        <p>📧 consultingpro@career.com</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>운영시간</h4>
+                        <p>평일 09:00 - 18:00</p>
+                        <p>주말 및 공휴일 휴무</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>SNS</h4>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook">f</a>
+                            <a href="#" aria-label="Instagram">📷</a>
+                            <a href="#" aria-label="YouTube">▶</a>
+                            <a href="http://pf.kakao.com/_cbBxcn" aria-label="KakaoTalk">💬</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 컨설팅 프로. All rights reserved.</p>
+                <p class="footer-disclaimer">본 안내는 법률 자문이 아니며, 제도 요약 정보입니다.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

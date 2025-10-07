@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리뷰 & 후기 | 컨설팅 프로</title>
+    <meta name="description" content="657명의 성공 스토리. 컨설팅 프로와 함께한 실제 후기를 확인하세요.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="리뷰 & 후기 - 컨설팅 프로">
+    <meta property="og:description" content="실제 수강생들의 생생한 후기와 성공 사례">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXX');
+    </script>
+
+    <style>
+        .reviews-hero {
+            padding: 120px 0 80px;
+            background: linear-gradient(135deg, var(--dark) 0%, #2A2A2A 100%);
+            color: var(--white);
+        }
+
+        .filter-section {
+            padding: var(--spacing-xl) 0;
+            background: var(--gray-light);
+            position: sticky;
+            top: 70px;
+            z-index: 10;
+        }
+
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-md);
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.75rem 1.5rem;
+            background: var(--white);
+            border: 2px solid var(--gray-light);
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .filter-btn.active {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+
+        .reviews-grid-section {
+            padding: var(--spacing-xxl) 0;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+        }
+
+        .review-item {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .review-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .review-header {
+            padding: var(--spacing-lg);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+        }
+
+        .review-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .review-program {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+        }
+
+        .review-rating {
+            display: flex;
+            gap: 2px;
+        }
+
+        .star {
+            color: #FFD700;
+        }
+
+        .review-body {
+            padding: var(--spacing-lg);
+        }
+
+        .review-quote {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            margin-bottom: var(--spacing-md);
+            color: var(--dark);
+            font-style: italic;
+        }
+
+        .review-result {
+            background: var(--gray-light);
+            padding: var(--spacing-md);
+            border-radius: 8px;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .result-label {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .review-author {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+            padding-top: var(--spacing-md);
+            border-top: 1px solid var(--gray-light);
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .author-info {
+            flex: 1;
+        }
+
+        .author-name {
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .author-date {
+            font-size: 0.875rem;
+            color: var(--gray);
+        }
+
+        .video-reviews {
+            padding: var(--spacing-xxl) 0;
+            background: var(--gray-light);
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+        }
+
+        .video-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+        }
+
+        .video-thumbnail {
+            position: relative;
+            padding-bottom: 56.25%;
+            background: var(--dark);
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .play-button:hover {
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .video-info {
+            padding: var(--spacing-md);
+        }
+
+        .statistics-section {
+            padding: var(--spacing-xxl) 0;
+            background: var(--dark);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .stat-box {
+            padding: var(--spacing-lg);
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 12px;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--primary);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .stat-description {
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .filter-section {
+                position: static;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header (동일) -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">컨설팅 프로</span>
+                </a>
+                <button class="menu-toggle" aria-label="메뉴 열기">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li class="nav-group">
+                        <span>컨설팅프로</span>
+                        <ul>
+                            <li><a href="about.html">컨설팅 프로 소개</a></li>
+                            <li><a href="history.html">컨설팅 이력</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-group">
+                        <span>프로그램 안내</span>
+                        <ul>
+                            <li><a href="program-job-leave.html">구직청원휴가 과정</a></li>
+                            <li><a href="program-admission.html">입시 과정</a></li>
+                            <li><a href="program-employment.html">취업 과정</a></li>
+                            <li><a href="program-startup.html">창업 과정</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-group">
+                        <span>과정 후기</span>
+                        <ul>
+                            <li><a href="reviews.html">리뷰 & 후기</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-cta">
+                        <a href="http://pf.kakao.com/_cbBxcn" class="btn btn-primary"
+                           onclick="gtag('event', 'click_kakao_cta', {'cta_position': 'header'});">
+                            상담 신청
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu (동일) -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <span class="logo-text">컨설팅 프로</span>
+            <button class="menu-close">×</button>
+        </div>
+        <div class="mobile-menu-content">
+            <div class="menu-section">
+                <h3>컨설팅프로</h3>
+                <ul>
+                    <li><a href="about.html">컨설팅 프로 소개</a></li>
+                    <li><a href="history.html">컨설팅 이력</a></li>
+                </ul>
+            </div>
+            <div class="menu-section">
+                <h3>프로그램 안내</h3>
+                <ul>
+                    <li><a href="program-job-leave.html">구직청원휴가 과정</a></li>
+                    <li><a href="program-admission.html">입시 과정</a></li>
+                    <li><a href="program-employment.html">취업 과정</a></li>
+                    <li><a href="program-startup.html">창업 과정</a></li>
+                </ul>
+            </div>
+            <div class="menu-section">
+                <h3>과정 후기</h3>
+                <ul>
+                    <li><a href="reviews.html">리뷰 & 후기</a></li>
+                </ul>
+            </div>
+            <div class="menu-section">
+                <a href="http://pf.kakao.com/_cbBxcn" class="btn btn-primary btn-block"
+                   onclick="gtag('event', 'click_kakao_cta', {'cta_position': 'mobile_menu'});">
+                    상담 신청
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="reviews-hero">
+        <div class="container">
+            <h1>리뷰 & 후기</h1>
+            <p class="hero-subtitle">
+                657명이 증명하는 성공 스토리<br>
+                컨설팅 프로와 함께한 생생한 후기를 확인하세요.
+            </p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">전체</button>
+                <button class="filter-btn" data-filter="job-leave">구직청원휴가</button>
+                <button class="filter-btn" data-filter="admission">입시</button>
+                <button class="filter-btn" data-filter="employment">취업</button>
+                <button class="filter-btn" data-filter="startup">창업</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Grid -->
+    <section class="reviews-grid-section">
+        <div class="container">
+            <div class="reviews-grid">
+                <!-- 구직청원휴가 후기 -->
+                <div class="review-item" data-category="job-leave">
+                    <div class="review-header">
+                        <div class="review-meta">
+                            <span class="review-program">구직청원휴가 과정</span>
+                            <div class="review-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-body">
+                        <p class="review-quote">
+                            "전역 전 막막했던 취업 준비가 체계적인 컨설팅으로 명확해졌습니다.
+                            구직청원휴가 제도 활용법부터 이력서 작성, 면접 준비까지 완벽하게 준비할 수 있었어요."
+                        </p>
+                        <div class="review-result">
+                            <div class="result-label">최종 결과</div>
+                            <p>삼성전자 DS부문 최종 합격</p>
+                        </div>
+                        <div class="review-author">
+                            <div class="author-avatar">김○○</div>
+                            <div class="author-info">
+                                <div class="author-name">김○○ (26세, 육군 병장)</div>
+                                <div class="author-date">2024년 3월 수료</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 입시 후기 -->
+                <div class="review-item" data-category="admission">
+                    <div class="review-header">
+                        <div class="review-meta">
+                            <span class="review-program">입시 과정</span>
+                            <div class="review-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-body">
+                        <p class="review-quote">
+                            "생기부 관리부터 자소서, 면접까지 입시의 모든 과정을 함께해주셨습니다.
+                            특히 대학별 맞춤 전략이 큰 도움이 되었어요."
+                        </p>
+                        <div class="review-result">
+                            <div class="result-label">최종 결과</div>
+                            <p>연세대학교 경영학과 합격</p>
+                        </div>
+                        <div class="review-author">
+                            <div class="author-avatar">이○○</div>
+                            <div class="author-info">
+                                <div class="author-name">이○○ (19세, 고3)</div>
+                                <div class="author-date">2024년 2월 수료</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 취업 후기 -->
+                <div class="review-item" data-category="employment">
+                    <div class="review-header">
+                        <div class="review-meta">
+                            <span class="review-program">취업 과정</span>
+                            <div class="review-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-body">
+                        <p class="review-quote">
+                            "NCS 준비부터 면접까지 공기업 취업의 A to Z를 배웠습니다.
+                            특히 토론 면접 대비가 실제 면접에서 큰 도움이 되었습니다."
+                        </p>
+                        <div class="review-result">
+                            <div class="result-label">최종 결과</div>
+                            <p>한국전력공사 최종 합격</p>
+                        </div>
+                        <div class="review-author">
+                            <div class="author-avatar">박○○</div>
+                            <div class="author-info">
+                                <div class="author-name">박○○ (28세, 경력 2년)</div>
+                                <div class="author-date">2024년 4월 수료</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 창업 후기 -->
+                <div class="review-item" data-category="startup">
+                    <div class="review-header">
+                        <div class="review-meta">
+                            <span class="review-program">창업 과정</span>
+                            <div class="review-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-body">
+                        <p class="review-quote">
+                            "아이디어만 있었는데, 사업 계획서 작성부터 정부 지원금 신청까지
+                            체계적으로 도움받았습니다. 이제 월 매출 3천만원을 넘었어요!"
+                        </p>
+                        <div class="review-result">
+                            <div class="result-label">최종 결과</div>
+                            <p>예비창업패키지 선정, 시드 투자 유치</p>
+                        </div>
+                        <div class="review-author">
+                            <div class="author-avatar">정○○</div>
+                            <div class="author-info">
+                                <div class="author-name">정○○ (32세, 전 대기업 직원)</div>
+                                <div class="author-date">2024년 1월 수료</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 추가 후기들 -->
+                <div class="review-item" data-category="employment">
+                    <div class="review-header">
+                        <div class="review-meta">
+                            <span class="review-program">취업 과정</span>
+                            <div class="review-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-body">
+                        <p class="review-quote">
+                            "외국계 기업 면접 준비를 완벽하게 도와주셨습니다.
+                            영어 면접과 케이스 인터뷰 준비가 특히 도움이 되었어요."
+                        </p>
+                        <div class="review-result">
+                            <div class="result-label">최종 결과</div>
+                            <p>구글 코리아 마케팅팀 합격</p>
+                        </div>
+                        <div class="review-author">
+                            <div class="author-avatar">최○○</div>
+                            <div class="author-info">
+                                <div class="author-name">최○○ (29세, 경력 3년)</div>
+                                <div class="author-date">2024년 3월 수료</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-item" data-category="admission">
+                    <div class="review-header">
+                        <div class="review-meta">
+                            <span class="review-program">입시 과정</span>
+                            <div class="review-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">☆</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-body">
+                        <p class="review-quote">
+                            "내신이 부족했지만 논술 전형으로 원하는 대학에 합격했습니다.
+                            논술 첨삭과 기출 분석이 정말 도움이 많이 되었어요."
+                        </p>
+                        <div class="review-result">
+                            <div class="result-label">최종 결과</div>
+                            <p>성균관대학교 경제학과 합격</p>
+                        </div>
+                        <div class="review-author">
+                            <div class="author-avatar">강○○</div>
+                            <div class="author-info">
+                                <div class="author-name">강○○ (19세, 고3)</div>
+                                <div class="author-date">2024년 2월 수료</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Reviews Section -->
+    <section class="video-reviews">
+        <div class="container">
+            <h2 class="section-title">영상 후기</h2>
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <div class="play-button">▶</div>
+                    </div>
+                    <div class="video-info">
+                        <h4>구직청원휴가로 대기업 취업 성공기</h4>
+                        <p>김○○님 | 삼성전자 합격</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <div class="play-button">▶</div>
+                    </div>
+                    <div class="video-info">
+                        <h4>수시 6관왕의 입시 전략</h4>
+                        <p>이○○님 | SKY 합격</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <div class="play-button">▶</div>
+                    </div>
+                    <div class="video-info">
+                        <h4>창업 6개월 만에 월 5천 달성</h4>
+                        <p>박○○님 | IT 스타트업 대표</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="statistics-section">
+        <div class="container">
+            <h2 style="color: var(--white); margin-bottom: var(--spacing-xl);">누적 성과 통계</h2>
+            <div class="stats-container">
+                <div class="stat-box">
+                    <div class="stat-number">94%</div>
+                    <div class="stat-description">평균 만족도</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">657명</div>
+                    <div class="stat-description">누적 수료생</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">89%</div>
+                    <div class="stat-description">목표 달성률</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">127개</div>
+                    <div class="stat-description">협력 기업</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">다음 성공 스토리의 <span class="highlight">주인공은 당신</span></h2>
+                <p class="cta-subtitle">
+                    657명이 증명한 컨설팅 프로의 체계적인 프로그램,<br>
+                    지금 시작하세요.
+                </p>
+                <a href="http://pf.kakao.com/_cbBxcn" class="btn btn-primary btn-xl"
+                   onclick="gtag('event', 'click_kakao_cta', {'cta_position': 'bottom_cta'});">
+                    무료 상담 신청하기 →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (동일) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">컨설팅 프로</h3>
+                    <p class="footer-tagline">커리어의 시작과 성장을 함께합니다</p>
+                </div>
+                <div class="footer-info">
+                    <div class="footer-section">
+                        <h4>연락처</h4>
+                        <p>📞 02-6402-3113</p>
+                        <p>📧 consultingpro@career.com</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>운영시간</h4>
+                        <p>평일 09:00 - 18:00</p>
+                        <p>주말 및 공휴일 휴무</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>SNS</h4>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook">f</a>
+                            <a href="#" aria-label="Instagram">📷</a>
+                            <a href="#" aria-label="YouTube">▶</a>
+                            <a href="http://pf.kakao.com/_cbBxcn" aria-label="KakaoTalk">💬</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 컨설팅 프로. All rights reserved.</p>
+                <p class="footer-disclaimer">본 안내는 법률 자문이 아니며, 제도 요약 정보입니다.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Update active button
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                // Filter reviews
+                const filter = this.dataset.filter;
+                const reviews = document.querySelectorAll('.review-item');
+
+                reviews.forEach(review => {
+                    if (filter === 'all' || review.dataset.category === filter) {
+                        review.style.display = 'block';
+                    } else {
+                        review.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

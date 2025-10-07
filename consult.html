@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상담 신청 | 컨설팅 프로</title>
+    <meta name="description" content="컨설팅 프로 카카오 채널로 이동 중입니다. 전문 컨설턴트가 1:1 맞춤 상담을 제공합니다.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="상담 신청 - 컨설팅 프로">
+    <meta property="og:description" content="카카오 채널로 편리하게 상담 신청하세요">
+
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXX');
+
+        // Track redirect
+        gtag('event', 'click_kakao_cta', {
+            'cta_position': 'consult_page_redirect'
+        });
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+            background: linear-gradient(135deg, #151515 0%, #2A2A2A 100%);
+            color: #FFFFFF;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .redirect-container {
+            text-align: center;
+            padding: 2rem;
+            max-width: 500px;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #D61F34;
+            margin-bottom: 2rem;
+        }
+
+        .redirect-message {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            animation: fadeIn 0.6s ease-in;
+        }
+
+        .redirect-subtitle {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 2rem;
+        }
+
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            border-top-color: #D61F34;
+            border-radius: 50%;
+            margin: 2rem auto;
+            animation: spin 1s linear infinite;
+        }
+
+        .redirect-info {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: 2rem;
+        }
+
+        .redirect-link {
+            color: #D61F34;
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.3s ease;
+        }
+
+        .redirect-link:hover {
+            opacity: 0.8;
+        }
+
+        /* 접근성을 위한 스크린리더 전용 텍스트 */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* 카카오 아이콘 */
+        .kakao-icon {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            background: #FFE812;
+            border-radius: 20px;
+            margin: 2rem auto;
+            position: relative;
+            animation: pulse 2s infinite;
+        }
+
+        .kakao-icon::before {
+            content: '💬';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 접근성을 위한 라이브 리전 -->
+    <div aria-live="polite" aria-atomic="true" class="sr-only">
+        카카오 채널로 이동 중입니다. 잠시만 기다려주세요.
+    </div>
+
+    <div class="redirect-container">
+        <h1 class="logo">컨설팅 프로</h1>
+
+        <div class="kakao-icon"></div>
+
+        <p class="redirect-message">카카오 채널로 이동 중입니다</p>
+        <p class="redirect-subtitle">전문 컨설턴트가 친절하게 상담해드립니다</p>
+
+        <div class="loading-spinner"></div>
+
+        <p class="redirect-info">
+            자동으로 이동되지 않는 경우<br>
+            <a href="http://pf.kakao.com/_cbBxcn" class="redirect-link">여기를 클릭</a>하세요
+        </p>
+    </div>
+
+    <script>
+        // 즉시 카카오 채널로 리다이렉트
+        (function() {
+            const kakaoUrl = 'http://pf.kakao.com/_cbBxcn';
+
+            // 약간의 지연을 두어 사용자가 메시지를 볼 수 있도록 함
+            setTimeout(function() {
+                window.location.href = kakaoUrl;
+            }, 1500);
+
+            // 백업: 3초 후에도 이동하지 않으면 강제 이동
+            setTimeout(function() {
+                if (window.location.pathname.includes('consult')) {
+                    window.location.replace(kakaoUrl);
+                }
+            }, 3000);
+        })();
+    </script>
+</body>
+</html>

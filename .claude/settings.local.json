@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/jeonghyeonwook/Downloads/**)",
+      "Bash(find:*)",
+      "Bash(tree:*)",
+      "Bash(open:*)",
+      "Bash(git init:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
