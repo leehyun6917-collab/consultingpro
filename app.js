@@ -409,6 +409,65 @@
     }
 
     // ========================================
+    // FAQ Slider
+    // ========================================
+    const faqSlides = document.querySelectorAll('.faq-slide');
+    const faqIndicators = document.querySelectorAll('.faq-indicator');
+    let currentFaq = 0;
+    let faqInterval;
+
+    function showFaqSlide(index) {
+        // Remove active class from all slides and indicators
+        faqSlides.forEach(slide => slide.classList.remove('active'));
+        faqIndicators.forEach(indicator => indicator.classList.remove('active'));
+
+        // Add active class to current slide and indicator
+        if (faqSlides[index]) {
+            faqSlides[index].classList.add('active');
+        }
+        if (faqIndicators[index]) {
+            faqIndicators[index].classList.add('active');
+        }
+    }
+
+    function nextFaqSlide() {
+        currentFaq = (currentFaq + 1) % faqSlides.length;
+        showFaqSlide(currentFaq);
+    }
+
+    // Set up auto-slide every 2 seconds
+    function startFaqSlider() {
+        faqInterval = setInterval(nextFaqSlide, 2000);
+    }
+
+    // Stop auto-slide when user interacts
+    function stopFaqSlider() {
+        clearInterval(faqInterval);
+    }
+
+    // Add click handlers to FAQ indicators
+    faqIndicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', function() {
+            stopFaqSlider();
+            currentFaq = index;
+            showFaqSlide(currentFaq);
+            startFaqSlider(); // Restart auto-slide
+        });
+    });
+
+    // Start the FAQ slider if elements exist
+    if (faqSlides.length > 0) {
+        startFaqSlider();
+
+        // Pause on hover
+        const faqWrapper = document.querySelector('.faq-slider-wrapper');
+        if (faqWrapper) {
+            faqWrapper.addEventListener('mouseenter', stopFaqSlider);
+            faqWrapper.addEventListener('mouseleave', startFaqSlider);
+        }
+    }
+
+    // ========================================
     // Initialize on DOM Ready
     // ========================================
     console.log('컨설팅 프로 - 사이트가 성공적으로 로드되었습니다.');
