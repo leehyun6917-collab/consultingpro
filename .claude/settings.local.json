@@ -6,7 +6,8 @@
       "Bash(tree:*)",
       "Bash(open:*)",
       "Bash(git init:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git push:*)"
     ],
     "deny": [],
     "ask": []
