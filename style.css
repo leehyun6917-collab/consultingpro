@@ -703,74 +703,31 @@ h1, h2, h3, h4, h5, h6 {
    Consulting Info Section
    ======================================== */
 .consulting-info-section {
-    padding: 0;
-    position: relative;
-    width: 100%;
-}
-
-.info-background {
-    position: relative;
-    width: 100%;
-    height: 600px;
-    background: url('assets/images/info02.jpg') center/cover no-repeat;
-    background-attachment: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.info-background::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 1;
-}
-
-.info-content-wrapper {
-    position: relative;
-    z-index: 2;
-    width: 90%;
-    max-width: 1200px;
-    height: 400px;
-    padding: 20px;
-}
-
-.info-content {
-    width: 100%;
-    height: 100%;
-    background: white;
-    border-radius: 24px;
-    padding: 30px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 80px 0;
+    background: #ffffff;
 }
 
 .info-cards-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    width: 100%;
-    height: 100%;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .info-card {
     width: 100%;
-    height: 100%;
-    border-radius: 12px;
+    height: 250px;
+    border-radius: 16px;
     overflow: hidden;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .info-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
 .info-card-image {
@@ -779,25 +736,31 @@ h1, h2, h3, h4, h5, h6 {
     background-size: cover;
     background-position: center;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .info-card-overlay {
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-    padding: 20px;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7));
     display: flex;
-    align-items: flex-end;
-    height: 50%;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 }
 
 .info-card-title {
     color: white;
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 24px;
+    font-weight: 700;
     margin: 0;
+    text-align: center;
 }
 
 /* ========================================
@@ -1036,28 +999,20 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     /* Consulting Info Section Tablet */
-    .info-background {
-        height: 500px;
-    }
-
-    .info-content-wrapper {
-        height: 350px;
-    }
-
-    .info-content {
-        padding: 20px;
+    .consulting-info-section {
+        padding: 60px 20px;
     }
 
     .info-cards-container {
-        gap: 15px;
+        gap: 20px;
+    }
+
+    .info-card {
+        height: 220px;
     }
 
     .info-card-title {
-        font-size: 16px;
-    }
-
-    .info-card-overlay {
-        padding: 15px;
+        font-size: 20px;
     }
 }
 
@@ -1385,38 +1340,21 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     /* Consulting Info Section Small Mobile */
-    .info-background {
-        height: 550px;
-        background-attachment: scroll;
-    }
-
-    .info-content-wrapper {
-        width: 95%;
-        height: 450px;
-        padding: 10px;
-    }
-
-    .info-content {
-        padding: 15px;
-        border-radius: 16px;
+    .consulting-info-section {
+        padding: 50px 15px;
     }
 
     .info-cards-container {
         grid-template-columns: 1fr;
-        gap: 12px;
+        gap: 15px;
     }
 
     .info-card {
-        height: 120px;
+        height: 150px;
     }
 
     .info-card-title {
-        font-size: 14px;
-    }
-
-    .info-card-overlay {
-        padding: 12px;
-        height: 60%;
+        font-size: 18px;
     }
 
     .hero-visual {
