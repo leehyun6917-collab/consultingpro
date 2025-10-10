@@ -304,6 +304,7 @@ h1, h2, h3, h4, h5, h6 {
         max-width: 400px;
         height: 100vh;
         background: white;
+        display: flex;
         flex-direction: column;
         align-items: stretch;
         gap: 0;
@@ -311,6 +312,10 @@ h1, h2, h3, h4, h5, h6 {
         transition: right 0.3s ease;
         z-index: 10000;
         overflow-y: auto;
+    }
+
+    .menu-footer {
+        margin-top: auto;
     }
 
     .nav-menu.active {
