@@ -28,11 +28,6 @@
             background-repeat: no-repeat;
             text-align: center;
             color: white;
-            image-rendering: -webkit-optimize-contrast;
-            image-rendering: crisp-edges;
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-            transform: translateZ(0);
         }
 
         .about-hero-label {
@@ -53,603 +48,312 @@
             letter-spacing: -1px;
         }
 
-
-        /* Career Program Section */
-        .career-program-section {
+        /* Introduction Section */
+        .intro-section {
             padding: 100px 0;
-            background: #f8f9fa;
-            text-align: center;
-            position: relative;
+            background: white;
         }
 
-        .program-content {
-            max-width: 1200px;
+        .intro-container {
+            max-width: 900px;
             margin: 0 auto;
             padding: 0 20px;
+            text-align: center;
         }
 
-        .program-title {
+        .intro-title {
             font-size: 2.5rem;
-            font-weight: 800;
+            font-weight: 700;
             color: #1a1a1a;
             margin-bottom: 2rem;
             letter-spacing: -1px;
-            line-height: 1.2;
+            line-height: 1.3;
         }
 
-        .program-subtitle {
+        .intro-highlight {
+            color: #e74c3c;
+            position: relative;
+        }
+
+        .intro-description {
             font-size: 1.2rem;
-            line-height: 1.8;
+            line-height: 2;
             color: #555;
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
+        }
+
+        .intro-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .stat-item {
+            padding: 30px 20px;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #e74c3c;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: #666;
             font-weight: 500;
         }
 
-        .highlight-text {
-            color: #ff3b30;
-            font-weight: 700;
-            position: relative;
-            padding-bottom: 2px;
-        }
-
-        .program-visual {
-            margin: 0 auto;
-            max-width: 1000px;
-            background: white;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-        }
-
-        .program-visual img {
-            width: 100%;
-            height: auto;
-            display: block;
-            max-width: 100%;
-        }
-
-        /* Show/Hide for Desktop and Mobile */
-        .desktop-only {
-            display: block;
-        }
-
-        .mobile-only {
-            display: none;
-        }
-
-        /* Content Sections */
-        .content-section {
-            padding: 80px 0;
-        }
-
-        .content-section:nth-child(odd) {
+        /* Mission Section */
+        .mission-section {
+            padding: 100px 0;
             background: #f8f9fa;
         }
 
-        .content-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
+        .mission-container {
             max-width: 1200px;
             margin: 0 auto;
+            padding: 0 20px;
         }
 
-        .content-row.reverse {
-            direction: rtl;
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 60px;
+            letter-spacing: -1px;
         }
 
-        .content-row.reverse .content-text {
-            direction: ltr;
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
         }
 
-        .content-image {
-            position: relative;
-            overflow: hidden;
+        .mission-card {
+            background: white;
+            padding: 50px 40px;
             border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
         }
 
-        .content-image img {
-            width: 100%;
-            height: auto;
-            display: block;
+        .mission-card:hover {
+            transform: translateY(-5px);
         }
 
-        .content-text {
-            padding: 20px;
+        .mission-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
         }
 
-        .content-text h3 {
-            font-size: 1.8rem;
+        .mission-card h3 {
+            font-size: 1.6rem;
             font-weight: 700;
             color: #333;
-            margin-bottom: 1.5rem;
-            line-height: 1.4;
+            margin-bottom: 15px;
         }
 
-        .content-text p {
+        .mission-card p {
             font-size: 1.1rem;
             line-height: 1.8;
             color: #666;
         }
 
-        .content-number {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            background: #ff3b30;
-            color: white;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 40px;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        /* VS Comparison Section */
-        .vs-section {
+        /* Values Section */
+        .values-section {
             padding: 100px 0;
-            background: #2a2a2a;
-            color: white;
+            background: white;
         }
 
-        .vs-container {
+        .values-container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        .vs-title {
-            text-align: center;
-            font-size: 2.2rem;
-            font-weight: 700;
-            margin-bottom: 60px;
-            line-height: 1.4;
-        }
-
-        .vs-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 60px;
-        }
-
-        .vs-column {
-            flex: 1;
-        }
-
-        .vs-grid {
+        .values-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 60px;
         }
 
-        .vs-item {
-            aspect-ratio: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 30px 20px;
-            border-radius: 30px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            line-height: 1.4;
+        .value-item {
             text-align: center;
-            position: relative;
-            overflow: hidden;
+            padding: 40px 30px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            transition: all 0.3s ease;
         }
 
-        .vs-item.general {
-            background: #e8e8e8;
-            color: #666;
-        }
-
-        .vs-item.general::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, transparent 48%, #c0c0c0 48.5%, #c0c0c0 51.5%, transparent 52%);
-            opacity: 0.5;
-        }
-
-        .vs-item.career {
+        .value-item:hover {
             background: #e74c3c;
             color: white;
         }
 
-        .vs-divider {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
+        .value-item:hover .value-number,
+        .value-item:hover h3,
+        .value-item:hover p {
+            color: white;
+        }
+
+        .value-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: #e74c3c;
+            color: white;
+            border-radius: 50%;
+            line-height: 50px;
+            font-size: 1.5rem;
             font-weight: 700;
-            color: white;
-            flex-shrink: 0;
-            padding: 0 20px;
+            margin-bottom: 20px;
         }
 
-        /* Three Icons Section */
-        .three-icons {
-            padding: 100px 0;
-            background: #2a2a2a;
-        }
-
-        .icons-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 60px;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .icon-item {
-            text-align: center;
-            padding: 40px 20px;
-            position: relative;
-        }
-
-        .icon-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60%;
-            height: 1px;
-            background: rgba(255,255,255,0.1);
-        }
-
-        .icon-wrapper {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-
-        .icon-svg {
-            width: 100%;
-            height: 100%;
-        }
-
-        .icon-item h4 {
+        .value-item h3 {
             font-size: 1.4rem;
-            font-weight: 600;
-            color: white;
+            font-weight: 700;
+            color: #333;
             margin-bottom: 15px;
-            line-height: 1.5;
         }
 
-        .icon-item p {
-            display: none;
+        .value-item p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #666;
         }
 
-        /* Network Section */
-        .network-section {
+        /* CTA Section */
+        .cta-section {
             padding: 100px 0;
-            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('assets/images/pass_bg.jpg');
-            background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-attachment: scroll;
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
             text-align: center;
             color: white;
-            position: relative;
         }
 
-        .network-content {
-            max-width: 1200px;
+        .cta-container {
+            max-width: 800px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        .network-title {
+        .cta-title {
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 1.5rem;
-            line-height: 1.4;
+            letter-spacing: -1px;
         }
 
-        .network-subtitle {
+        .cta-description {
             font-size: 1.2rem;
-            line-height: 1.6;
-            margin-bottom: 60px;
-            opacity: 0.9;
-        }
-
-        .network-bubbles {
-            display: flex;
-            justify-content: center;
-            gap: 0;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .network-bubble {
-            flex: 1;
-            padding: 60px 40px;
-            border-radius: 200px;
-            min-height: 250px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .network-bubble.red {
-            background: #e74c3c;
-            margin-right: -30px;
-            z-index: 1;
-        }
-
-        .network-bubble.white {
-            background: white;
-            color: #333;
-        }
-
-        .network-bubble h3 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            letter-spacing: 1px;
-        }
-
-        .network-bubble p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-
-        /* Partners Section */
-        .partners-section {
-            background-color: #3d3d3d;
-            padding: 80px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 50px;
-        }
-
-        .partners-title {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: white;
-            text-align: center;
-            margin: 0;
-        }
-
-        .partners-image-wrapper {
-            width: 100%;
-            max-width: 1200px;
-        }
-
-        .partners-image {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .partners-footer-content {
-            text-align: center;
-            max-width: 1200px;
-        }
-
-        .partners-dots {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 2rem;
-        }
-
-        .partners-dot {
-            width: 8px;
-            height: 8px;
-            background: white;
-            border-radius: 50%;
-            opacity: 0.7;
-        }
-
-        .partners-text {
-            font-size: 1.1rem;
             line-height: 1.8;
-            color: #e0e0e0;
+            margin-bottom: 3rem;
+            opacity: 0.95;
         }
 
-        .partners-text strong {
+        .cta-button {
+            display: inline-block;
+            padding: 18px 50px;
+            background: white;
+            color: #e74c3c;
+            font-size: 1.2rem;
             font-weight: 700;
-            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
         }
 
         /* Mobile Responsive */
         @media (max-width: 768px) {
             .about-hero {
                 padding: 140px 20px 80px;
-                background-attachment: scroll;
-                background-size: cover;
-                background-position: center center;
-            }
-
-            .about-hero-label {
-                font-size: 0.875rem;
-                letter-spacing: 1.5px;
             }
 
             .about-hero h1 {
                 font-size: 2rem;
             }
 
-            /* Career Program Section Mobile */
-            .career-program-section {
-                padding: 60px 20px;
+            .intro-section {
+                padding: 60px 0;
             }
 
-            .program-title {
+            .intro-title {
                 font-size: 1.8rem;
                 margin-bottom: 1.5rem;
-                letter-spacing: -0.5px;
             }
 
-            .program-subtitle {
+            .intro-description {
                 font-size: 1rem;
-                line-height: 1.7;
-                margin-bottom: 3rem;
+                line-height: 1.8;
             }
 
-            .program-subtitle br {
-                display: none;
-            }
-
-            .program-visual {
-                padding: 20px;
-                border-radius: 15px;
-            }
-
-            /* Show/Hide for Mobile */
-            .desktop-only {
-                display: none;
-            }
-
-            .mobile-only {
-                display: block;
-            }
-
-            .content-row {
+            .intro-stats {
                 grid-template-columns: 1fr;
                 gap: 30px;
             }
 
-            .content-row.reverse {
-                direction: ltr;
+            .stat-number {
+                font-size: 2.5rem;
             }
 
-            /* VS Section Mobile */
-            .vs-section {
-                padding: 60px 20px;
+            .mission-section,
+            .values-section {
+                padding: 60px 0;
             }
 
-            .vs-title {
-                font-size: 1.6rem;
-                margin-bottom: 40px;
-            }
-
-            .vs-content {
-                flex-direction: column;
-                gap: 30px;
-            }
-
-            .vs-divider {
-                font-size: 2rem;
-                padding: 20px 0;
-            }
-
-            .vs-item {
-                font-size: 1rem;
-                padding: 25px 15px;
-                border-radius: 20px;
-            }
-
-            /* Three Icons Mobile */
-            .three-icons {
-                padding: 60px 20px;
-            }
-
-            .icons-grid {
-                grid-template-columns: 1fr;
-                gap: 0;
-            }
-
-            .icon-item {
-                padding: 40px 20px;
-            }
-
-            .icon-item::before {
-                width: 80%;
-            }
-
-            .icon-wrapper {
-                width: 100px;
-                height: 100px;
-                margin-bottom: 25px;
-            }
-
-            .icon-item h4 {
-                font-size: 1.2rem;
-            }
-
-            /* Network Section Mobile */
-            .network-section {
-                padding: 60px 20px;
-                background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('assets/images/pass_bg.jpg');
-                background-size: cover;
-                background-position: center center;
-                background-attachment: scroll;
-            }
-
-            .network-title {
+            .section-title {
                 font-size: 1.8rem;
-                margin-bottom: 1rem;
-            }
-
-            .network-subtitle {
-                font-size: 1rem;
                 margin-bottom: 40px;
             }
 
-            .network-bubbles {
-                flex-direction: column;
-                gap: 0;
+            .mission-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
             }
 
-            .network-bubble {
-                border-radius: 150px;
+            .mission-card {
                 padding: 40px 30px;
-                min-height: 200px;
             }
 
-            .network-bubble.red {
-                margin-right: 0;
-                margin-bottom: -20px;
-            }
-
-            .network-bubble h3 {
+            .mission-card h3 {
                 font-size: 1.4rem;
             }
 
-            .network-bubble p {
+            .mission-card p {
                 font-size: 1rem;
             }
 
-            /* Partners Section Mobile */
-            .partners-section {
-                padding: 50px 20px;
-                gap: 40px;
+            .values-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
             }
 
-            .partners-title {
-                font-size: 1.5rem;
+            .cta-section {
+                padding: 60px 0;
             }
 
-            .partners-dots {
-                margin-bottom: 1.5rem;
+            .cta-title {
+                font-size: 1.8rem;
             }
 
-            .partners-text {
+            .cta-description {
                 font-size: 1rem;
-                line-height: 1.6;
             }
 
-
-            .content-section {
-                padding: 50px 20px;
-            }
-
-            .decision-section {
-                padding: 60px 20px;
+            .cta-button {
+                padding: 16px 40px;
+                font-size: 1.1rem;
             }
         }
     </style>
@@ -729,190 +433,101 @@
         </div>
     </section>
 
+    <!-- Introduction Section -->
+    <section class="intro-section">
+        <div class="intro-container">
+            <h2 class="intro-title">
+                당신의 커리어를 <span class="intro-highlight">전문적으로 설계</span>하고<br>
+                <span class="intro-highlight">함께 실현</span>합니다
+            </h2>
+            <p class="intro-description">
+                컨설팅프로는 단순한 취업 컨설팅을 넘어,<br>
+                평생 커리어 파트너로서 여러분의 성장을 함께합니다.<br>
+                체계적인 프로세스와 전문 컨설턴트의 1:1 맞춤 코칭으로<br>
+                당신이 원하는 커리어의 목표를 달성하세요.
+            </p>
 
-    <!-- Career Program Section -->
-    <section class="career-program-section">
-        <div class="container">
-            <div class="program-content">
-                <h2 class="program-title">컨설팅프로 맞춤형 프로그램</h2>
-                <p class="program-subtitle">
-                    커리어 컨설팅 이란 취업과 커리어 개발을 위해 <span class="highlight-text">커리어 전문가</span>를 통해<br>
-                    <span class="highlight-text">전문적인 도움과 솔루션</span>을 제공받는 서비스를 말합니다.
-                </p>
-
-                <!-- Desktop Version -->
-                <div class="program-visual desktop-only">
-                    <img src="assets/images/picto_m.gif" alt="커리어 개발 프로세스">
+            <div class="intro-stats">
+                <div class="stat-item">
+                    <span class="stat-number">60+</span>
+                    <p class="stat-label">합격 파트너 기업</p>
                 </div>
-
-                <!-- Mobile Version -->
-                <div class="program-visual mobile-only">
-                    <img src="assets/images/picto_m (1).gif" alt="커리어 개발 프로세스 모바일">
+                <div class="stat-item">
+                    <span class="stat-number">1000+</span>
+                    <p class="stat-label">누적 컨설팅 성공</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">95%</span>
+                    <p class="stat-label">회원 만족도</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Content Section 1 -->
-    <section class="content-section">
-        <div class="container">
-            <div class="content-row">
-                <div class="content-image">
-                    <img src="assets/images/intro01.jpg" alt="전문 컨설턴트와의 상담">
+    <!-- Mission Section -->
+    <section class="mission-section">
+        <div class="mission-container">
+            <h2 class="section-title">우리의 미션</h2>
+            <div class="mission-grid">
+                <div class="mission-card">
+                    <div class="mission-icon">🎯</div>
+                    <h3>평생 커리어 파트너</h3>
+                    <p>단발성 컨설팅이 아닌, 취업부터 이직, 승진까지 평생 커리어를 함께 관리합니다. 3년 후, 5년 후를 내다보는 장기적 관점의 커리어 설계를 제공합니다.</p>
                 </div>
-                <div class="content-text">
-                    <span class="content-number">01</span>
-                    <h3>3년 프로젝트의 목표와<br>기반 프로그램</h3>
-                    <p>컨설팅프로는 단기적인 취업이 아닌, 3년 후의 성장을 목표로 합니다. 체계적인 로드맵과 단계별 목표 설정으로 지속 가능한 커리어를 만들어갑니다. 취업 후에도 이직, 승진, 커리어 전환까지 평생 파트너가 되어드립니다.</p>
+                <div class="mission-card">
+                    <div class="mission-icon">💡</div>
+                    <h3>맞춤형 솔루션</h3>
+                    <p>개인의 성향, 적성, 목표에 따라 완전히 다른 맞춤형 컨설팅을 제공합니다. 획일화된 프로그램이 아닌, 오직 당신만을 위한 커리어 전략을 수립합니다.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Content Section 2 -->
-    <section class="content-section">
-        <div class="container">
-            <div class="content-row reverse">
-                <div class="content-image">
-                    <img src="assets/images/intro02.jpg" alt="맞춤형 커리어 설계">
+                <div class="mission-card">
+                    <div class="mission-icon">🤝</div>
+                    <h3>강력한 네트워크</h3>
+                    <p>60여 개 글로벌 기업 및 국내 대기업 입사자 네트워크를 보유하고 있습니다. 내부 추천 시스템으로 더 높은 합격률을 제공합니다.</p>
                 </div>
-                <div class="content-text">
-                    <span class="content-number">02</span>
-                    <h3>지원 프로젝트의 탄생과<br>지속적인 관리 시스템</h3>
-                    <p>획일화된 프로그램이 아닌, 개인별 맞춤형 프로젝트를 설계합니다. 직무 분석부터 기업 문화 매칭까지 세밀하게 분석하여 최적의 기회를 찾아드립니다. 합격 후에도 6개월간 무료 사후 관리로 안정적인 정착을 돕습니다.</p>
+                <div class="mission-card">
+                    <div class="mission-icon">📚</div>
+                    <h3>실무 역량 강화</h3>
+                    <p>취업 준비뿐만 아니라 입사 후 실무에 필요한 역량까지 함께 개발합니다. 지속 가능한 커리어 성장을 위한 토탈 솔루션을 제공합니다.</p>
                 </div>
             </div>
         </div>
     </section>
 
-
-    <!-- VS Comparison Section -->
-    <section class="vs-section">
-        <div class="vs-container">
-            <h2 class="vs-title">일반 취업 컨설팅 vs 컨설팅프로 커리어 컨설팅</h2>
-            <div class="vs-content">
-                <div class="vs-column">
-                    <div class="vs-grid">
-                        <div class="vs-item general">단순첨삭</div>
-                        <div class="vs-item general">학원식 강의</div>
-                        <div class="vs-item general">일회성 컨설팅</div>
-                        <div class="vs-item general">스펙진단</div>
-                    </div>
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="values-container">
+            <h2 class="section-title">컨설팅프로의 핵심 가치</h2>
+            <div class="values-grid">
+                <div class="value-item">
+                    <span class="value-number">01</span>
+                    <h3>전문성</h3>
+                    <p>오랜 경험과 실적을 갖춘 전문 컨설턴트가 직접 1:1 코칭을 진행합니다.</p>
                 </div>
-                <div class="vs-divider">VS</div>
-                <div class="vs-column">
-                    <div class="vs-grid">
-                        <div class="vs-item career">평생가는 원리와 논리<br>개인코칭</div>
-                        <div class="vs-item career">취업 후에도 이어지는<br>지속 관리</div>
-                        <div class="vs-item career">취업에서 실무까지<br>역량강화 교육</div>
-                        <div class="vs-item career">개인 성향/적성 기반<br>직무 설정</div>
-                    </div>
+                <div class="value-item">
+                    <span class="value-number">02</span>
+                    <h3>신뢰성</h3>
+                    <p>투명한 프로세스와 검증된 방법론으로 신뢰할 수 있는 컨설팅을 제공합니다.</p>
+                </div>
+                <div class="value-item">
+                    <span class="value-number">03</span>
+                    <h3>지속성</h3>
+                    <p>일회성이 아닌 평생 커리어 관리 시스템으로 지속적인 성장을 지원합니다.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Three Icons Section -->
-    <section class="three-icons">
-        <div class="icons-grid">
-            <div class="icon-item">
-                <div class="icon-wrapper">
-                    <svg class="icon-svg" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Target/Crosshair Icon -->
-                        <circle cx="60" cy="60" r="45" stroke="white" stroke-width="2"/>
-                        <circle cx="60" cy="60" r="30" stroke="white" stroke-width="2"/>
-                        <circle cx="60" cy="60" r="15" stroke="white" stroke-width="2"/>
-                        <circle cx="60" cy="60" r="5" fill="white"/>
-                        <line x1="60" y1="5" x2="60" y2="25" stroke="white" stroke-width="2"/>
-                        <line x1="60" y1="95" x2="60" y2="115" stroke="white" stroke-width="2"/>
-                        <line x1="5" y1="60" x2="25" y2="60" stroke="white" stroke-width="2"/>
-                        <line x1="95" y1="60" x2="115" y2="60" stroke="white" stroke-width="2"/>
-                    </svg>
-                </div>
-                <h4>컨설팅프로는<br>단순 진단하지 않습니다.</h4>
-            </div>
-            <div class="icon-item">
-                <div class="icon-wrapper">
-                    <svg class="icon-svg" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Ruler and Pencil Icon -->
-                        <rect x="20" y="30" width="15" height="70" stroke="white" stroke-width="2" fill="none"/>
-                        <line x1="25" y1="40" x2="30" y2="40" stroke="white" stroke-width="2"/>
-                        <line x1="25" y1="50" x2="30" y2="50" stroke="white" stroke-width="2"/>
-                        <line x1="25" y1="60" x2="30" y2="60" stroke="white" stroke-width="2"/>
-                        <line x1="25" y1="70" x2="30" y2="70" stroke="white" stroke-width="2"/>
-                        <line x1="25" y1="80" x2="30" y2="80" stroke="white" stroke-width="2"/>
-                        <line x1="25" y1="90" x2="30" y2="90" stroke="white" stroke-width="2"/>
-                        <!-- Pencil -->
-                        <rect x="65" y="20" width="8" height="60" transform="rotate(45 69 50)" stroke="white" stroke-width="2" fill="none"/>
-                        <path d="M85 65 L100 80 L95 85 L80 70 Z" stroke="white" stroke-width="2" fill="none"/>
-                        <line x1="40" y1="100" x2="100" y2="100" stroke="white" stroke-width="2"/>
-                    </svg>
-                </div>
-                <h4>원하는 직무의 방향을 찾아<br>커리어를 설계하고</h4>
-            </div>
-            <div class="icon-item">
-                <div class="icon-wrapper">
-                    <svg class="icon-svg" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Chart/Graph Icon -->
-                        <line x1="20" y1="20" x2="20" y2="100" stroke="white" stroke-width="2"/>
-                        <line x1="20" y1="100" x2="100" y2="100" stroke="white" stroke-width="2"/>
-                        <!-- Graph line -->
-                        <polyline points="30,80 45,65 60,70 75,50 90,40" stroke="white" stroke-width="2" fill="none"/>
-                        <!-- Dots -->
-                        <circle cx="30" cy="80" r="3" fill="white"/>
-                        <circle cx="45" cy="65" r="3" fill="white"/>
-                        <circle cx="60" cy="70" r="3" fill="white"/>
-                        <circle cx="75" cy="50" r="3" fill="white"/>
-                        <circle cx="90" cy="40" r="3" fill="white"/>
-                        <!-- Grid lines -->
-                        <line x1="20" y1="80" x2="100" y2="80" stroke="white" stroke-width="0.5" stroke-dasharray="2,2"/>
-                        <line x1="20" y1="60" x2="100" y2="60" stroke="white" stroke-width="0.5" stroke-dasharray="2,2"/>
-                        <line x1="20" y1="40" x2="100" y2="40" stroke="white" stroke-width="0.5" stroke-dasharray="2,2"/>
-                        <line x1="40" y1="20" x2="40" y2="100" stroke="white" stroke-width="0.5" stroke-dasharray="2,2"/>
-                        <line x1="60" y1="20" x2="60" y2="100" stroke="white" stroke-width="0.5" stroke-dasharray="2,2"/>
-                        <line x1="80" y1="20" x2="80" y2="100" stroke="white" stroke-width="0.5" stroke-dasharray="2,2"/>
-                    </svg>
-                </div>
-                <h4>필요한 직무역량 개발을<br>직접 함께합니다.</h4>
-            </div>
-        </div>
-    </section>
-
-    <!-- Network Section -->
-    <section class="network-section">
-        <div class="network-content">
-            <h2 class="network-title">합격·취업 회원 네트워킹 활성화</h2>
-            <p class="network-subtitle">세계적인 글로벌기업 합격자 기반 네트워크를 확보한 "컨설팅프로"</p>
-            <div class="network-bubbles">
-                <div class="network-bubble red">
-                    <h3>Network</h3>
-                    <p>수시채용은 채용공고가 업로드 되지 않고<br>
-                    내부추천단계에서 클로징 되는 경우가 많습니다.</p>
-                </div>
-                <div class="network-bubble white">
-                    <h3>Effective</h3>
-                    <p>기업 입장에서는 인력 충원에 필요한 비용절감, 믿을 수 있는<br>
-                    인재를 채용 할 수 있기 때문에 내부추천을 신뢰합니다.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Partners Section -->
-    <section class="partners-section">
-        <h2 class="partners-title">컨설팅프로 회원 합격기업</h2>
-        <div class="partners-image-wrapper">
-            <img src="assets/images/pass_company.png" alt="파트너 기업" class="partners-image desktop-only">
-            <img src="assets/images/company_m.png" alt="파트너 기업" class="partners-image mobile-only">
-        </div>
-        <div class="partners-footer-content">
-            <div class="partners-dots">
-                <span class="partners-dot"></span>
-                <span class="partners-dot"></span>
-                <span class="partners-dot"></span>
-            </div>
-            <p class="partners-text">컨설팅프로는 <strong>60여개가 넘는 외국계 & 국내 기업</strong>에 입사한 회원 네트워크를 보유하고 있으며,<br>
-            취업 및 이직 시 추천 채용을 통한 입사가 가능합니다.</p>
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2 class="cta-title">지금 바로 시작하세요</h2>
+            <p class="cta-description">
+                컨설팅프로와 함께라면 당신이 꿈꾸는 커리어가 현실이 됩니다.<br>
+                전문 컨설턴트와의 무료 상담으로 첫 걸음을 시작하세요.
+            </p>
+            <a href="http://pf.kakao.com/_cbBxcn" class="cta-button" target="_blank">
+                무료 상담 신청하기
+            </a>
         </div>
     </section>
 
