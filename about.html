@@ -62,12 +62,12 @@
         }
 
         .intro-title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: 700;
             color: #1a1a1a;
             margin-bottom: 2rem;
             letter-spacing: -1px;
-            line-height: 1.3;
+            line-height: 1.4;
         }
 
         .intro-highlight {
@@ -76,21 +76,24 @@
         }
 
         .intro-description {
-            font-size: 1.2rem;
-            line-height: 2;
+            font-size: 1.05rem;
+            line-height: 1.9;
             color: #555;
             margin-bottom: 3rem;
         }
 
         .intro-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
             margin-top: 60px;
         }
 
         .stat-item {
-            padding: 30px 20px;
+            padding: 0;
+            text-align: center;
+            flex: 0 0 auto;
         }
 
         .stat-number {
@@ -289,22 +292,25 @@
             }
 
             .intro-title {
-                font-size: 1.8rem;
+                font-size: 1.5rem;
                 margin-bottom: 1.5rem;
             }
 
             .intro-description {
-                font-size: 1rem;
-                line-height: 1.8;
+                font-size: 0.95rem;
+                line-height: 1.7;
             }
 
             .intro-stats {
-                grid-template-columns: 1fr;
                 gap: 30px;
             }
 
             .stat-number {
-                font-size: 2.5rem;
+                font-size: 2rem;
+            }
+
+            .stat-label {
+                font-size: 0.85rem;
             }
 
             .mission-section,
