@@ -13,6 +13,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- GA4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
@@ -214,87 +215,71 @@
     </style>
 </head>
 <body>
-    <!-- Header (동일) -->
+    <!-- Header -->
     <header class="header">
         <nav class="nav-container">
             <div class="nav-wrapper">
                 <a href="index.html" class="logo">
-                    <span class="logo-text">컨설팅 프로</span>
+                    <span class="logo-text">커리어브릿지</span>
                 </a>
                 <button class="menu-toggle" aria-label="메뉴 열기">
-                    <span></span><span></span><span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </button>
-                <ul class="nav-menu">
-                    <li class="nav-group">
-                        <span>컨설팅프로</span>
-                        <ul>
-                            <li><a href="about.html">컨설팅 프로 소개</a></li>
+                <div class="nav-menu">
+                    <div class="mobile-menu-header">
+                        <a href="index.html" class="mobile-logo">
+                            <span>CAREER BRIDGE</span>
+                        </a>
+                        <button class="menu-close" aria-label="메뉴 닫기">
+                            <span>&times;</span>
+                        </button>
+                    </div>
+                    <div class="menu-section">
+                        <h3 class="menu-title">컨설팅프로</h3>
+                        <ul class="menu-list">
+                            <li><a href="about.html">컨설팅프로 소개</a></li>
                             <li><a href="history.html">컨설팅 이력</a></li>
                         </ul>
-                    </li>
-                    <li class="nav-group">
-                        <span>프로그램 안내</span>
-                        <ul>
+                    </div>
+                    <div class="menu-section">
+                        <h3 class="menu-title">프로그램 안내</h3>
+                        <ul class="menu-list">
                             <li><a href="program-job-leave.html">구직청원휴가 과정</a></li>
                             <li><a href="program-admission.html">입시 과정</a></li>
                             <li><a href="program-employment.html">취업 과정</a></li>
                             <li><a href="program-startup.html">창업 과정</a></li>
                         </ul>
-                    </li>
-                    <li class="nav-group">
-                        <span>과정 후기</span>
-                        <ul>
+                    </div>
+                    <div class="menu-section">
+                        <h3 class="menu-title">과정 후기</h3>
+                        <ul class="menu-list">
                             <li><a href="reviews.html">리뷰 & 후기</a></li>
                         </ul>
-                    </li>
-                    <li class="nav-cta">
-                        <a href="http://pf.kakao.com/_cbBxcn" class="btn btn-primary"
-                           onclick="gtag('event', 'click_kakao_cta', {'cta_position': 'header'});">
-                            상담 신청
-                        </a>
-                    </li>
-                </ul>
+                    </div>
+                    <div class="menu-section">
+                        <h3 class="menu-title">상담신청</h3>
+                        <ul class="menu-list">
+                            <li><a href="http://pf.kakao.com/_cbBxcn" target="_blank" class="consult-link">카카오톡 상담</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu-footer">
+                        <div class="menu-contact">
+                            <p><i class="fas fa-phone"></i> 02-6402-3113</p>
+                            <p><i class="fas fa-envelope"></i> careerbridge@careerbrdg.com</p>
+                        </div>
+                        <div class="menu-social">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" aria-label="Tistory"><i class="fas fa-blog"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            <a href="http://pf.kakao.com/_cbBxcn" aria-label="Kakao"><i class="fas fa-comment"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
-
-    <!-- Mobile Menu (동일) -->
-    <div class="mobile-menu">
-        <div class="mobile-menu-header">
-            <span class="logo-text">컨설팅 프로</span>
-            <button class="menu-close">×</button>
-        </div>
-        <div class="mobile-menu-content">
-            <div class="menu-section">
-                <h3>컨설팅프로</h3>
-                <ul>
-                    <li><a href="about.html">컨설팅 프로 소개</a></li>
-                    <li><a href="history.html">컨설팅 이력</a></li>
-                </ul>
-            </div>
-            <div class="menu-section">
-                <h3>프로그램 안내</h3>
-                <ul>
-                    <li><a href="program-job-leave.html">구직청원휴가 과정</a></li>
-                    <li><a href="program-admission.html">입시 과정</a></li>
-                    <li><a href="program-employment.html">취업 과정</a></li>
-                    <li><a href="program-startup.html">창업 과정</a></li>
-                </ul>
-            </div>
-            <div class="menu-section">
-                <h3>과정 후기</h3>
-                <ul>
-                    <li><a href="reviews.html">리뷰 & 후기</a></li>
-                </ul>
-            </div>
-            <div class="menu-section">
-                <a href="http://pf.kakao.com/_cbBxcn" class="btn btn-primary btn-block"
-                   onclick="gtag('event', 'click_kakao_cta', {'cta_position': 'mobile_menu'});">
-                    상담 신청
-                </a>
-            </div>
-        </div>
-    </div>
 
     <!-- Hero Section -->
     <section class="program-hero">
