@@ -3,20 +3,656 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>커리어브릿지 | 커리어의 모든 것</title>
-    <meta name="description" content="상상만 해왔던 글로벌 기업 취업, 더 높은 연봉으로 이직, 개인 실무 능력 강화까지! 커리어브릿지로 Level-UP하세요.">
+    <title>커리어브릿지 소개 | 커리어브릿지</title>
+    <meta name="description" content="커리어브릿지는 당신의 커리어를 체계적으로 설계하고 실현하는 전문 컨설팅 서비스입니다.">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="커리어브릿지">
-    <meta property="og:description" content="내 커리어를 Level-Up 시키는 커리어브릿지로 인생을 Level-UP하세요.">
+    <meta property="og:title" content="커리어브릿지 소개">
+    <meta property="og:description" content="전문가 팀과 체계적인 프로세스로 최고의 커리어 컨설팅 서비스를 제공합니다.">
     <meta property="og:type" content="website">
 
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Hero Section */
+        .about-hero {
+            position: relative;
+            padding: 180px 0 120px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/images/about_visual.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            text-align: center;
+            color: white;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            transform: translateZ(0);
+        }
+
+        .about-hero-label {
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            color: white;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .about-hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+
+
+        /* Career Program Section */
+        .career-program-section {
+            padding: 100px 0;
+            background: #f8f9fa;
+            text-align: center;
+            position: relative;
+        }
+
+        .program-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .program-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #1a1a1a;
+            margin-bottom: 2rem;
+            letter-spacing: -1px;
+            line-height: 1.2;
+        }
+
+        .program-subtitle {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 4rem;
+            font-weight: 500;
+        }
+
+        .highlight-text {
+            color: #ff3b30;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 2px;
+        }
+
+        .program-visual {
+            margin: 0 auto;
+            max-width: 1000px;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .program-visual img {
+            width: 100%;
+            height: auto;
+            display: block;
+            max-width: 100%;
+        }
+
+        /* Show/Hide for Desktop and Mobile */
+        .desktop-only {
+            display: block;
+        }
+
+        .mobile-only {
+            display: none;
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 80px 0;
+        }
+
+        .content-section:nth-child(odd) {
+            background: #f8f9fa;
+        }
+
+        .content-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .content-row.reverse {
+            direction: rtl;
+        }
+
+        .content-row.reverse .content-text {
+            direction: ltr;
+        }
+
+        .content-image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .content-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .content-text {
+            padding: 20px;
+        }
+
+        .content-text h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 1.5rem;
+            line-height: 1.4;
+        }
+
+        .content-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #666;
+        }
+
+        .content-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #ff3b30;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        /* VS Comparison Section */
+        .vs-section {
+            padding: 100px 0;
+            background: #2a2a2a;
+            color: white;
+        }
+
+        .vs-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .vs-title {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 60px;
+            line-height: 1.4;
+        }
+
+        .vs-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+        }
+
+        .vs-column {
+            flex: 1;
+        }
+
+        .vs-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .vs-item {
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 20px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            line-height: 1.4;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .vs-item.general {
+            background: #e8e8e8;
+            color: #666;
+        }
+
+        .vs-item.general::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, transparent 48%, #c0c0c0 48.5%, #c0c0c0 51.5%, transparent 52%);
+            opacity: 0.5;
+        }
+
+        .vs-item.career {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .vs-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            font-weight: 700;
+            color: white;
+            flex-shrink: 0;
+            padding: 0 20px;
+        }
+
+        /* Three Icons Section */
+        .three-icons {
+            padding: 100px 0;
+            background: #2a2a2a;
+        }
+
+        .icons-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .icon-item {
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+        }
+
+        .icon-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 1px;
+            background: rgba(255,255,255,0.1);
+        }
+
+        .icon-wrapper {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .icon-svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .icon-item h4 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .icon-item p {
+            display: none;
+        }
+
+        /* Network Section */
+        .network-section {
+            padding: 100px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('assets/images/pass_bg.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .network-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .network-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.4;
+        }
+
+        .network-subtitle {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 60px;
+            opacity: 0.9;
+        }
+
+        .network-bubbles {
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .network-bubble {
+            flex: 1;
+            padding: 60px 40px;
+            border-radius: 200px;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .network-bubble.red {
+            background: #e74c3c;
+            margin-right: -30px;
+            z-index: 1;
+        }
+
+        .network-bubble.white {
+            background: white;
+            color: #333;
+        }
+
+        .network-bubble h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .network-bubble p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* Partners Section */
+        .partners-section {
+            background-color: #3d3d3d;
+            padding: 80px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .partners-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: white;
+            text-align: center;
+            margin: 0;
+        }
+
+        .partners-image-wrapper {
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .partners-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .partners-footer-content {
+            text-align: center;
+            max-width: 1200px;
+        }
+
+        .partners-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .partners-dot {
+            width: 8px;
+            height: 8px;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.7;
+        }
+
+        .partners-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #e0e0e0;
+        }
+
+        .partners-text strong {
+            font-weight: 700;
+            color: white;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .about-hero {
+                padding: 140px 20px 80px;
+                background-attachment: scroll;
+                background-size: cover;
+                background-position: center center;
+            }
+
+            .about-hero-label {
+                font-size: 0.875rem;
+                letter-spacing: 1.5px;
+            }
+
+            .about-hero h1 {
+                font-size: 2rem;
+            }
+
+            /* Career Program Section Mobile */
+            .career-program-section {
+                padding: 60px 20px;
+            }
+
+            .program-title {
+                font-size: 1.8rem;
+                margin-bottom: 1.5rem;
+                letter-spacing: -0.5px;
+            }
+
+            .program-subtitle {
+                font-size: 1rem;
+                line-height: 1.7;
+                margin-bottom: 3rem;
+            }
+
+            .program-subtitle br {
+                display: none;
+            }
+
+            .program-visual {
+                padding: 20px;
+                border-radius: 15px;
+            }
+
+            /* Show/Hide for Mobile */
+            .desktop-only {
+                display: none;
+            }
+
+            .mobile-only {
+                display: block;
+            }
+
+            .content-row {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .content-row.reverse {
+                direction: ltr;
+            }
+
+            /* VS Section Mobile */
+            .vs-section {
+                padding: 60px 20px;
+            }
+
+            .vs-title {
+                font-size: 1.6rem;
+                margin-bottom: 40px;
+            }
+
+            .vs-content {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .vs-divider {
+                font-size: 2rem;
+                padding: 20px 0;
+            }
+
+            .vs-item {
+                font-size: 1rem;
+                padding: 25px 15px;
+                border-radius: 20px;
+            }
+
+            /* Three Icons Mobile */
+            .three-icons {
+                padding: 60px 20px;
+            }
+
+            .icons-grid {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .icon-item {
+                padding: 40px 20px;
+            }
+
+            .icon-item::before {
+                width: 80%;
+            }
+
+            .icon-wrapper {
+                width: 100px;
+                height: 100px;
+                margin-bottom: 25px;
+            }
+
+            .icon-item h4 {
+                font-size: 1.2rem;
+            }
+
+            /* Network Section Mobile */
+            .network-section {
+                padding: 60px 20px;
+                background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('assets/images/pass_bg.jpg');
+                background-size: cover;
+                background-position: center center;
+                background-attachment: scroll;
+            }
+
+            .network-title {
+                font-size: 1.8rem;
+                margin-bottom: 1rem;
+            }
+
+            .network-subtitle {
+                font-size: 1rem;
+                margin-bottom: 40px;
+            }
+
+            .network-bubbles {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .network-bubble {
+                border-radius: 150px;
+                padding: 40px 30px;
+                min-height: 200px;
+            }
+
+            .network-bubble.red {
+                margin-right: 0;
+                margin-bottom: -20px;
+            }
+
+            .network-bubble h3 {
+                font-size: 1.4rem;
+            }
+
+            .network-bubble p {
+                font-size: 1rem;
+            }
+
+            /* Partners Section Mobile */
+            .partners-section {
+                padding: 50px 20px;
+                gap: 40px;
+            }
+
+            .partners-title {
+                font-size: 1.5rem;
+            }
+
+            .partners-dots {
+                margin-bottom: 1.5rem;
+            }
+
+            .partners-text {
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+
+
+            .content-section {
+                padding: 50px 20px;
+            }
+
+            .decision-section {
+                padding: 60px 20px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -86,438 +722,197 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="about-hero">
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">
-                        커리어의 모든 것<br>
-                        <span class="highlight">커리어브릿지</span>
-                    </h1>
-                    <p class="hero-subtitle">
-                        상상만 해왔던 글로벌 기업 취업, 더 높은 연봉으로 이직,<br>
-                        개인 실무 능력 강화까지!<br>
-                        내 커리어를 Level-Up 시키는 커리어브릿지로 인생을<br>
-                        Level-UP하세요.
-                    </p>
-                    <div class="hero-actions">
-                        <a href="http://pf.kakao.com/_cbBxcn" class="btn btn-primary">커리어브릿지 소개</a>
-                    </div>
+            <p class="about-hero-label">ABOUT US</p>
+            <h1>커리어브릿지 소개</h1>
+        </div>
+    </section>
+
+
+    <!-- Career Program Section -->
+    <section class="career-program-section">
+        <div class="container">
+            <div class="program-content">
+                <h2 class="program-title">커리어브릿지 맞춤형 프로그램</h2>
+                <p class="program-subtitle">
+                    커리어 컨설팅 이란 취업과 커리어 개발을 위해 <span class="highlight-text">커리어 전문가</span>를 통해<br>
+                    <span class="highlight-text">전문적인 도움과 솔루션</span>을 제공받는 서비스를 말합니다.
+                </p>
+
+                <!-- Desktop Version -->
+                <div class="program-visual desktop-only">
+                    <img src="assets/images/picto_m.gif" alt="커리어 개발 프로세스">
                 </div>
-                <div class="hero-visual">
-                    <img src="assets/images/Phone.gif" alt="커리어브릿지 앱" class="phone-mockup">
+
+                <!-- Mobile Version -->
+                <div class="program-visual mobile-only">
+                    <img src="assets/images/picto_m (1).gif" alt="커리어 개발 프로세스 모바일">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- KPI Section -->
-    <section class="kpi-section">
+    <!-- Content Section 1 -->
+    <section class="content-section">
         <div class="container">
-            <div class="kpi-container">
-                <div class="kpi-item">
-                    <div class="kpi-icon">
-                        <img src="assets/images/i_people.svg" alt="합격자">
-                    </div>
-                    <div class="kpi-value">2,309</div>
-                    <div class="kpi-label">
-                        합격자 (전년도<br>
-                        대비 +589명)
-                    </div>
+            <div class="content-row">
+                <div class="content-image">
+                    <img src="assets/images/intro01.jpg" alt="전문 컨설턴트와의 상담">
                 </div>
-                <div class="kpi-item">
-                    <div class="kpi-icon">
-                        <img src="assets/images/i_chart_bar.svg" alt="합격 기업">
-                    </div>
-                    <div class="kpi-value">446</div>
-                    <div class="kpi-label">
-                        합격 기업 (새로운<br>
-                        합격 기업 +23)
-                    </div>
-                </div>
-                <div class="kpi-item">
-                    <div class="kpi-icon">
-                        <img src="assets/images/i_chart_pie.svg" alt="취업 달성률">
-                    </div>
-                    <div class="kpi-value">99.9</div>
-                    <div class="kpi-label">
-                        취업<br>
-                        달성률
-                    </div>
+                <div class="content-text">
+                    <span class="content-number">01</span>
+                    <h3>3년 프로젝트의 목표와<br>기반 프로그램</h3>
+                    <p>커리어브릿지는 단기적인 취업이 아닌, 3년 후의 성장을 목표로 합니다. 체계적인 로드맵과 단계별 목표 설정으로 지속 가능한 커리어를 만들어갑니다. 취업 후에도 이직, 승진, 커리어 전환까지 평생 파트너가 되어드립니다.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- What We Do Section -->
-    <section class="what-we-do-section">
+    <!-- Content Section 2 -->
+    <section class="content-section">
         <div class="container">
-            <div class="what-we-do-container">
-                <div class="section-header">
-                    <p class="section-label">WHAT WE DO</p>
-                    <h2 class="section-title">
-                        커리어브릿지에서 어떤 서비스를<br>
-                        받을 수 있나요?
-                    </h2>
-                    <p class="section-desc">
-                        커리어브릿지 컨설팅 프로그램에서는 커리어고민의 유형별 솔루션을<br>
-                        기반으로 커리어를 달성까지 우리만의 트레이닝 서비스를 받을 수<br>
-                        있습니다.
-                    </p>
+            <div class="content-row reverse">
+                <div class="content-image">
+                    <img src="assets/images/intro02.jpg" alt="맞춤형 커리어 설계">
                 </div>
-
-                <div class="service-tabs">
-                    <div class="tab-buttons">
-                        <button class="tab-btn active" data-tab="tab1">
-                            업계 최초의<br>
-                            차별화된 커리어<br>
-                            컨설팅
-                        </button>
-                        <button class="tab-btn" data-tab="tab2">
-                            믿을 수 있는 평생<br>
-                            커리어 설계
-                        </button>
-                        <button class="tab-btn" data-tab="tab3">
-                            내부추천을 위한<br>
-                            네트워크 보유
-                        </button>
-                    </div>
-
-                    <div class="tab-contents">
-                        <div class="tab-content active" id="tab1">
-                            <div class="content-item">
-                                <div class="content-icon">👥</div>
-                                <h3>전문 커리어 컨설팅</h3>
-                                <p>개인의 강점과 능력을 바탕으로 전문적인 서류 및 면접<br>컨설팅 서비스를 제공합니다.</p>
-                            </div>
-                            <div class="content-item">
-                                <div class="content-icon">🌍</div>
-                                <h3>독자적인 컨설팅 시스템</h3>
-                                <p>직무별 역량 강화를 위한 교육 프로그램과, 일반인에게<br>공개되지 않는 기업/산업의 내부 정보를 제공합니다.</p>
-                            </div>
-                            <div class="content-item">
-                                <div class="content-icon">🎯</div>
-                                <h3>지속적인 커리어 개발</h3>
-                                <p>취업을 넘어 이직, 직무 전환 등 생애 전반에 걸친 커리어<br>설계를 위한 체계적인 전략과 솔루션을 제공합니다.</p>
-                            </div>
-                        </div>
-
-                        <div class="tab-content" id="tab2">
-                            <div class="content-item">
-                                <div class="content-icon">📈</div>
-                                <h3>평생 커리어 컨설팅</h3>
-                                <p>커리어브릿지는 단발 결제가 아닌 1회성으로 끝나는 단순<br>컨설팅이나 판드백 제공이 아닌, 취업 이후에도 지속되는 평생<br>커리어 관리 시스템입니다.</p>
-                            </div>
-                            <div class="content-item">
-                                <div class="content-icon">💬</div>
-                                <h3>1:1 컨설팅</h3>
-                                <p>커리어 전문 컨설턴트와 1:1 컨설팅을 통해 지금까지 쌓아온<br>커리어를 리뷰 평가하고, 커리어를 개발하기 위한 장재력을<br>확인합니다.</p>
-                            </div>
-                            <div class="content-item">
-                                <div class="content-icon">🚀</div>
-                                <h3>맞춤형 커리어 개발</h3>
-                                <p>학력, 경력에 기반한 단순 평가가 아닌 개인의 역량과 흥미,<br>가치관을 고려해 지속될 수 있는 커리어의 맞춤형 방향성을<br>설계합니다.</p>
-                            </div>
-                        </div>
-
-                        <div class="tab-content" id="tab3">
-                            <div class="content-item">
-                                <div class="content-icon">🔗</div>
-                                <h3>수시채용의 핵심 기회 내부추천</h3>
-                                <p>수시채용은 채용공고가 외부에 공개 되지 않고,<br>내부추천단계에서 클로징 되는 경우가 많습니다.</p>
-                            </div>
-                            <div class="content-item">
-                                <div class="content-icon">🏢</div>
-                                <h3>보다 신뢰도 높은 내부추천</h3>
-                                <p>회사 입장에서는 인력 충원에 필요한 비용을 절감하고 믿을<br>수 있는 인재를 채용 할 수 있기 때문에, 내부추천은<br>커리어개발을 원하는 분들에게 필수적인 정보입니다.</p>
-                            </div>
-                            <div class="content-item">
-                                <div class="content-icon">🌐</div>
-                                <h3>커리어브릿지의 내부 추천네트워크</h3>
-                                <p>커리어브릿지는 60여 개가 넘는 외국계 국내 대기업에<br>입사한 회원 네트워크를 보유하고 있으며 취업 및 이직 시,<br>추천 채용을 통한 입사 기회를 제공합니다.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Real Story Section -->
-    <section class="real-story-section">
-        <div class="container">
-            <div class="real-story-container">
-                <div class="section-header">
-                    <p class="section-label">REAL STORY</p>
-                    <h2 class="section-title">
-                        커리어브릿지, 합격자의 스토리가<br>
-                        증명합니다.
-                    </h2>
-                </div>
-
-                <div class="story-grid">
-                    <div class="story-card">
-                        <div class="company-logo">
-                            <img src="assets/images/3068021237_oaj3qiTw_ef4f6ba5fca26b65b73f1d29bf12caf00d774389.png" alt="Oracle">
-                        </div>
-                        <h3 class="company-name">한국오라클</h3>
-                        <div class="company-name-en">ORACLE</div>
-                        <p class="story-desc">비관련 경력 3년</p>
-                        <p class="story-info">30대 초반 | 이직</p>
-                    </div>
-
-                    <div class="story-card">
-                        <div class="company-logo">
-                            <img src="assets/images/3068021237_FW2Gh5kZ_69f0cf4c4b2a75043f99e4c8a54e5c1768ed752a.png" alt="Nike">
-                        </div>
-                        <h3 class="company-name">NIKE KOREA</h3>
-                        <div class="company-name-en">NIKE</div>
-                        <p class="story-desc">비관련 경력 3년</p>
-                        <p class="story-info">30대 초반 | 이직</p>
-                    </div>
-
-                    <div class="story-card">
-                        <div class="company-logo">
-                            <img src="assets/images/3068021237_JEuaRNbe_af067e775fba3c7b3b4f852786eab489512967ad.png" alt="eBay">
-                        </div>
-                        <h3 class="company-name">이베이코리아</h3>
-                        <div class="company-name-en">ebay</div>
-                        <p class="story-desc">해외대 Visual Arts & Cultu</p>
-                        <p class="story-info">20대 중반 | 신입</p>
-                    </div>
-
-                    <div class="story-card">
-                        <div class="company-logo">
-                            <img src="assets/images/3068021237_Q0wHsiNO_aaf6f5ce4a5e0a1a4dfcfae210069bb6cef9b8d1.png" alt="LVMH">
-                        </div>
-                        <h3 class="company-name">엘브이엠에치코스메틱스</h3>
-                        <div class="company-name-en">LVMH</div>
-                        <p class="story-desc">서울 사립대 문헌정보학</p>
-                        <p class="story-info">20대 후반 | 신입</p>
-                    </div>
-
-                    <div class="story-card">
-                        <div class="company-logo">
-                            <img src="assets/images/3068021237_hRKzjkpc_81af5e7d0fa67dc5680e23db3f50d852f9386758.png" alt="Shinsegae">
-                        </div>
-                        <h3 class="company-name">신세계인터내셔널</h3>
-                        <div class="company-name-en">SHINSEGAE INTERNATIONAL</div>
-                        <p class="story-desc">서울 사립대 생활디자인</p>
-                        <p class="story-info">20대 초반 | 신입</p>
-                    </div>
-
-                    <div class="story-card">
-                        <div class="company-logo">
-                            <img src="assets/images/3068021237_UXqDZJpA_afd96f6971184f6d5c353d9c3e0513506a19759e (1).png" alt="Disney">
-                        </div>
-                        <h3 class="company-name">월트디즈니컴퍼니코리아</h3>
-                        <div class="company-name-en">The Walt Disney Company</div>
-                        <p class="story-desc">서울사립대 국제학</p>
-                        <p class="story-info">20대 중반 | 신입</p>
-                    </div>
-
-                    <div class="story-card">
-                        <div class="company-logo">
-                            <img src="assets/images/3068021237_XnBd1G5Z_80ac17aac7dc3375b2edd58aff5a68f8f87f71eb.png" alt="GE Healthcare">
-                        </div>
-                        <h3 class="company-name">지이헬스케어코리아</h3>
-                        <div class="company-name-en">GE Healthcare</div>
-                        <p class="story-desc">지방 국공립대 산업 경...</p>
-                        <p class="story-info">20대 중반 | 신입</p>
-                    </div>
-
-                    <div class="story-card">
-                        <div class="company-logo">
-                            <img src="assets/images/3068021237_s80SL2yl_2109b5c613cd931e99be86be0ad7775b875f3725.png" alt="Medtronic">
-                        </div>
-                        <h3 class="company-name">메드트로닉코리아</h3>
-                        <div class="company-name-en">Medtronic</div>
-                        <p class="story-desc">서울 사립대 광고홍보학</p>
-                        <p class="story-info">30대 초반 | 신입</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Slider Section -->
-    <section class="testimonials-slider-section">
-        <div class="container">
-            <div class="testimonials-header">
-                <h2 class="section-title">미래를 바꾼 컨설팅 후기</h2>
-            </div>
-            <div class="testimonials-slider-wrapper">
-                <div class="testimonials-slider">
-                    <div class="testimonial-card active">
-                        <div class="testimonial-category">취업</div>
-                        <h3 class="testimonial-title">내 인생의 길잡이가 되어준 커리어브릿지</h3>
-                        <p class="testimonial-content">커리어브릿지와 외국계와 커리어관리에 특화된 맞춤형 컨설팅을 통해 꿈에 그리던 글로벌 기업 취업에 성공했습니다. 체계적인 준비 과정과 실전 면접 대비까지, 정말 감사합니다!</p>
-                        <div class="testimonial-date">2022.01.10</div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-category">이직</div>
-                        <h3 class="testimonial-title">연봉 협상부터 이직까지 완벽했어요</h3>
-                        <p class="testimonial-content">5년차 개발자로 이직을 고민하던 중 커리어브릿지를 만났습니다. 포트폴리오 개선부터 기술 면접 준비, 연봉 협상까지 모든 과정이 체계적이었고, 결과적으로 연봉 40% 인상과 함께 원하던 회사로 이직했습니다.</p>
-                        <div class="testimonial-date">2022.02.15</div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-category">입시</div>
-                        <h3 class="testimonial-title">SKY 대학 합격의 비결</h3>
-                        <p class="testimonial-content">고3 수시 준비하면서 막막했는데, 커리어브릿지의 입시 컨설팅으로 명확한 방향을 잡을 수 있었습니다. 자소서 첨삭부터 면접 준비까지 꼼꼼하게 도와주셔서 서울대 경영학과에 최초합격했습니다!</p>
-                        <div class="testimonial-date">2022.03.20</div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-category">창업</div>
-                        <h3 class="testimonial-title">스타트업 창업의 든든한 파트너</h3>
-                        <p class="testimonial-content">IT 스타트업을 준비하면서 사업계획서 작성부터 투자 유치까지 전 과정을 커리어브릿지와 함께했습니다. 덕분에 시드 투자 10억원을 유치하고 성공적으로 사업을 시작할 수 있었습니다.</p>
-                        <div class="testimonial-date">2022.04.05</div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-category">구직청원휴가</div>
-                        <h3 class="testimonial-title">전역 후 바로 대기업 입사</h3>
-                        <p class="testimonial-content">군 복무 중 구직청원휴가 프로그램을 통해 전역 전부터 체계적으로 취업 준비를 했습니다. 자격증 취득부터 면접 준비까지 완벽하게 준비해서 전역 2주 만에 삼성전자 입사에 성공했습니다!</p>
-                        <div class="testimonial-date">2022.05.12</div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-category">취업</div>
-                        <h3 class="testimonial-title">비전공자에서 네이버 개발자로</h3>
-                        <p class="testimonial-content">문과 출신 비전공자였지만 커리어브릿지의 체계적인 커리큘럼으로 6개월 만에 네이버 신입 개발자로 합격했습니다. 코딩 테스트부터 기술 면접까지 완벽하게 준비할 수 있었습니다.</p>
-                        <div class="testimonial-date">2022.06.08</div>
-                    </div>
-                </div>
-                <div class="slider-indicators">
-                    <span class="indicator active" data-slide="0"></span>
-                    <span class="indicator" data-slide="1"></span>
-                    <span class="indicator" data-slide="2"></span>
-                    <span class="indicator" data-slide="3"></span>
-                    <span class="indicator" data-slide="4"></span>
-                    <span class="indicator" data-slide="5"></span>
+                <div class="content-text">
+                    <span class="content-number">02</span>
+                    <h3>지원 프로젝트의 탄생과<br>지속적인 관리 시스템</h3>
+                    <p>획일화된 프로그램이 아닌, 개인별 맞춤형 프로젝트를 설계합니다. 직무 분석부터 기업 문화 매칭까지 세밀하게 분석하여 최적의 기회를 찾아드립니다. 합격 후에도 6개월간 무료 사후 관리로 안정적인 정착을 돕습니다.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Consulting Info Section -->
-    <section class="consulting-info-section">
-        <div class="container">
-            <div class="info-cards-container">
-                <div class="info-card">
-                    <div class="info-card-image" style="background-image: url('assets/images/info01.jpg');">
-                        <div class="info-card-overlay">
-                            <h3 class="info-card-title">컨설팅 프로그램 소개</h3>
-                        </div>
+
+    <!-- VS Comparison Section -->
+    <section class="vs-section">
+        <div class="vs-container">
+            <h2 class="vs-title">일반 취업 컨설팅 vs 커리어브릿지 커리어 컨설팅</h2>
+            <div class="vs-content">
+                <div class="vs-column">
+                    <div class="vs-grid">
+                        <div class="vs-item general">단순첨삭</div>
+                        <div class="vs-item general">학원식 강의</div>
+                        <div class="vs-item general">일회성 컨설팅</div>
+                        <div class="vs-item general">스펙진단</div>
                     </div>
                 </div>
-                <div class="info-card">
-                    <div class="info-card-image" style="background-image: url('assets/images/info02.jpg');">
-                        <div class="info-card-overlay">
-                            <h3 class="info-card-title">컨설턴트 소개</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="info-card">
-                    <div class="info-card-image" style="background-image: url('assets/images/info03.jpg');">
-                        <div class="info-card-overlay">
-                            <h3 class="info-card-title">상담신청</h3>
-                        </div>
+                <div class="vs-divider">VS</div>
+                <div class="vs-column">
+                    <div class="vs-grid">
+                        <div class="vs-item career">평생가는 원리와 논리<br>개인코칭</div>
+                        <div class="vs-item career">취업 후에도 이어지는<br>지속 관리</div>
+                        <div class="vs-item career">취업에서 실무까지<br>역량강화 교육</div>
+                        <div class="vs-item career">개인 성향/적성 기반<br>직무 설정</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <div class="container">
-            <div class="faq-header">
-                <h2 class="section-title">자주 묻는 질문 FAQ</h2>
-            </div>
-            <div class="faq-slider-wrapper">
-                <div class="faq-slider">
-                    <div class="faq-slide active">
-                        <div class="faq-card">
-                            <div class="faq-label">Question</div>
-                            <div class="faq-content">
-                                <h3>국내 유일 커리어 컨설팅</h3>
-                                <p>이라는 광고,<br>정확한 뜻은 무엇인가요?</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="faq-slide">
-                        <div class="faq-card">
-                            <div class="faq-label">Question</div>
-                            <div class="faq-content">
-                                <h3>프로그램은 총 몇 회</h3>
-                                <p>2차 면접 및<br>컨설팅으로 구성되나요?</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="faq-slide">
-                        <div class="faq-card">
-                            <div class="faq-label">Question</div>
-                            <div class="faq-content">
-                                <h3>컨설팅 비용은</h3>
-                                <p>어떻게 되나요?<br>할인 혜택도 있나요?</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="faq-slide">
-                        <div class="faq-card">
-                            <div class="faq-label">Question</div>
-                            <div class="faq-content">
-                                <h3>취업 성공 보장</h3>
-                                <p>프로그램이 있다고<br>들었는데 맞나요?</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="faq-slide">
-                        <div class="faq-card">
-                            <div class="faq-label">Question</div>
-                            <div class="faq-content">
-                                <h3>온라인 컨설팅도</h3>
-                                <p>가능한가요?<br>지방에서도 참여할 수 있나요?</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="faq-slide">
-                        <div class="faq-card">
-                            <div class="faq-label">Question</div>
-                            <div class="faq-content">
-                                <h3>컨설팅 후 추가 지원</h3>
-                                <p>서비스도 제공되나요?<br>AS는 어떻게 받나요?</p>
-                            </div>
-                        </div>
-                    </div>
+    <!-- Three Icons Section -->
+    <section class="three-icons">
+        <div class="icons-grid">
+            <div class="icon-item">
+                <div class="icon-wrapper">
+                    <svg class="icon-svg" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Target/Crosshair Icon -->
+                        <circle cx="60" cy="60" r="45" stroke="white" stroke-width="2"/>
+                        <circle cx="60" cy="60" r="30" stroke="white" stroke-width="2"/>
+                        <circle cx="60" cy="60" r="15" stroke="white" stroke-width="2"/>
+                        <circle cx="60" cy="60" r="5" fill="white"/>
+                        <line x1="60" y1="5" x2="60" y2="25" stroke="white" stroke-width="2"/>
+                        <line x1="60" y1="95" x2="60" y2="115" stroke="white" stroke-width="2"/>
+                        <line x1="5" y1="60" x2="25" y2="60" stroke="white" stroke-width="2"/>
+                        <line x1="95" y1="60" x2="115" y2="60" stroke="white" stroke-width="2"/>
+                    </svg>
                 </div>
-                <div class="faq-indicators">
-                    <span class="faq-indicator active" data-slide="0"></span>
-                    <span class="faq-indicator" data-slide="1"></span>
-                    <span class="faq-indicator" data-slide="2"></span>
-                    <span class="faq-indicator" data-slide="3"></span>
-                    <span class="faq-indicator" data-slide="4"></span>
-                    <span class="faq-indicator" data-slide="5"></span>
+                <h4>커리어브릿지는<br>단순 진단하지 않습니다.</h4>
+            </div>
+            <div class="icon-item">
+                <div class="icon-wrapper">
+                    <svg class="icon-svg" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Ruler and Pencil Icon -->
+                        <rect x="20" y="30" width="15" height="70" stroke="white" stroke-width="2" fill="none"/>
+                        <line x1="25" y1="40" x2="30" y2="40" stroke="white" stroke-width="2"/>
+                        <line x1="25" y1="50" x2="30" y2="50" stroke="white" stroke-width="2"/>
+                        <line x1="25" y1="60" x2="30" y2="60" stroke="white" stroke-width="2"/>
+                        <line x1="25" y1="70" x2="30" y2="70" stroke="white" stroke-width="2"/>
+                        <line x1="25" y1="80" x2="30" y2="80" stroke="white" stroke-width="2"/>
+                        <line x1="25" y1="90" x2="30" y2="90" stroke="white" stroke-width="2"/>
+                        <!-- Pencil -->
+                        <rect x="65" y="20" width="8" height="60" transform="rotate(45 69 50)" stroke="white" stroke-width="2" fill="none"/>
+                        <path d="M85 65 L100 80 L95 85 L80 70 Z" stroke="white" stroke-width="2" fill="none"/>
+                        <line x1="40" y1="100" x2="100" y2="100" stroke="white" stroke-width="2"/>
+                    </svg>
+                </div>
+                <h4>원하는 직무의 방향을 찾아<br>커리어를 설계하고</h4>
+            </div>
+            <div class="icon-item">
+                <div class="icon-wrapper">
+                    <svg class="icon-svg" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Chart/Graph Icon -->
+                        <line x1="20" y1="20" x2="20" y2="100" stroke="white" stroke-width="2"/>
+                        <line x1="20" y1="100" x2="100" y2="100" stroke="white" stroke-width="2"/>
+                        <!-- Graph line -->
+                        <polyline points="30,80 45,65 60,70 75,50 90,40" stroke="white" stroke-width="2" fill="none"/>
+                        <!-- Dots -->
+                        <circle cx="30" cy="80" r="3" fill="white"/>
+                        <circle cx="45" cy="65" r="3" fill="white"/>
+                        <circle cx="60" cy="70" r="3" fill="white"/>
+                        <circle cx="75" cy="50" r="3" fill="white"/>
+                        <circle cx="90" cy="40" r="3" fill="white"/>
+                        <!-- Grid lines -->
+                        <line x1="20" y1="80" x2="100" y2="80" stroke="white" stroke-width="0.5" stroke-dasharray="2,2"/>
+                        <line x1="20" y1="60" x2="100" y2="60" stroke="white" stroke-width="0.5" stroke-dasharray="2,2"/>
+                        <line x1="20" y1="40" x2="100" y2="40" stroke="white" stroke-width="0.5" stroke-dasharray="2,2"/>
+                        <line x1="40" y1="20" x2="40" y2="100" stroke="white" stroke-width="0.5" stroke-dasharray="2,2"/>
+                        <line x1="60" y1="20" x2="60" y2="100" stroke="white" stroke-width="0.5" stroke-dasharray="2,2"/>
+                        <line x1="80" y1="20" x2="80" y2="100" stroke="white" stroke-width="0.5" stroke-dasharray="2,2"/>
+                    </svg>
+                </div>
+                <h4>필요한 직무역량 개발을<br>직접 함께합니다.</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Network Section -->
+    <section class="network-section">
+        <div class="network-content">
+            <h2 class="network-title">합격·취업 회원 네트워킹 활성화</h2>
+            <p class="network-subtitle">세계적인 글로벌기업 합격자 기반 네트워크를 확보한 "커리어브릿지"</p>
+            <div class="network-bubbles">
+                <div class="network-bubble red">
+                    <h3>Network</h3>
+                    <p>수시채용은 채용공고가 업로드 되지 않고<br>
+                    내부추천단계에서 클로징 되는 경우가 많습니다.</p>
+                </div>
+                <div class="network-bubble white">
+                    <h3>Effective</h3>
+                    <p>기업 입장에서는 인력 충원에 필요한 비용절감, 믿을 수 있는<br>
+                    인재를 채용 할 수 있기 때문에 내부추천을 신뢰합니다.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Consultation CTA Section -->
-    <section class="consultation-cta-section">
-        <div class="cta-overlay">
-            <div class="container">
-                <div class="cta-content">
-                    <h2 class="cta-title">
-                        고민하지 말고, 일단 <span class="highlight">상담신청</span> 하세요.
-                    </h2>
-                    <p class="cta-description">
-                        당신이 고민하는 것이 무엇이든 괜찮습니다.<br>
-                        최고의 커리어 컨설턴트가 1:1 맞춤형 커리어 컨설팅을 제공합니다.
-                    </p>
-                    <a href="http://pf.kakao.com/_cbBxcn" class="cta-button">상담신청 하기</a>
-                </div>
+    <!-- Partners Section -->
+    <section class="partners-section">
+        <h2 class="partners-title">커리어브릿지 회원 합격기업</h2>
+        <div class="partners-image-wrapper">
+            <img src="assets/images/pass_company.png" alt="파트너 기업" class="partners-image desktop-only">
+            <img src="assets/images/company_m.png" alt="파트너 기업" class="partners-image mobile-only">
+        </div>
+        <div class="partners-footer-content">
+            <div class="partners-dots">
+                <span class="partners-dot"></span>
+                <span class="partners-dot"></span>
+                <span class="partners-dot"></span>
             </div>
+            <p class="partners-text">커리어브릿지는 <strong>60여개가 넘는 외국계 & 국내 기업</strong>에 입사한 회원 네트워크를 보유하고 있으며,<br>
+            취업 및 이직 시 추천 채용을 통한 입사가 가능합니다.</p>
         </div>
     </section>
 
