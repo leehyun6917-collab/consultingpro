@@ -54,40 +54,45 @@
         }
 
         .filter-container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
         .filter-tabs {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
         .filter-tab {
-            padding: 12px 24px;
-            background: #f5f5f5;
-            border: 1px solid #e0e0e0;
-            border-radius: 30px;
-            font-size: 0.95rem;
-            font-weight: 500;
-            color: #666;
+            padding: 32px 20px;
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #333;
             cursor: pointer;
             transition: all 0.3s ease;
+            text-align: center;
         }
 
         .filter-tab:hover {
             background: #e74c3c;
             color: white;
             border-color: #e74c3c;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
         }
 
         .filter-tab.active {
             background: #e74c3c;
             color: white;
             border-color: #e74c3c;
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
         }
 
         /* Cases Section */
@@ -231,12 +236,13 @@
             }
 
             .filter-tabs {
-                gap: 8px;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
             }
 
             .filter-tab {
-                padding: 10px 18px;
-                font-size: 0.85rem;
+                padding: 20px 12px;
+                font-size: 0.9rem;
             }
 
             .cases-section {
@@ -362,12 +368,11 @@
     <section class="filter-section">
         <div class="filter-container">
             <div class="filter-tabs">
-                <button class="filter-tab active">전 분야</button>
-                <button class="filter-tab">취업 · 이직 · 커리어성장</button>
-                <button class="filter-tab">IT</button>
-                <button class="filter-tab">입시 · 입학 · 전형</button>
-                <button class="filter-tab">구직 · 전직</button>
-                <button class="filter-tab">창업 · 사업</button>
+                <button class="filter-tab active">전체</button>
+                <button class="filter-tab">입시</button>
+                <button class="filter-tab">구직청원휴가</button>
+                <button class="filter-tab">취업</button>
+                <button class="filter-tab">창업</button>
             </div>
         </div>
     </section>
