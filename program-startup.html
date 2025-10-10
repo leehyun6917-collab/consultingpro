@@ -26,18 +26,44 @@
 
     <style>
         .program-hero {
-            padding: 120px 0 80px;
-            background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%);
-            color: var(--white);
+            position: relative;
+            padding: 180px 0 120px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/images/about_visual.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            text-align: center;
+            color: white;
+        }
+
+        .program-hero-label {
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 3px;
+            color: white;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .program-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        .hero-subtitle {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         .program-hero .badge {
-            display: inline-block;
-            background: rgba(255,255,255,0.2);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.875rem;
-            margin-bottom: var(--spacing-md);
+            display: none;
         }
 
         .startup-stages {
@@ -284,7 +310,7 @@
     <!-- Hero Section -->
     <section class="program-hero">
         <div class="container">
-            <span class="badge">🚀 창업 성공 전문 프로그램</span>
+            <p class="program-hero-label">STARTUP PROGRAM</p>
             <h1>창업 과정</h1>
             <p class="hero-subtitle">
                 아이디어 검증부터 사업화까지<br>
