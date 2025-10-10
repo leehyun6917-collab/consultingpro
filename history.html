@@ -141,48 +141,35 @@
             object-fit: contain;
         }
 
+        .case-category {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #666;
+            text-align: center;
+            padding: 16px 20px 12px;
+            letter-spacing: -0.5px;
+        }
+
         .case-info {
-            padding: 24px;
+            padding: 20px 24px 24px;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
+            gap: 8px;
+            text-align: center;
         }
 
-        .case-company {
-            font-size: 1.25rem;
-            font-weight: 700;
+        .case-university {
+            font-size: 1.05rem;
+            font-weight: 600;
             color: #1a1a1a;
-            margin-bottom: 8px;
+            line-height: 1.5;
         }
 
-        .case-title {
-            font-size: 0.95rem;
-            color: #666;
-            margin-bottom: auto;
-            line-height: 1.6;
-            padding-bottom: 16px;
-        }
-
-        .case-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.85rem;
+        .case-details {
+            font-size: 0.9rem;
             color: #999;
-            padding-top: 12px;
-            border-top: 1px solid #f0f0f0;
-        }
-
-        .case-date {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .case-views {
-            display: flex;
-            align-items: center;
-            gap: 5px;
+            font-weight: 500;
         }
 
         /* Pagination */
@@ -266,16 +253,22 @@
                 padding: 30px;
             }
 
+            .case-category {
+                font-size: 0.75rem;
+                padding: 14px 16px 10px;
+            }
+
             .case-info {
-                padding: 20px;
+                padding: 16px 20px 20px;
+                gap: 6px;
             }
 
-            .case-company {
-                font-size: 1.1rem;
+            .case-university {
+                font-size: 0.95rem;
             }
 
-            .case-title {
-                font-size: 0.9rem;
+            .case-details {
+                font-size: 0.85rem;
             }
 
             .pagination {
@@ -360,8 +353,8 @@
     <!-- Hero Section -->
     <section class="history-hero">
         <div class="container">
-            <p class="history-hero-label">SUCCESS STORY</p>
-            <h1>합격스토리</h1>
+            <p class="history-hero-label">CONSULTING HISTORY</p>
+            <h1>컨설팅 이력</h1>
         </div>
     </section>
 
@@ -385,136 +378,109 @@
             <div class="cases-grid">
                 <!-- Case 1 -->
                 <div class="case-card">
+                    <div class="case-category">Apple</div>
                     <div class="case-logo">
                         <img src="assets/images/3068021237_Q0wHsiNO_aaf6f5ce4a5e0a1a4dfcfae210069bb6cef9b8d1.png" alt="Apple">
                     </div>
                     <div class="case-info">
-                        <h3 class="case-company">Apple</h3>
-                        <p class="case-title">서울 지역본 경영 직무 합격</p>
-                        <div class="case-meta">
-                            <span class="case-date"><i class="far fa-calendar"></i> 2024.08</span>
-                            <span class="case-views"><i class="far fa-eye"></i> 1,234</span>
-                        </div>
+                        <p class="case-university">서울 사립대 경영학</p>
+                        <p class="case-details">20대 후반 | 신입</p>
                     </div>
                 </div>
 
                 <!-- Case 2 -->
                 <div class="case-card">
+                    <div class="case-category">Microsoft</div>
                     <div class="case-logo">
                         <img src="assets/images/3068021237_XnBd1G5Z_80ac17aac7dc3375b2edd58aff5a68f8f87f71eb.png" alt="Microsoft">
                     </div>
                     <div class="case-info">
-                        <h3 class="case-company">Microsoft</h3>
-                        <p class="case-title">서울 지사본 경영 직무 합격</p>
-                        <div class="case-meta">
-                            <span class="case-date"><i class="far fa-calendar"></i> 2024.08</span>
-                            <span class="case-views"><i class="far fa-eye"></i> 987</span>
-                        </div>
+                        <p class="case-university">서울 국립대 컴퓨터공학</p>
+                        <p class="case-details">20대 후반 | 경력</p>
                     </div>
                 </div>
 
                 <!-- Case 3 -->
                 <div class="case-card">
+                    <div class="case-category">3M 한국지사</div>
                     <div class="case-logo">
                         <img src="assets/images/3068021237_UXqDZJpA_afd96f6971184f6d5c353d9c3e0513506a19759e (1).png" alt="3M">
                     </div>
                     <div class="case-info">
-                        <h3 class="case-company">3M 한국지사</h3>
-                        <p class="case-title">서울 지역본 경영 직무 합격</p>
-                        <div class="case-meta">
-                            <span class="case-date"><i class="far fa-calendar"></i> 2024.09</span>
-                            <span class="case-views"><i class="far fa-eye"></i> 856</span>
-                        </div>
+                        <p class="case-university">서울 사립대 화학공학</p>
+                        <p class="case-details">30대 초반 | 경력</p>
                     </div>
                 </div>
 
                 <!-- Case 4 -->
                 <div class="case-card">
+                    <div class="case-category">Medtronic</div>
                     <div class="case-logo">
                         <img src="assets/images/3068021237_hRKzjkpc_81af5e7d0fa67dc5680e23db3f50d852f9386758.png" alt="Medtronic">
                     </div>
                     <div class="case-info">
-                        <h3 class="case-company">Medtronic</h3>
-                        <p class="case-title">비공개 합격자 성함</p>
-                        <div class="case-meta">
-                            <span class="case-date"><i class="far fa-calendar"></i> 2024.09</span>
-                            <span class="case-views"><i class="far fa-eye"></i> 742</span>
-                        </div>
+                        <p class="case-university">경기 사립대 의공학</p>
+                        <p class="case-details">20대 후반 | 신입</p>
                     </div>
                 </div>
 
                 <!-- Case 5 -->
                 <div class="case-card">
+                    <div class="case-category">Harman</div>
                     <div class="case-logo">
                         <img src="assets/images/3068021237_FW2Gh5kZ_69f0cf4c4b2a75043f99e4c8a54e5c1768ed752a.png" alt="Harman">
                     </div>
                     <div class="case-info">
-                        <h3 class="case-company">Harman</h3>
-                        <p class="case-title">엔지니어 경력 4년</p>
-                        <div class="case-meta">
-                            <span class="case-date"><i class="far fa-calendar"></i> 2024.07</span>
-                            <span class="case-views"><i class="far fa-eye"></i> 658</span>
-                        </div>
+                        <p class="case-university">서울 사립대 전기전자공학</p>
+                        <p class="case-details">30대 초반 | 경력</p>
                     </div>
                 </div>
 
                 <!-- Case 6 -->
                 <div class="case-card">
+                    <div class="case-category">Springer Nature</div>
                     <div class="case-logo">
                         <img src="assets/images/3068021237_JEuaRNbe_af067e775fba3c7b3b4f852786eab489512967ad.png" alt="Springer Nature">
                     </div>
                     <div class="case-info">
-                        <h3 class="case-company">Springer Nature</h3>
-                        <p class="case-title">서울 지역본 편집 직무 합격</p>
-                        <div class="case-meta">
-                            <span class="case-date"><i class="far fa-calendar"></i> 2024.09</span>
-                            <span class="case-views"><i class="far fa-eye"></i> 823</span>
-                        </div>
+                        <p class="case-university">서울 국립대 영문학</p>
+                        <p class="case-details">20대 후반 | 신입</p>
                     </div>
                 </div>
 
                 <!-- Case 7 -->
                 <div class="case-card">
+                    <div class="case-category">Merck</div>
                     <div class="case-logo">
                         <img src="assets/images/3068021237_s80SL2yl_2109b5c613cd931e99be86be0ad7775b875f3725.png" alt="Merck">
                     </div>
                     <div class="case-info">
-                        <h3 class="case-company">Merck</h3>
-                        <p class="case-title">지역 사업본 마케팅 신입</p>
-                        <div class="case-meta">
-                            <span class="case-date"><i class="far fa-calendar"></i> 2024.06</span>
-                            <span class="case-views"><i class="far fa-eye"></i> 912</span>
-                        </div>
+                        <p class="case-university">서울 사립대 생명과학</p>
+                        <p class="case-details">20대 후반 | 신입</p>
                     </div>
                 </div>
 
                 <!-- Case 8 -->
                 <div class="case-card">
+                    <div class="case-category">Oracle</div>
                     <div class="case-logo">
                         <img src="assets/images/3068021237_oaj3qiTw_ef4f6ba5fca26b65b73f1d29bf12caf00d774389.png" alt="Oracle">
                     </div>
                     <div class="case-info">
-                        <h3 class="case-company">Oracle</h3>
-                        <p class="case-title">지역 사업본 컨설팅 경력직</p>
-                        <div class="case-meta">
-                            <span class="case-date"><i class="far fa-calendar"></i> 2024.05</span>
-                            <span class="case-views"><i class="far fa-eye"></i> 1,056</span>
-                        </div>
+                        <p class="case-university">경기 국립대 경영정보학</p>
+                        <p class="case-details">30대 초반 | 경력</p>
                     </div>
                 </div>
 
                 <!-- Case 9 -->
                 <div class="case-card">
+                    <div class="case-category">LG Display</div>
                     <div class="case-logo">
                         <img src="assets/images/3068021237_Q0wHsiNO_aaf6f5ce4a5e0a1a4dfcfae210069bb6cef9b8d1.png" alt="LG Display">
                     </div>
                     <div class="case-info">
-                        <h3 class="case-company">LG Display</h3>
-                        <p class="case-title">비공개 합격자 성함</p>
-                        <div class="case-meta">
-                            <span class="case-date"><i class="far fa-calendar"></i> 2024.08</span>
-                            <span class="case-views"><i class="far fa-eye"></i> 743</span>
-                        </div>
+                        <p class="case-university">서울 사립대 전자공학</p>
+                        <p class="case-details">20대 후반 | 신입</p>
                     </div>
                 </div>
             </div>
