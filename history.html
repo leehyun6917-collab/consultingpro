@@ -105,31 +105,33 @@
         .cases-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
+            gap: 24px;
             margin-bottom: 60px;
         }
 
         .case-card {
             background: white;
-            border-radius: 12px;
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
             transition: all 0.3s ease;
             cursor: pointer;
+            display: flex;
+            flex-direction: column;
         }
 
         .case-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
         }
 
         .case-logo {
-            height: 180px;
+            aspect-ratio: 1;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: white;
-            padding: 30px;
+            background: #fafafa;
+            padding: 40px;
             border-bottom: 1px solid #f0f0f0;
         }
 
@@ -140,21 +142,25 @@
         }
 
         .case-info {
-            padding: 25px;
+            padding: 24px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .case-company {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             font-weight: 700;
-            color: #333;
-            margin-bottom: 10px;
+            color: #1a1a1a;
+            margin-bottom: 8px;
         }
 
         .case-title {
             font-size: 0.95rem;
             color: #666;
-            margin-bottom: 15px;
-            line-height: 1.5;
+            margin-bottom: auto;
+            line-height: 1.6;
+            padding-bottom: 16px;
         }
 
         .case-meta {
@@ -163,6 +169,8 @@
             align-items: center;
             font-size: 0.85rem;
             color: #999;
+            padding-top: 12px;
+            border-top: 1px solid #f0f0f0;
         }
 
         .case-date {
@@ -255,12 +263,19 @@
             }
 
             .case-logo {
-                height: 150px;
-                padding: 20px;
+                padding: 30px;
             }
 
             .case-info {
                 padding: 20px;
+            }
+
+            .case-company {
+                font-size: 1.1rem;
+            }
+
+            .case-title {
+                font-size: 0.9rem;
             }
 
             .pagination {
