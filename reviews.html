@@ -26,41 +26,90 @@
 
     <style>
         .reviews-hero {
-            padding: 120px 0 80px;
-            background: linear-gradient(135deg, var(--dark) 0%, #2A2A2A 100%);
-            color: var(--white);
+            position: relative;
+            padding: 180px 0 120px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/images/about_visual.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            text-align: center;
+            color: white;
+        }
+
+        .reviews-hero-label {
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 3px;
+            color: white;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .reviews-hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         .filter-section {
-            padding: var(--spacing-xl) 0;
-            background: var(--gray-light);
-            position: sticky;
-            top: 70px;
-            z-index: 10;
+            padding: 40px 0 60px;
+            background: white;
+            border-bottom: 1px solid #e0e0e0;
         }
 
         .filter-container {
-            display: flex;
-            justify-content: center;
-            gap: var(--spacing-md);
-            flex-wrap: wrap;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .filter-tabs {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
         }
 
         .filter-btn {
-            padding: 0.75rem 1.5rem;
-            background: var(--white);
-            border: 2px solid var(--gray-light);
-            border-radius: 25px;
+            padding: 32px 20px;
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #333;
             cursor: pointer;
             transition: all 0.3s ease;
-            font-weight: 600;
-            color: var(--dark);
+            text-align: center;
+        }
+
+        .filter-btn:first-child {
+            grid-column: 1 / 3;
+        }
+
+        .filter-btn:hover {
+            background: #e74c3c;
+            color: white;
+            border-color: #e74c3c;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
         }
 
         .filter-btn.active {
-            background: var(--primary);
-            color: var(--white);
-            border-color: var(--primary);
+            background: #e74c3c;
+            color: white;
+            border-color: #e74c3c;
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
         }
 
         .reviews-grid-section {
@@ -88,33 +137,35 @@
         }
 
         .review-header {
-            padding: var(--spacing-lg);
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: var(--white);
+            padding: 1.5rem 1.75rem;
+            background: white;
+            border-bottom: 1px solid #f0f0f0;
         }
 
         .review-meta {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: var(--spacing-sm);
         }
 
         .review-program {
             display: inline-block;
-            background: rgba(255,255,255,0.2);
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
+            background: #e74c3c;
+            color: white;
+            padding: 0.4rem 0.9rem;
+            border-radius: 6px;
             font-size: 0.875rem;
+            font-weight: 600;
         }
 
         .review-rating {
             display: flex;
-            gap: 2px;
+            gap: 3px;
         }
 
         .star {
-            color: #FFD700;
+            color: #FFB800;
+            font-size: 1rem;
         }
 
         .review-body {
@@ -122,59 +173,51 @@
         }
 
         .review-quote {
-            font-size: 1.125rem;
+            font-size: 1.05rem;
             line-height: 1.8;
-            margin-bottom: var(--spacing-md);
-            color: var(--dark);
-            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: #333;
+            font-weight: 400;
         }
 
         .review-result {
-            background: var(--gray-light);
-            padding: var(--spacing-md);
+            background: #f8f9fa;
+            padding: 1.2rem 1.4rem;
             border-radius: 8px;
-            margin-bottom: var(--spacing-md);
+            margin-bottom: 1.5rem;
+            border-left: 3px solid #e74c3c;
         }
 
         .result-label {
-            font-weight: 600;
-            color: var(--primary);
-            margin-bottom: var(--spacing-xs);
+            font-weight: 700;
+            color: #e74c3c;
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
         }
 
         .review-author {
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-md);
-            padding-top: var(--spacing-md);
-            border-top: 1px solid var(--gray-light);
+            padding-top: 1.2rem;
+            border-top: 1px solid #e0e0e0;
         }
 
         .author-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-weight: 700;
-            font-size: 1.25rem;
+            display: none;
         }
 
         .author-info {
-            flex: 1;
+            text-align: left;
         }
 
         .author-name {
             font-weight: 600;
-            margin-bottom: 2px;
+            margin-bottom: 0.4rem;
+            color: #333;
+            font-size: 0.95rem;
         }
 
         .author-date {
             font-size: 0.875rem;
-            color: var(--gray);
+            color: #999;
         }
 
         .video-reviews {
@@ -261,12 +304,34 @@
         }
 
         @media (max-width: 768px) {
+            .reviews-hero {
+                padding: 140px 20px 80px;
+            }
+
+            .reviews-hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
             .reviews-grid {
                 grid-template-columns: 1fr;
             }
 
             .filter-section {
-                position: static;
+                padding: 30px 0 40px;
+            }
+
+            .filter-tabs {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+
+            .filter-btn {
+                padding: 20px 12px;
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -341,21 +406,22 @@
     <!-- Hero Section -->
     <section class="reviews-hero">
         <div class="container">
+            <p class="reviews-hero-label">REVIEWS & TESTIMONIALS</p>
             <h1>리뷰 & 후기</h1>
             <p class="hero-subtitle">
                 657명이 증명하는 성공 스토리<br>
-                컨설팅 프로와 함께한 생생한 후기를 확인하세요.
+                컨설팅프로와 함께한 생생한 후기를 확인하세요.
             </p>
         </div>
     </section>
 
     <!-- Filter Section -->
     <section class="filter-section">
-        <div class="container">
-            <div class="filter-container">
+        <div class="filter-container">
+            <div class="filter-tabs">
                 <button class="filter-btn active" data-filter="all">전체</button>
-                <button class="filter-btn" data-filter="job-leave">구직청원휴가</button>
                 <button class="filter-btn" data-filter="admission">입시</button>
+                <button class="filter-btn" data-filter="job-leave">구직청원휴가</button>
                 <button class="filter-btn" data-filter="employment">취업</button>
                 <button class="filter-btn" data-filter="startup">창업</button>
             </div>
