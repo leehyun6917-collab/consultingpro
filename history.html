@@ -3,186 +3,280 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>컨설팅 이력 | 컨설팅 프로</title>
-    <meta name="description" content="657명의 성공 스토리와 127개 기업과의 파트너십. 컨설팅 프로의 검증된 이력을 확인하세요.">
+    <title>컨설팅 이력 | 컨설팅프로</title>
+    <meta name="description" content="컨설팅프로의 검증된 합격 사례를 확인하세요.">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="컨설팅 이력 - 컨설팅 프로">
-    <meta property="og:description" content="국내외 유수 기업과 함께한 성공 사례">
+    <meta property="og:title" content="컨설팅 이력 - 컨설팅프로">
+    <meta property="og:description" content="국내외 유수 기업 합격 사례">
 
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- GA4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){ dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXX');
-    </script>
-
     <style>
+        /* Hero Section */
         .history-hero {
-            padding: 120px 0 80px;
-            background: linear-gradient(135deg, var(--dark) 0%, #2A2A2A 100%);
-            color: var(--white);
-        }
-
-        .stats-overview {
-            padding: var(--spacing-xxl) 0;
-            background: var(--gray-light);
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: var(--spacing-lg);
+            position: relative;
+            padding: 180px 0 120px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/images/about_visual.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
             text-align: center;
+            color: white;
         }
 
-        .stat-circle {
-            width: 150px;
-            height: 150px;
-            margin: 0 auto var(--spacing-md);
-            border-radius: 50%;
-            background: var(--primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-size: 2.5rem;
-            font-weight: 900;
+        .history-hero-label {
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 3px;
+            color: white;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
         }
 
-        .timeline-section {
-            padding: var(--spacing-xxl) 0;
-        }
-
-        .timeline {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: var(--gray);
-            transform: translateX(-50%);
-        }
-
-        .timeline-item {
-            position: relative;
-            padding: var(--spacing-lg) 0;
-            width: 50%;
-        }
-
-        .timeline-item:nth-child(odd) {
-            left: 0;
-            text-align: right;
-            padding-right: var(--spacing-xl);
-        }
-
-        .timeline-item:nth-child(even) {
-            left: 50%;
-            padding-left: var(--spacing-xl);
-        }
-
-        .timeline-dot {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background: var(--primary);
-            border-radius: 50%;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .timeline-item:nth-child(odd) .timeline-dot {
-            right: -10px;
-        }
-
-        .timeline-item:nth-child(even) .timeline-dot {
-            left: -10px;
-        }
-
-        .timeline-content {
-            background: var(--white);
-            padding: var(--spacing-md);
-            border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
-
-        .timeline-year {
-            color: var(--primary);
+        .history-hero h1 {
+            font-size: 3rem;
             font-weight: 700;
-            margin-bottom: var(--spacing-xs);
+            color: white;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
         }
 
-        .partners-showcase {
-            padding: var(--spacing-xxl) 0;
-            background: linear-gradient(180deg, var(--white) 0%, var(--gray-light) 50%, var(--dark) 50%);
+        /* Filter Section */
+        .filter-section {
+            padding: 40px 0 60px;
+            background: white;
+            border-bottom: 1px solid #e0e0e0;
         }
 
-        .partners-logos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: var(--spacing-md);
-            background: var(--white);
-            padding: var(--spacing-xl);
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        .filter-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
-        .partner-logo {
+        .filter-tabs {
             display: flex;
-            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
             justify-content: center;
-            padding: var(--spacing-md);
-            background: var(--white);
-            border-radius: 8px;
-            min-height: 100px;
+        }
+
+        .filter-tab {
+            padding: 12px 24px;
+            background: #f5f5f5;
+            border: 1px solid #e0e0e0;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #666;
+            cursor: pointer;
             transition: all 0.3s ease;
         }
 
-        .partner-logo:hover {
-            transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        .filter-tab:hover {
+            background: #e74c3c;
+            color: white;
+            border-color: #e74c3c;
         }
 
-        .partner-name {
-            font-weight: 600;
-            color: var(--dark);
+        .filter-tab.active {
+            background: #e74c3c;
+            color: white;
+            border-color: #e74c3c;
         }
 
-        .partner-detail {
-            font-size: 0.875rem;
-            color: var(--gray);
+        /* Cases Section */
+        .cases-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .cases-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .cases-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .case-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .case-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .case-logo {
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            padding: 30px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .case-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .case-info {
+            padding: 25px;
+        }
+
+        .case-company {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .case-title {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .case-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: #999;
+        }
+
+        .case-date {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .case-views {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .page-btn {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            color: #666;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .page-btn:hover {
+            background: #e74c3c;
+            color: white;
+            border-color: #e74c3c;
+        }
+
+        .page-btn.active {
+            background: #e74c3c;
+            color: white;
+            border-color: #e74c3c;
+        }
+
+        .page-btn.dots {
+            border: none;
+            cursor: default;
+        }
+
+        .page-btn.dots:hover {
+            background: transparent;
+            color: #666;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 1024px) {
+            .cases-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         @media (max-width: 768px) {
-            .timeline::before {
-                left: 30px;
+            .history-hero {
+                padding: 140px 20px 80px;
             }
 
-            .timeline-item {
-                width: 100%;
-                left: 0 !important;
-                padding-left: 60px !important;
-                padding-right: var(--spacing-md) !important;
-                text-align: left !important;
+            .history-hero h1 {
+                font-size: 2rem;
             }
 
-            .timeline-dot {
-                left: 20px !important;
-                right: auto !important;
+            .filter-section {
+                padding: 30px 0 40px;
+            }
+
+            .filter-tabs {
+                gap: 8px;
+            }
+
+            .filter-tab {
+                padding: 10px 18px;
+                font-size: 0.85rem;
+            }
+
+            .cases-section {
+                padding: 50px 0;
+            }
+
+            .cases-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .case-logo {
+                height: 150px;
+                padding: 20px;
+            }
+
+            .case-info {
+                padding: 20px;
+            }
+
+            .pagination {
+                gap: 5px;
+            }
+
+            .page-btn {
+                width: 35px;
+                height: 35px;
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -257,232 +351,260 @@
     <!-- Hero Section -->
     <section class="history-hero">
         <div class="container">
-            <h1>검증된 실력,<br><span class="highlight">확실한 성과</span></h1>
-            <p class="hero-subtitle">
-                2019년부터 시작된 컨설팅 프로의 여정,<br>
-                657명의 성공 스토리가 실력을 증명합니다.
-            </p>
+            <p class="history-hero-label">SUCCESS STORY</p>
+            <h1>합격스토리</h1>
         </div>
     </section>
 
-    <!-- Statistics Overview -->
-    <section class="stats-overview">
-        <div class="container">
-            <h2 class="section-title">누적 성과</h2>
-            <div class="stats-grid">
-                <div>
-                    <div class="stat-circle">657</div>
-                    <h3>컨설팅 인원</h3>
-                    <p>2019년부터 누적</p>
-                </div>
-                <div>
-                    <div class="stat-circle">127</div>
-                    <h3>협력 기업</h3>
-                    <p>국내외 유수 기업</p>
-                </div>
-                <div>
-                    <div class="stat-circle">94%</div>
-                    <h3>만족도</h3>
-                    <p>평균 만족도 점수</p>
-                </div>
-                <div>
-                    <div class="stat-circle">89%</div>
-                    <h3>목표 달성률</h3>
-                    <p>3개월 내 달성</p>
-                </div>
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="filter-container">
+            <div class="filter-tabs">
+                <button class="filter-tab active">전 분야</button>
+                <button class="filter-tab">취업 · 이직 · 커리어성장</button>
+                <button class="filter-tab">IT</button>
+                <button class="filter-tab">입시 · 입학 · 전형</button>
+                <button class="filter-tab">구직 · 전직</button>
+                <button class="filter-tab">창업 · 사업</button>
             </div>
         </div>
     </section>
 
-    <!-- Timeline Section -->
-    <section class="timeline-section">
-        <div class="container">
-            <h2 class="section-title">성장의 발자취</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-year">2024</div>
-                        <h4>창업 컨설팅 프로그램 런칭</h4>
-                        <p>정부 지원금 연계 창업 프로그램 시작</p>
+    <!-- Cases Section -->
+    <section class="cases-section">
+        <div class="cases-container">
+            <div class="cases-grid">
+                <!-- Case 1 -->
+                <div class="case-card">
+                    <div class="case-logo">
+                        <img src="assets/images/3068021237_Q0wHsiNO_aaf6f5ce4a5e0a1a4dfcfae210069bb6cef9b8d1.png" alt="Apple">
+                    </div>
+                    <div class="case-info">
+                        <h3 class="case-company">Apple</h3>
+                        <p class="case-title">서울 지역본 경영 직무 합격</p>
+                        <div class="case-meta">
+                            <span class="case-date"><i class="far fa-calendar"></i> 2024.08</span>
+                            <span class="case-views"><i class="far fa-eye"></i> 1,234</span>
+                        </div>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-year">2023</div>
-                        <h4>구직청원휴가 특화 과정 개설</h4>
-                        <p>군 복무자 전용 취업 준비 프로그램</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-year">2022</div>
-                        <h4>글로벌 기업 파트너십 체결</h4>
-                        <p>Oracle, Nike 등 글로벌 기업과 협력</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-year">2021</div>
-                        <h4>온라인 컨설팅 플랫폼 구축</h4>
-                        <p>비대면 컨설팅 서비스 확대</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-year">2020</div>
-                        <h4>취업/입시 컨설팅 확대</h4>
-                        <p>NCS, 공기업 취업 전문 과정 개설</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-year">2019</div>
-                        <h4>컨설팅 프로 설립</h4>
-                        <p>커리어 컨설팅 전문 기업 시작</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Partners Showcase -->
-    <section class="partners-showcase">
-        <div class="container">
-            <h2 class="section-title" style="color: var(--white);">주요 파트너사</h2>
-            <div class="partners-logos">
-                <div class="partner-logo">
-                    <div>
-                        <div class="partner-name">Oracle</div>
-                        <div class="partner-detail">비관련 경력 3년</div>
+                <!-- Case 2 -->
+                <div class="case-card">
+                    <div class="case-logo">
+                        <img src="assets/images/3068021237_XnBd1G5Z_80ac17aac7dc3375b2edd58aff5a68f8f87f71eb.png" alt="Microsoft">
+                    </div>
+                    <div class="case-info">
+                        <h3 class="case-company">Microsoft</h3>
+                        <p class="case-title">서울 지사본 경영 직무 합격</p>
+                        <div class="case-meta">
+                            <span class="case-date"><i class="far fa-calendar"></i> 2024.08</span>
+                            <span class="case-views"><i class="far fa-eye"></i> 987</span>
+                        </div>
                     </div>
                 </div>
-                <div class="partner-logo">
-                    <div>
-                        <div class="partner-name">Nike Korea</div>
-                        <div class="partner-detail">비관련 경력 3년</div>
-                    </div>
-                </div>
-                <div class="partner-logo">
-                    <div>
-                        <div class="partner-name">eBay</div>
-                        <div class="partner-detail">해외대 Visual Arts & Culture</div>
-                    </div>
-                </div>
-                <div class="partner-logo">
-                    <div>
-                        <div class="partner-name">LVMH</div>
-                        <div class="partner-detail">30대 후반 | 경영</div>
-                    </div>
-                </div>
-                <div class="partner-logo">
-                    <div>
-                        <div class="partner-name">신세계인터내셔널</div>
-                        <div class="partner-detail">20대 초반 | 신입</div>
-                    </div>
-                </div>
-                <div class="partner-logo">
-                    <div>
-                        <div class="partner-name">Walt Disney Company</div>
-                        <div class="partner-detail">20대 중반 | 경영</div>
-                    </div>
-                </div>
-                <div class="partner-logo">
-                    <div>
-                        <div class="partner-name">GE Healthcare</div>
-                        <div class="partner-detail">20대 후반 | 신입</div>
-                    </div>
-                </div>
-                <div class="partner-logo">
-                    <div>
-                        <div class="partner-name">Medtronic</div>
-                        <div class="partner-detail">30대 초반 | 신입</div>
-                    </div>
-                </div>
-                <div class="partner-logo">
-                    <div>
-                        <div class="partner-name">Microsoft</div>
-                        <div class="partner-detail">20대 후반 | 신입</div>
-                    </div>
-                </div>
-                <div class="partner-logo">
-                    <div>
-                        <div class="partner-name">3M</div>
-                        <div class="partner-detail">비관련 경력 3년</div>
-                    </div>
-                </div>
-                <div class="partner-logo">
-                    <div>
-                        <div class="partner-name">LG Display</div>
-                        <div class="partner-detail">20대 후반 | 무역</div>
-                    </div>
-                </div>
-                <div class="partner-logo">
-                    <div>
-                        <div class="partner-name">Merck</div>
-                        <div class="partner-detail">20대 후반 | 신입</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2 class="cta-title">검증된 실력으로 <span class="highlight">당신의 성공</span>을 만들어갑니다</h2>
-                <p class="cta-subtitle">657명이 선택한 컨설팅 프로, 다음은 당신의 차례입니다.</p>
-                <a href="http://pf.kakao.com/_cbBxcn" class="btn btn-primary btn-xl"
-                   onclick="gtag('event', 'click_kakao_cta', {'cta_position': 'bottom_cta'});">
-                    상담 신청하기 →
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer (동일) -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3 class="footer-logo">컨설팅 프로</h3>
-                    <p class="footer-tagline">커리어의 시작과 성장을 함께합니다</p>
+                <!-- Case 3 -->
+                <div class="case-card">
+                    <div class="case-logo">
+                        <img src="assets/images/3068021237_UXqDZJpA_afd96f6971184f6d5c353d9c3e0513506a19759e (1).png" alt="3M">
+                    </div>
+                    <div class="case-info">
+                        <h3 class="case-company">3M 한국지사</h3>
+                        <p class="case-title">서울 지역본 경영 직무 합격</p>
+                        <div class="case-meta">
+                            <span class="case-date"><i class="far fa-calendar"></i> 2024.09</span>
+                            <span class="case-views"><i class="far fa-eye"></i> 856</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="footer-info">
-                    <div class="footer-section">
-                        <h4>연락처</h4>
-                        <p>📞 02-6402-3113</p>
-                        <p>📧 consultingpro@career.com</p>
+
+                <!-- Case 4 -->
+                <div class="case-card">
+                    <div class="case-logo">
+                        <img src="assets/images/3068021237_hRKzjkpc_81af5e7d0fa67dc5680e23db3f50d852f9386758.png" alt="Medtronic">
                     </div>
-                    <div class="footer-section">
-                        <h4>운영시간</h4>
-                        <p>평일 09:00 - 18:00</p>
-                        <p>주말 및 공휴일 휴무</p>
+                    <div class="case-info">
+                        <h3 class="case-company">Medtronic</h3>
+                        <p class="case-title">비공개 합격자 성함</p>
+                        <div class="case-meta">
+                            <span class="case-date"><i class="far fa-calendar"></i> 2024.09</span>
+                            <span class="case-views"><i class="far fa-eye"></i> 742</span>
+                        </div>
                     </div>
-                    <div class="footer-section">
-                        <h4>SNS</h4>
-                        <div class="social-links">
-                            <a href="#" aria-label="Facebook">f</a>
-                            <a href="#" aria-label="Instagram">📷</a>
-                            <a href="#" aria-label="YouTube">▶</a>
-                            <a href="http://pf.kakao.com/_cbBxcn" aria-label="KakaoTalk">💬</a>
+                </div>
+
+                <!-- Case 5 -->
+                <div class="case-card">
+                    <div class="case-logo">
+                        <img src="assets/images/3068021237_FW2Gh5kZ_69f0cf4c4b2a75043f99e4c8a54e5c1768ed752a.png" alt="Harman">
+                    </div>
+                    <div class="case-info">
+                        <h3 class="case-company">Harman</h3>
+                        <p class="case-title">엔지니어 경력 4년</p>
+                        <div class="case-meta">
+                            <span class="case-date"><i class="far fa-calendar"></i> 2024.07</span>
+                            <span class="case-views"><i class="far fa-eye"></i> 658</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case 6 -->
+                <div class="case-card">
+                    <div class="case-logo">
+                        <img src="assets/images/3068021237_JEuaRNbe_af067e775fba3c7b3b4f852786eab489512967ad.png" alt="Springer Nature">
+                    </div>
+                    <div class="case-info">
+                        <h3 class="case-company">Springer Nature</h3>
+                        <p class="case-title">서울 지역본 편집 직무 합격</p>
+                        <div class="case-meta">
+                            <span class="case-date"><i class="far fa-calendar"></i> 2024.09</span>
+                            <span class="case-views"><i class="far fa-eye"></i> 823</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case 7 -->
+                <div class="case-card">
+                    <div class="case-logo">
+                        <img src="assets/images/3068021237_s80SL2yl_2109b5c613cd931e99be86be0ad7775b875f3725.png" alt="Merck">
+                    </div>
+                    <div class="case-info">
+                        <h3 class="case-company">Merck</h3>
+                        <p class="case-title">지역 사업본 마케팅 신입</p>
+                        <div class="case-meta">
+                            <span class="case-date"><i class="far fa-calendar"></i> 2024.06</span>
+                            <span class="case-views"><i class="far fa-eye"></i> 912</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case 8 -->
+                <div class="case-card">
+                    <div class="case-logo">
+                        <img src="assets/images/3068021237_oaj3qiTw_ef4f6ba5fca26b65b73f1d29bf12caf00d774389.png" alt="Oracle">
+                    </div>
+                    <div class="case-info">
+                        <h3 class="case-company">Oracle</h3>
+                        <p class="case-title">지역 사업본 컨설팅 경력직</p>
+                        <div class="case-meta">
+                            <span class="case-date"><i class="far fa-calendar"></i> 2024.05</span>
+                            <span class="case-views"><i class="far fa-eye"></i> 1,056</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case 9 -->
+                <div class="case-card">
+                    <div class="case-logo">
+                        <img src="assets/images/3068021237_Q0wHsiNO_aaf6f5ce4a5e0a1a4dfcfae210069bb6cef9b8d1.png" alt="LG Display">
+                    </div>
+                    <div class="case-info">
+                        <h3 class="case-company">LG Display</h3>
+                        <p class="case-title">비공개 합격자 성함</p>
+                        <div class="case-meta">
+                            <span class="case-date"><i class="far fa-calendar"></i> 2024.08</span>
+                            <span class="case-views"><i class="far fa-eye"></i> 743</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 컨설팅 프로. All rights reserved.</p>
-                <p class="footer-disclaimer">본 안내는 법률 자문이 아니며, 제도 요약 정보입니다.</p>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn">4</button>
+                <button class="page-btn">5</button>
+                <button class="page-btn dots">...</button>
+                <button class="page-btn">»</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-icon">CB</span>
+                    <span class="logo-text">CAREER BRIDGE</span>
+                </div>
+
+                <div class="footer-info">
+                    <div class="footer-links">
+                        <a href="#">이용약관</a>
+                        <a href="#">개인정보처리방침</a>
+                    </div>
+
+                    <div class="footer-address">
+                        <p>(주)민민 서울특별시 영등포구 양평로 24, 610호 (당산동 6가, 수정빌딩) 대표 이하영</p>
+                        <p>사업자번호 658-87-00038 통신판매신고 2023-서울영등포-0818호</p>
+                        <p>개인정보관리책임자 이하영</p>
+                    </div>
+
+                    <div class="footer-contact">
+                        <span>📞 02-6402-3113</span>
+                        <span>✉️ careerbridge@careerbrdg.com</span>
+                    </div>
+
+                    <div class="footer-social">
+                        <a href="#" class="social-icon facebook" aria-label="Facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon tistory" aria-label="Tistory">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <circle cx="4.5" cy="4.5" r="2"/>
+                                <circle cx="12" cy="4.5" r="2"/>
+                                <circle cx="19.5" cy="4.5" r="2"/>
+                                <circle cx="4.5" cy="12" r="2"/>
+                                <circle cx="12" cy="12" r="2"/>
+                                <circle cx="19.5" cy="12" r="2"/>
+                                <circle cx="4.5" cy="19.5" r="2"/>
+                                <circle cx="12" cy="19.5" r="2"/>
+                                <circle cx="19.5" cy="19.5" r="2"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon youtube" aria-label="YouTube">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                        <a href="http://pf.kakao.com/_cbBxcn" class="social-icon kakao" aria-label="KakaoTalk">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2c5.514 0 10 3.476 10 7.755 0 4.28-4.486 7.755-10 7.755-.802 0-1.583-.074-2.329-.213L4.918 20.5l1.37-4.287C3.778 14.614 2 12.314 2 9.755 2 5.476 6.486 2 12 2zm0 13.221c4.14 0 7.5-2.605 7.5-5.466S16.14 4.29 12 4.29s-7.5 2.605-7.5 5.466 3.36 5.466 7.5 5.466z"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="footer-copyright">
+                        <p>Copyright Career Bridge all right reserved.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
 
     <script src="app.js"></script>
+    <script>
+        // Filter tabs functionality
+        document.querySelectorAll('.filter-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Pagination functionality
+        document.querySelectorAll('.page-btn:not(.dots)').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.page-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
 </body>
 </html>
