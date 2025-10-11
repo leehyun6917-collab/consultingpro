@@ -110,14 +110,20 @@
             box-shadow: 0 20px 40px rgba(14, 41, 79, 0.15);
         }
 
-        .target-icon {
-            font-size: 3.5rem;
-            margin-bottom: var(--spacing-md);
-            transition: transform 0.3s ease;
+        .target-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #0e294f, #2d5a8f);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
         }
 
-        .target-card:hover .target-icon {
-            transform: scale(1.1);
+        .target-card:hover::after {
+            transform: scaleX(1);
         }
 
         .target-card h3 {
@@ -247,7 +253,8 @@
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
-            font-size: 1.25rem;
+            font-size: 1rem;
+            font-weight: 700;
             box-shadow: 0 4px 12px rgba(14, 41, 79, 0.2);
         }
 
@@ -504,17 +511,14 @@
                     <div class="tab-contents">
                         <div class="tab-content active" id="tab1">
                             <div class="content-item">
-                                <div class="content-icon">📋</div>
                                 <h3>제도 신청부터 활용까지</h3>
                                 <p>구직청원휴가 신청 자격 확인, 필요 서류 준비,<br>부대장 승인 절차까지 A to Z 완벽 가이드를 제공합니다.</p>
                             </div>
                             <div class="content-item">
-                                <div class="content-icon">⏰</div>
                                 <h3>최적의 타이밍 설계</h3>
                                 <p>전역 6개월 전부터 체계적인 준비 계획을 수립하여<br>제도를 최대한 활용할 수 있도록 타임라인을 관리합니다.</p>
                             </div>
                             <div class="content-item">
-                                <div class="content-icon">✅</div>
                                 <h3>구직활동 증빙 지원</h3>
                                 <p>면접 일정표, 채용공고 등 구직활동 증빙 자료 준비를<br>체계적으로 도와 부대 보고를 원활하게 진행합니다.</p>
                             </div>
@@ -522,17 +526,14 @@
 
                         <div class="tab-content" id="tab2">
                             <div class="content-item">
-                                <div class="content-icon">🪖</div>
                                 <h3>군 경력 민간 전환 전략</h3>
                                 <p>군 복무 경험을 리더십, 책임감, 조직 적응력 등<br>기업이 원하는 핵심 역량으로 전환하는 노하우를 제공합니다.</p>
                             </div>
                             <div class="content-item">
-                                <div class="content-icon">📄</div>
                                 <h3>군 특화 이력서 작성</h3>
                                 <p>군 복무 기간의 경험과 성과를 효과적으로 어필하는<br>차별화된 이력서 및 자기소개서 작성법을 지도합니다.</p>
                             </div>
                             <div class="content-item">
-                                <div class="content-icon">💪</div>
                                 <h3>실전 면접 트레이닝</h3>
                                 <p>군 경력 관련 빈출 질문 대응법과 전역 후 포부를<br>효과적으로 전달하는 면접 전략을 집중 훈련합니다.</p>
                             </div>
@@ -540,17 +541,14 @@
 
                         <div class="tab-content" id="tab3">
                             <div class="content-item">
-                                <div class="content-icon">🏢</div>
                                 <h3>군 경력 우대 기업 매칭</h3>
                                 <p>보훈 가점 제도가 있는 공기업, 군 경력을 선호하는<br>대기업을 연결하여 합격 가능성을 극대화합니다.</p>
                             </div>
                             <div class="content-item">
-                                <div class="content-icon">🎯</div>
                                 <h3>채용 정보 실시간 제공</h3>
                                 <p>전역 시기에 맞춘 채용 공고 정보와 지원 전략을<br>실시간으로 제공하여 골든타임을 놓치지 않습니다.</p>
                             </div>
                             <div class="content-item">
-                                <div class="content-icon">🤝</div>
                                 <h3>입사 후 정착 지원</h3>
                                 <p>합격 후 연봉 협상부터 조기 적응까지<br>사회 복귀 전 과정을 지속적으로 지원합니다.</p>
                             </div>
@@ -856,23 +854,20 @@
         <div class="container">
             <h2 class="section-title">구직청원휴가 제도란?</h2>
             <div class="warning-box" style="max-width: 900px; margin: 0 auto var(--spacing-xl);">
-                <h4>📜 법령 근거</h4>
+                <h4>법령 근거</h4>
                 <p>군인의 지위 및 복무에 관한 기본법 시행령 제12조<br>
                 "의무복무기간의 2분의 1 이상을 마친 병(兵)은 취업상담, 채용시험 응시, 현장채용행사 참석 등 구직활동을 하기 위하여 의무복무기간 중 2일의 범위에서 구직휴가를 받을 수 있다."</p>
             </div>
             <div class="target-cards">
                 <div class="target-card">
-                    <div class="target-icon">✅</div>
                     <h3>신청 자격</h3>
                     <p>의무복무기간의 50% 이상을 마친 모든 병(계급 무관, 일병 포함)</p>
                 </div>
                 <div class="target-card">
-                    <div class="target-icon">⏱️</div>
                     <h3>사용 기간</h3>
                     <p>의무복무기간 중 2일의 범위에서 사용 가능</p>
                 </div>
                 <div class="target-card">
-                    <div class="target-icon">📱</div>
                     <h3>확인 방법</h3>
                     <p>군돌이 앱에서 복무율 50% 이상 확인 시 신청 가능 대상자</p>
                 </div>
@@ -886,17 +881,14 @@
             <h2 class="section-title">이런 분들께 추천합니다</h2>
             <div class="target-cards">
                 <div class="target-card">
-                    <div class="target-icon">🪖</div>
                     <h3>의무복무 50% 이상 장병</h3>
                     <p>의무복무 50% 이상 마치고 취업 준비가 필요한 모든 장병</p>
                 </div>
                 <div class="target-card">
-                    <div class="target-icon">📋</div>
                     <h3>제도 활용 희망자</h3>
                     <p>구직청원휴가 제도를 효과적으로 활용하고 싶은 분</p>
                 </div>
                 <div class="target-card">
-                    <div class="target-icon">💼</div>
                     <h3>체계적 준비 필요</h3>
                     <p>이력서부터 면접까지 체계적인 준비가 필요한 분</p>
                 </div>
@@ -955,40 +947,40 @@
             <h2 class="section-title">구직청원휴가 체크리스트</h2>
             <div class="checklist-container">
                 <div class="warning-box">
-                    <h4>⚠️ 주의사항</h4>
+                    <h4>주의사항</h4>
                     <p>본 안내는 법률 자문이 아니며, 제도 요약 정보입니다. 정확한 내용은 부대 인사과에 문의하시기 바랍니다.</p>
                 </div>
 
                 <div class="checklist-item">
-                    <div class="check-icon">✓</div>
+                    <div class="check-icon">1</div>
                     <div>
                         <h4>의무복무 50% 이상 시 신청 가능</h4>
                         <p>의무복무기간의 50% 이상을 마친 모든 병 (계급 무관, 일병 포함)</p>
                     </div>
                 </div>
                 <div class="checklist-item">
-                    <div class="check-icon">✓</div>
+                    <div class="check-icon">2</div>
                     <div>
                         <h4>2일 범위 내 사용 가능</h4>
                         <p>의무복무기간 중 총 2일의 범위에서 구직청원휴가 사용 가능</p>
                     </div>
                 </div>
                 <div class="checklist-item">
-                    <div class="check-icon">✓</div>
+                    <div class="check-icon">3</div>
                     <div>
                         <h4>지휘관 승인 필수 (가장 중요!)</h4>
                         <p>신청 전 반드시 지휘관/부대장 승인을 받아야 하며, 부대 상황에 따라 제한될 수 있음</p>
                     </div>
                 </div>
                 <div class="checklist-item">
-                    <div class="check-icon">✓</div>
+                    <div class="check-icon">4</div>
                     <div>
                         <h4>구직활동 증빙 제출 필요</h4>
                         <p>수료증, 진행 내용서 등 구직활동 증빙 자료를 휴가 복귀 후 부대에 제출</p>
                     </div>
                 </div>
                 <div class="checklist-item">
-                    <div class="check-icon">⚠️</div>
+                    <div class="check-icon">5</div>
                     <div>
                         <h4>인증된 업체 확인 필수</h4>
                         <p>인증되지 않은 업체는 휴가 미승인 가능성이 있으므로, 전문 컨설팅 업체인지 반드시 확인</p>
