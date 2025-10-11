@@ -996,7 +996,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .faq-slider {
     position: relative;
-    height: 480px;
+    height: 400px;
     display: flex;
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -1019,7 +1019,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .faq-card {
     width: 600px;
-    height: 420px;
+    height: 350px;
     background: #0e294f;
     border-radius: 20px;
     padding: 25px;
@@ -1037,7 +1037,7 @@ h1, h2, h3, h4, h5, h6 {
 .faq-content {
     background: white;
     border-radius: 12px;
-    padding: 25px;
+    padding: 30px;
     height: calc(100% - 50px);
     display: flex;
     flex-direction: column;
@@ -1048,7 +1048,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .faq-content h3 {
     color: #0e294f;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
     margin: 0 0 15px 0;
     line-height: 1.5;
@@ -1056,7 +1056,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .faq-content p {
     color: #1A1A1A;
-    font-size: 14px;
+    font-size: 15px;
     margin: 0;
     line-height: 1.7;
 }
