@@ -67,70 +67,60 @@
         }
 
         .startup-stages {
-            padding: var(--spacing-xxl) 0;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e8eef5 100%);
+            padding: 60px 0;
+            background: #fafafa;
         }
 
         .stages-timeline {
             position: relative;
             max-width: 1100px;
             margin: 0 auto;
-            padding: var(--spacing-xl) 0;
+            padding: 30px 0;
         }
 
         .stage-item {
             display: flex;
-            gap: var(--spacing-xl);
-            margin-bottom: var(--spacing-xl);
+            gap: 30px;
+            margin-bottom: 30px;
             align-items: center;
         }
 
         .stage-number {
-            width: 90px;
-            height: 90px;
-            background: linear-gradient(135deg, #0e294f, #2d5a8f);
+            width: 70px;
+            height: 70px;
+            background: #333;
             color: var(--white);
-            border-radius: 50%;
+            border-radius: 4px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.25rem;
-            font-weight: 900;
+            font-size: 1.5rem;
+            font-weight: 700;
             flex-shrink: 0;
-            box-shadow: 0 8px 24px rgba(14, 41, 79, 0.3);
-            transition: transform 0.3s ease;
-        }
-
-        .stage-item:hover .stage-number {
-            transform: scale(1.1);
+            transition: none;
         }
 
         .stage-content {
             flex: 1;
             background: var(--white);
-            padding: var(--spacing-xl);
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(14, 41, 79, 0.08);
-            border: 2px solid transparent;
-            transition: all 0.3s ease;
-        }
-
-        .stage-content:hover {
-            border-color: #0e294f;
-            box-shadow: 0 15px 35px rgba(14, 41, 79, 0.12);
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            transition: none;
         }
 
         .stage-content h3 {
-            color: #0e294f;
-            font-weight: 700;
-            margin-bottom: var(--spacing-md);
-            font-size: 1.375rem;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 1rem;
         }
 
         .stage-content > p {
-            color: #6c757d;
-            margin-bottom: var(--spacing-md);
-            font-weight: 500;
+            color: #666;
+            margin-bottom: 10px;
+            font-weight: 400;
+            font-size: 0.85rem;
         }
 
         .stage-content ul {
@@ -139,87 +129,76 @@
         }
 
         .stage-content ul li {
-            padding: 0.5rem 0;
-            padding-left: 1.75rem;
+            padding: 5px 0;
+            padding-left: 15px;
             position: relative;
-            color: #495057;
+            color: #555;
+            font-size: 0.85rem;
         }
 
         .stage-content ul li::before {
-            content: "→";
+            content: "•";
             position: absolute;
             left: 0;
-            color: #0e294f;
+            color: #333;
             font-weight: 700;
         }
 
         .support-programs {
-            padding: var(--spacing-xxl) 0;
+            padding: 60px 0;
             background: var(--white);
         }
 
         .program-tabs {
             display: flex;
             justify-content: center;
-            gap: var(--spacing-md);
-            margin-bottom: var(--spacing-xl);
+            gap: 15px;
+            margin-bottom: 30px;
             flex-wrap: wrap;
         }
 
         .program-tab {
-            padding: 0.875rem 1.75rem;
+            padding: 10px 20px;
             background: var(--white);
-            border: 2px solid #e8eef5;
-            border-radius: 30px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
             cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            font-weight: 600;
-            box-shadow: 0 4px 12px rgba(14, 41, 79, 0.05);
-        }
-
-        .program-tab:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(14, 41, 79, 0.12);
+            transition: none;
+            font-weight: 500;
+            font-size: 0.9rem;
         }
 
         .program-tab.active {
-            background: linear-gradient(135deg, #0e294f, #2d5a8f);
+            background: #333;
             color: var(--white);
-            border-color: #0e294f;
-            box-shadow: 0 8px 24px rgba(14, 41, 79, 0.25);
+            border-color: #333;
         }
 
         .program-content {
             display: none;
-            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-            padding: var(--spacing-xl);
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(14, 41, 79, 0.08);
-            border: 2px solid #e8eef5;
+            background: #fafafa;
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
         }
 
         .program-content.active {
             display: block;
-            animation: fadeIn 0.5s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
         }
 
         .program-content h3 {
-            color: #0e294f;
-            font-weight: 700;
-            margin-bottom: var(--spacing-md);
-            font-size: 1.5rem;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 1rem;
         }
 
         .program-content > p {
-            color: #6c757d;
-            margin-bottom: var(--spacing-md);
-            font-weight: 500;
-            line-height: 1.7;
+            color: #666;
+            margin-bottom: 10px;
+            font-weight: 400;
+            line-height: 1.6;
+            font-size: 0.85rem;
         }
 
         .program-content ul {
@@ -228,69 +207,61 @@
         }
 
         .program-content ul li {
-            padding: 0.625rem 0;
-            padding-left: 1.75rem;
+            padding: 5px 0;
+            padding-left: 15px;
             position: relative;
-            color: #495057;
+            color: #555;
             line-height: 1.6;
+            font-size: 0.85rem;
         }
 
         .program-content ul li::before {
-            content: "✓";
+            content: "•";
             position: absolute;
             left: 0;
-            color: #0e294f;
+            color: #333;
             font-weight: 700;
         }
 
         .funding-section {
-            padding: var(--spacing-xxl) 0;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e8eef5 100%);
+            padding: 60px 0;
+            background: #fafafa;
         }
 
         .funding-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--spacing-xl);
-            margin-top: var(--spacing-xl);
+            gap: 20px;
+            margin-top: 30px;
         }
 
         .funding-card {
             background: var(--white);
-            padding: var(--spacing-xl);
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(14, 41, 79, 0.08);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 2px solid transparent;
-        }
-
-        .funding-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(14, 41, 79, 0.15);
-            border-color: #0e294f;
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            transition: none;
         }
 
         .funding-card h3 {
-            color: #0e294f;
-            font-weight: 700;
-            margin-bottom: var(--spacing-sm);
-            font-size: 1.25rem;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 1rem;
         }
 
         .funding-amount {
-            font-size: 2.5rem;
-            font-weight: 900;
-            background: linear-gradient(135deg, #0e294f, #2d5a8f);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin: var(--spacing-md) 0;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #333;
+            margin: 15px 0;
         }
 
         .funding-card > p {
-            color: #6c757d;
-            margin-bottom: var(--spacing-md);
-            font-weight: 500;
+            color: #666;
+            margin-bottom: 10px;
+            font-weight: 400;
+            font-size: 0.85rem;
         }
 
         .funding-card ul {
@@ -299,118 +270,113 @@
         }
 
         .funding-card ul li {
-            padding: 0.5rem 0;
-            padding-left: 1.75rem;
+            padding: 5px 0;
+            padding-left: 15px;
             position: relative;
-            color: #495057;
+            color: #555;
+            font-size: 0.85rem;
         }
 
         .funding-card ul li::before {
-            content: "→";
+            content: "•";
             position: absolute;
             left: 0;
-            color: #0e294f;
+            color: #333;
             font-weight: 700;
         }
 
         .mvp-development {
-            padding: var(--spacing-xxl) 0;
+            padding: 60px 0;
             background: var(--white);
         }
 
         .mvp-process {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: var(--spacing-xl);
-            margin-top: var(--spacing-xl);
+            gap: 20px;
+            margin-top: 30px;
         }
 
         .mvp-step {
             text-align: center;
-            padding: var(--spacing-xl);
-            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-            border: 2px solid transparent;
-            border-radius: 20px;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 10px 30px rgba(14, 41, 79, 0.08);
-        }
-
-        .mvp-step:hover {
-            border-color: #0e294f;
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(14, 41, 79, 0.12);
+            padding: 25px;
+            background: #fafafa;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            transition: none;
         }
 
         .mvp-icon {
-            font-size: 3.5rem;
-            margin-bottom: var(--spacing-md);
-            transition: transform 0.3s ease;
-        }
-
-        .mvp-step:hover .mvp-icon {
-            transform: scale(1.1);
+            display: none;
         }
 
         .mvp-step h3 {
-            color: #0e294f;
-            font-weight: 700;
-            margin-bottom: var(--spacing-sm);
-            font-size: 1.25rem;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 1rem;
         }
 
         .mvp-step p {
-            color: #6c757d;
+            color: #666;
             line-height: 1.6;
+            font-size: 0.85rem;
         }
 
         .success-stories {
-            padding: var(--spacing-xxl) 0;
-            background: linear-gradient(135deg, #151515 0%, #2A2A2A 100%);
+            padding: 60px 0;
+            background: #2B2B2B;
             color: var(--white);
         }
 
         .story-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: var(--spacing-xl);
-            margin-top: var(--spacing-xl);
+            gap: 20px;
+            margin-top: 30px;
         }
 
         .story-card {
-            background: rgba(14, 41, 79, 0.2);
-            padding: var(--spacing-xl);
-            border-radius: 20px;
-            border: 2px solid rgba(93, 137, 199, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .story-card:hover {
-            border-color: #2d5a8f;
-            transform: translateY(-5px);
-            background: rgba(14, 41, 79, 0.3);
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: none;
         }
 
         .story-category {
             display: inline-block;
-            background: linear-gradient(135deg, #0e294f, #2d5a8f);
+            background: #333;
             color: var(--white);
-            padding: 0.375rem 1rem;
-            border-radius: 25px;
-            font-size: 0.875rem;
-            margin-bottom: var(--spacing-md);
-            font-weight: 600;
-            box-shadow: 0 4px 12px rgba(14, 41, 79, 0.3);
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+            font-weight: 500;
         }
 
         .story-card h3 {
-            font-weight: 700;
-            margin-bottom: var(--spacing-sm);
-            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 1rem;
         }
 
         .story-card p {
             line-height: 1.6;
             opacity: 0.9;
+            font-size: 0.85rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .content-icon {
+            display: none;
         }
     </style>
 </head>
@@ -525,32 +491,32 @@
             <div class="kpi-container">
                 <div class="kpi-item">
                     <div class="kpi-icon">
-                        <img src="assets/images/i_people.svg" alt="합격자">
+                        <img src="assets/images/i_people.svg" alt="컨설팅 경력">
                     </div>
-                    <div class="kpi-value">127</div>
+                    <div class="kpi-value">15년+</div>
                     <div class="kpi-label">
-                        창업 기업<br>
-                        (2024년 기준)
+                        창업 컨설팅<br>
+                        경력
                     </div>
                 </div>
                 <div class="kpi-item">
                     <div class="kpi-icon">
-                        <img src="assets/images/i_chart_bar.svg" alt="정부지원 선정">
+                        <img src="assets/images/i_chart_bar.svg" alt="컨설팅 시간">
                     </div>
-                    <div class="kpi-value">78%</div>
+                    <div class="kpi-value">30시간</div>
                     <div class="kpi-label">
-                        정부 지원 사업<br>
-                        선정률
+                        1:1 맞춤<br>
+                        컨설팅 제공
                     </div>
                 </div>
                 <div class="kpi-item">
                     <div class="kpi-icon">
-                        <img src="assets/images/i_chart_pie.svg" alt="투자 유치">
+                        <img src="assets/images/i_chart_pie.svg" alt="피드백">
                     </div>
-                    <div class="kpi-value">42억</div>
+                    <div class="kpi-value">7회+</div>
                     <div class="kpi-label">
-                        누적 투자 유치<br>
-                        (시드~Series A)
+                        사업계획서<br>
+                        피드백 제공
                     </div>
                 </div>
             </div>
@@ -570,7 +536,7 @@
                     <p class="section-desc">
                         아이디어 검증부터 사업화, 투자 유치까지<br>
                         체계적인 창업 컨설팅으로 성공하는 스타트업을 만듭니다.<br>
-                        정부 지원 사업 선정률 78%, 검증된 창업 컨설팅을 경험하세요.
+                        15년 이상의 경험을 바탕으로 검증된 창업 컨설팅을 제공합니다.
                     </p>
                 </div>
 
@@ -604,8 +570,8 @@
                             </div>
                             <div class="content-item">
                                 <div class="content-icon">💰</div>
-                                <h3>최대 5억원 지원금 획득</h3>
-                                <p>정부 지원 사업 선정률 78%의 노하우로<br>예비창업패키지부터 TIPS까지 지원금 확보를 돕습니다.</p>
+                                <h3>정부 지원금 확보 전략</h3>
+                                <p>15년+ 축적된 노하우로<br>예비창업패키지부터 TIPS까지 지원금 확보를 체계적으로 돕습니다.</p>
                             </div>
                         </div>
 
@@ -669,7 +635,6 @@
                             <img src="assets/images/3068021237_oaj3qiTw_ef4f6ba5fca26b65b73f1d29bf12caf00d774389.png" alt="Oracle">
                         </div>
                         <h3 class="company-name">한국오라클</h3>
-                        <div class="company-name-en">ORACLE</div>
                         <p class="story-desc">비관련 경력 3년</p>
                         <p class="story-info">30대 초반 | 이직</p>
                     </div>
@@ -679,7 +644,6 @@
                             <img src="assets/images/3068021237_FW2Gh5kZ_69f0cf4c4b2a75043f99e4c8a54e5c1768ed752a.png" alt="Nike">
                         </div>
                         <h3 class="company-name">NIKE KOREA</h3>
-                        <div class="company-name-en">NIKE</div>
                         <p class="story-desc">비관련 경력 3년</p>
                         <p class="story-info">30대 초반 | 이직</p>
                     </div>
@@ -689,7 +653,6 @@
                             <img src="assets/images/3068021237_JEuaRNbe_af067e775fba3c7b3b4f852786eab489512967ad.png" alt="eBay">
                         </div>
                         <h3 class="company-name">이베이코리아</h3>
-                        <div class="company-name-en">ebay</div>
                         <p class="story-desc">해외대 Visual Arts & Cultu</p>
                         <p class="story-info">20대 중반 | 신입</p>
                     </div>
@@ -699,7 +662,6 @@
                             <img src="assets/images/3068021237_Q0wHsiNO_aaf6f5ce4a5e0a1a4dfcfae210069bb6cef9b8d1.png" alt="LVMH">
                         </div>
                         <h3 class="company-name">엘브이엠에치코스메틱스</h3>
-                        <div class="company-name-en">LVMH</div>
                         <p class="story-desc">서울 사립대 문헌정보학</p>
                         <p class="story-info">20대 후반 | 신입</p>
                     </div>
@@ -709,7 +671,6 @@
                             <img src="assets/images/3068021237_hRKzjkpc_81af5e7d0fa67dc5680e23db3f50d852f9386758.png" alt="Shinsegae">
                         </div>
                         <h3 class="company-name">신세계인터내셔널</h3>
-                        <div class="company-name-en">SHINSEGAE INTERNATIONAL</div>
                         <p class="story-desc">서울 사립대 생활디자인</p>
                         <p class="story-info">20대 초반 | 신입</p>
                     </div>
@@ -719,7 +680,6 @@
                             <img src="assets/images/3068021237_UXqDZJpA_afd96f6971184f6d5c353d9c3e0513506a19759e (1).png" alt="Disney">
                         </div>
                         <h3 class="company-name">월트디즈니컴퍼니코리아</h3>
-                        <div class="company-name-en">The Walt Disney Company</div>
                         <p class="story-desc">서울사립대 국제학</p>
                         <p class="story-info">20대 중반 | 신입</p>
                     </div>
@@ -729,7 +689,6 @@
                             <img src="assets/images/3068021237_XnBd1G5Z_80ac17aac7dc3375b2edd58aff5a68f8f87f71eb.png" alt="GE Healthcare">
                         </div>
                         <h3 class="company-name">지이헬스케어코리아</h3>
-                        <div class="company-name-en">GE Healthcare</div>
                         <p class="story-desc">지방 국공립대 산업 경...</p>
                         <p class="story-info">20대 중반 | 신입</p>
                     </div>
@@ -739,7 +698,6 @@
                             <img src="assets/images/3068021237_s80SL2yl_2109b5c613cd931e99be86be0ad7775b875f3725.png" alt="Medtronic">
                         </div>
                         <h3 class="company-name">메드트로닉코리아</h3>
-                        <div class="company-name-en">Medtronic</div>
                         <p class="story-desc">서울 사립대 광고홍보학</p>
                         <p class="story-info">30대 초반 | 신입</p>
                     </div>
@@ -847,8 +805,8 @@
                         <div class="faq-card">
                             <div class="faq-label">Question</div>
                             <div class="faq-content">
-                                <h3>창업 아이템이 없어도</h3>
-                                <p>컨설팅을 받을 수<br>있나요?</p>
+                                <h3>창업 아이템이 없어도 컨설팅을 받을 수 있나요?</h3>
+                                <p>네, 가능합니다. 아이디어 발굴부터 시장 조사, 사업 모델 구체화까지 전 과정을 지원합니다. 관심 분야나 전문성을 바탕으로 실현 가능한 창업 아이템을 함께 찾아갑니다.</p>
                             </div>
                         </div>
                     </div>
@@ -856,8 +814,8 @@
                         <div class="faq-card">
                             <div class="faq-label">Question</div>
                             <div class="faq-content">
-                                <h3>정부 지원 사업은</h3>
-                                <p>어떤 것을 받을 수<br>있나요?</p>
+                                <h3>정부 지원 사업은 어떤 것을 받을 수 있나요?</h3>
+                                <p>예비창업패키지(1억), 초기창업패키지(1억), TIPS(5억), 청년창업사관학교 등 다양한 정부 지원 사업이 있습니다. 사업 단계와 분야에 맞는 최적의 프로그램을 매칭해드립니다.</p>
                             </div>
                         </div>
                     </div>
@@ -865,8 +823,8 @@
                         <div class="faq-card">
                             <div class="faq-label">Question</div>
                             <div class="faq-content">
-                                <h3>컨설팅 비용은</h3>
-                                <p>어떻게 되나요?<br>할인 혜택도 있나요?</p>
+                                <h3>정부 지원 사업 선정을 위한 준비 기간은 얼마나 걸리나요?</h3>
+                                <p>평균 2-3개월 정도 소요됩니다. 사업 계획서 작성부터 발표 준비까지 체계적으로 진행하며, 사업별 평가 기준에 맞춘 맞춤형 준비를 통해 선정 가능성을 높입니다.</p>
                             </div>
                         </div>
                     </div>
@@ -874,8 +832,8 @@
                         <div class="faq-card">
                             <div class="faq-label">Question</div>
                             <div class="faq-content">
-                                <h3>정부 지원 사업 선정률이</h3>
-                                <p>78%인 게 사실인가요?<br>어떻게 가능한가요?</p>
+                                <h3>MVP 개발도 도와주시나요? 개발자 연결도 가능한가요?</h3>
+                                <p>네, MVP 기획부터 개발까지 전 과정을 지원합니다. 프리랜서 개발자부터 개발 전문 업체까지 신뢰할 수 있는 개발 파트너를 매칭해드리며, 개발 프로세스 전반을 관리합니다.</p>
                             </div>
                         </div>
                     </div>
@@ -883,17 +841,8 @@
                         <div class="faq-card">
                             <div class="faq-label">Question</div>
                             <div class="faq-content">
-                                <h3>MVP 개발도</h3>
-                                <p>도와주시나요?<br>개발자 연결도 가능한가요?</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="faq-slide">
-                        <div class="faq-card">
-                            <div class="faq-label">Question</div>
-                            <div class="faq-content">
-                                <h3>투자 유치는</h3>
-                                <p>어떻게 지원되나요?<br>성공 가능성은?</p>
+                                <h3>투자 유치는 어떻게 지원되나요?</h3>
+                                <p>IR 자료 제작부터 피칭 트레이닝, 투자자 네트워킹까지 전 과정을 지원합니다. 엔젤 투자자 및 VC 네트워크를 통해 투자 기회를 제공하며, 투자 조건 협상과 계약서 검토도 도와드립니다.</p>
                             </div>
                         </div>
                     </div>
@@ -904,7 +853,6 @@
                     <span class="faq-indicator" data-slide="2"></span>
                     <span class="faq-indicator" data-slide="3"></span>
                     <span class="faq-indicator" data-slide="4"></span>
-                    <span class="faq-indicator" data-slide="5"></span>
                 </div>
             </div>
         </div>
