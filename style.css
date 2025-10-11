@@ -440,7 +440,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-subtitle {
     font-size: 1.125rem;
     color: var(--gray);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     line-height: 1.8;
 }
 
