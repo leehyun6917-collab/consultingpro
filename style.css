@@ -1791,7 +1791,7 @@ h1, h2, h3, h4, h5, h6 {
     .phone-mockup {
         width: 100%;
         max-width: 400px;
-        padding: 40px;
+        padding: 20px;
     }
 
     .section-title {
@@ -2102,7 +2102,7 @@ h1, h2, h3, h4, h5, h6 {
     .phone-mockup {
         width: 100%;
         max-width: 350px;
-        padding: 40px;
+        padding: 20px;
     }
 
     .phone-mockup-large img {
