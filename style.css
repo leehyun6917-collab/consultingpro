@@ -996,7 +996,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .faq-slider {
     position: relative;
-    height: 400px;
+    height: 280px;
     display: flex;
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -1019,7 +1019,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .faq-card {
     width: 600px;
-    height: 350px;
+    height: 240px;
     background: #0e294f;
     border-radius: 20px;
     padding: 25px;
@@ -1037,7 +1037,7 @@ h1, h2, h3, h4, h5, h6 {
 .faq-content {
     background: white;
     border-radius: 12px;
-    padding: 30px;
+    padding: 20px;
     height: calc(100% - 50px);
     display: flex;
     flex-direction: column;
@@ -1048,17 +1048,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .faq-content h3 {
     color: #0e294f;
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 700;
-    margin: 0 0 15px 0;
-    line-height: 1.5;
+    margin: 0 0 10px 0;
+    line-height: 1.4;
 }
 
 .faq-content p {
     color: #1A1A1A;
-    font-size: 15px;
+    font-size: 14px;
     margin: 0;
-    line-height: 1.7;
+    line-height: 1.6;
 }
 
 .faq-indicators {
@@ -1118,7 +1118,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .consultation-cta-section .cta-title {
-    font-size: 42px;
+    font-size: 38px;
     font-weight: 700;
     color: white;
     margin-bottom: 20px;
@@ -1126,7 +1126,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .consultation-cta-section .cta-title .highlight {
-    color: #0e294f;
+    color: #4fc3f7;
 }
 
 .consultation-cta-section .cta-description {
