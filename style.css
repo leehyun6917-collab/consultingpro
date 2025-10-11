@@ -285,11 +285,64 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 769px) {
     .nav-menu {
         display: flex !important;
+        position: static;
+        width: auto;
+        height: auto;
+        background: transparent;
+        box-shadow: none;
+        gap: 2.5rem;
+        align-items: center;
     }
 
     .mobile-menu-header,
-    .menu-section,
     .menu-footer {
+        display: none !important;
+    }
+
+    .menu-section {
+        display: block !important;
+        padding: 0;
+        border-bottom: none;
+    }
+
+    .menu-title {
+        display: none;
+    }
+
+    .menu-list {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .menu-list li a {
+        padding: 8px 16px;
+        font-size: 0.95rem;
+        color: #333;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+
+    .menu-list li a:hover {
+        background-color: transparent;
+        color: #0e294f;
+        transform: none;
+    }
+
+    .consult-link {
+        background: #0e294f;
+        color: white !important;
+        padding: 10px 24px !important;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+    }
+
+    .consult-link:hover {
+        background: #1a3d6b !important;
+        transform: translateY(-2px);
+    }
+
+    .menu-toggle {
         display: none !important;
     }
 }
