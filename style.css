@@ -1002,7 +1002,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .faq-slider {
     position: relative;
-    height: 280px;
+    height: 480px;
     display: flex;
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -1024,8 +1024,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .faq-card {
-    width: 360px;
-    height: 220px;
+    width: 600px;
+    height: 420px;
     background: #0e294f;
     border-radius: 20px;
     padding: 25px;
@@ -1043,28 +1043,28 @@ h1, h2, h3, h4, h5, h6 {
 .faq-content {
     background: white;
     border-radius: 12px;
-    padding: 20px;
+    padding: 25px;
     height: calc(100% - 50px);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
 }
 
 .faq-content h3 {
     color: #0e294f;
     font-size: 18px;
     font-weight: 700;
-    margin: 0 0 10px 0;
-    line-height: 1.4;
+    margin: 0 0 15px 0;
+    line-height: 1.5;
 }
 
 .faq-content p {
     color: #1A1A1A;
     font-size: 14px;
     margin: 0;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 .faq-indicators {
@@ -1494,13 +1494,21 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 28px;
     }
 
+    .faq-slider {
+        height: 420px;
+    }
+
     .faq-card {
-        width: 320px;
-        height: 200px;
+        width: 520px;
+        height: 360px;
     }
 
     .faq-content h3 {
         font-size: 16px;
+    }
+
+    .faq-content p {
+        font-size: 13px;
     }
 
     /* Consultation CTA Section Tablet */
@@ -1687,6 +1695,25 @@ h1, h2, h3, h4, h5, h6 {
 
     .footer-info {
         grid-template-columns: 1fr;
+    }
+
+    /* FAQ Section Mobile */
+    .faq-slider {
+        height: 450px;
+    }
+
+    .faq-card {
+        width: 90%;
+        max-width: 500px;
+        height: 390px;
+    }
+
+    .faq-content h3 {
+        font-size: 16px;
+    }
+
+    .faq-content p {
+        font-size: 13px;
     }
 }
 
@@ -1880,13 +1907,13 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .faq-slider {
-        height: 240px;
+        height: 440px;
     }
 
     .faq-card {
         width: 90%;
-        max-width: 300px;
-        height: 180px;
+        max-width: 340px;
+        height: 380px;
         padding: 20px;
     }
 
@@ -1896,15 +1923,17 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .faq-content {
-        padding: 15px;
+        padding: 20px;
     }
 
     .faq-content h3 {
         font-size: 15px;
+        margin-bottom: 12px;
     }
 
     .faq-content p {
         font-size: 13px;
+        line-height: 1.6;
     }
 
     /* Consultation CTA Section Small Mobile */
