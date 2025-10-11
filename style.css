@@ -464,8 +464,6 @@ h1, h2, h3, h4, h5, h6 {
     height: auto;
     display: block;
     margin: 0 auto;
-    padding: 40px;
-    box-sizing: border-box;
 }
 
 /* ========================================
@@ -1791,7 +1789,6 @@ h1, h2, h3, h4, h5, h6 {
     .phone-mockup {
         width: 100%;
         max-width: 480px;
-        padding: 20px;
     }
 
     .section-title {
@@ -2102,7 +2099,6 @@ h1, h2, h3, h4, h5, h6 {
     .phone-mockup {
         width: 100%;
         max-width: 420px;
-        padding: 20px;
     }
 
     .phone-mockup-large img {
