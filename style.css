@@ -460,7 +460,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .phone-mockup {
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -1790,7 +1790,7 @@ h1, h2, h3, h4, h5, h6 {
 
     .phone-mockup {
         width: 100%;
-        max-width: 400px;
+        max-width: 480px;
         padding: 20px;
     }
 
@@ -2101,7 +2101,7 @@ h1, h2, h3, h4, h5, h6 {
 
     .phone-mockup {
         width: 100%;
-        max-width: 350px;
+        max-width: 420px;
         padding: 20px;
     }
 
