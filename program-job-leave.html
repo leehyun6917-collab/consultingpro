@@ -68,47 +68,91 @@
 
         .target-section {
             padding: var(--spacing-xxl) 0;
-            background: var(--gray-light);
+            background: linear-gradient(135deg, #f8f9fa 0%, #e8eef5 100%);
         }
 
         .target-cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--spacing-lg);
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-xl);
             margin-top: var(--spacing-xl);
         }
 
         .target-card {
             background: var(--white);
-            padding: var(--spacing-lg);
-            border-radius: 12px;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            padding: var(--spacing-xl);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(14, 41, 79, 0.08);
             text-align: center;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .target-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #0e294f, #2d5a8f);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .target-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .target-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(14, 41, 79, 0.15);
         }
 
         .target-icon {
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin-bottom: var(--spacing-md);
+            transition: transform 0.3s ease;
+        }
+
+        .target-card:hover .target-icon {
+            transform: scale(1.1);
+        }
+
+        .target-card h3 {
+            color: #0e294f;
+            font-weight: 700;
+            margin-bottom: var(--spacing-sm);
+            font-size: 1.25rem;
+        }
+
+        .target-card p {
+            color: #6c757d;
+            line-height: 1.6;
         }
 
         .process-detail {
             padding: var(--spacing-xxl) 0;
+            background: var(--white);
         }
 
         .process-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--spacing-lg);
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--spacing-xl);
             margin-top: var(--spacing-xl);
         }
 
         .process-card {
-            background: var(--white);
-            border: 2px solid var(--gray-light);
-            border-radius: 12px;
-            padding: var(--spacing-lg);
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border: 2px solid transparent;
+            border-radius: 20px;
+            padding: var(--spacing-xl);
             position: relative;
             overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 5px 20px rgba(14, 41, 79, 0.06);
         }
 
         .process-card::before {
@@ -116,60 +160,132 @@
             position: absolute;
             top: 0;
             right: 0;
-            background: var(--primary);
+            background: linear-gradient(135deg, #0e294f, #2d5a8f);
             color: var(--white);
-            padding: 0.5rem 1.5rem;
+            padding: 0.75rem 1.75rem;
             font-weight: 700;
-            border-bottom-left-radius: 12px;
+            font-size: 0.875rem;
+            border-bottom-left-radius: 20px;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 10px rgba(14, 41, 79, 0.2);
+        }
+
+        .process-card:hover {
+            transform: translateY(-5px);
+            border-color: #0e294f;
+            box-shadow: 0 15px 35px rgba(14, 41, 79, 0.12);
+        }
+
+        .process-card h3 {
+            color: #0e294f;
+            font-weight: 700;
+            margin-bottom: var(--spacing-md);
+            font-size: 1.25rem;
+        }
+
+        .process-card > p {
+            color: #6c757d;
+            margin-bottom: var(--spacing-md);
+            font-weight: 500;
+        }
+
+        .process-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .process-card ul li {
+            padding: 0.5rem 0;
+            padding-left: 1.75rem;
+            position: relative;
+            color: #495057;
+            line-height: 1.6;
+        }
+
+        .process-card ul li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #0e294f;
+            font-weight: 700;
         }
 
         .checklist-section {
             padding: var(--spacing-xxl) 0;
-            background: var(--white);
+            background: linear-gradient(135deg, #f8f9fa 0%, #e8eef5 100%);
         }
 
         .checklist-container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
         .checklist-item {
             display: flex;
             align-items: flex-start;
-            gap: var(--spacing-md);
-            padding: var(--spacing-md);
-            border-bottom: 1px solid var(--gray-light);
+            gap: var(--spacing-lg);
+            padding: var(--spacing-lg);
+            background: var(--white);
+            border-radius: 16px;
+            margin-bottom: var(--spacing-md);
+            box-shadow: 0 5px 15px rgba(14, 41, 79, 0.06);
+            transition: all 0.3s ease;
+        }
+
+        .checklist-item:hover {
+            transform: translateX(8px);
+            box-shadow: 0 8px 25px rgba(14, 41, 79, 0.12);
         }
 
         .check-icon {
-            width: 30px;
-            height: 30px;
-            background: var(--primary);
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #0e294f, #2d5a8f);
             color: var(--white);
-            border-radius: 50%;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
+            font-size: 1.25rem;
+            box-shadow: 0 4px 12px rgba(14, 41, 79, 0.2);
+        }
+
+        .checklist-item h4 {
+            color: #0e294f;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            font-size: 1.125rem;
+        }
+
+        .checklist-item p {
+            color: #6c757d;
+            line-height: 1.6;
         }
 
         .document-section {
             padding: var(--spacing-xxl) 0;
-            background: var(--gray-light);
+            background: var(--white);
         }
 
         .document-table {
             background: var(--white);
-            border-radius: 12px;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 10px 30px rgba(14, 41, 79, 0.1);
+            border: 2px solid #e8eef5;
         }
 
         .document-row {
             display: grid;
             grid-template-columns: 1fr 2fr 1fr;
-            padding: var(--spacing-md);
-            border-bottom: 1px solid var(--gray-light);
+            padding: var(--spacing-lg);
+            border-bottom: 1px solid #e8eef5;
+            transition: background 0.3s ease;
+        }
+
+        .document-row:hover:not(.document-header) {
+            background: #f8f9fa;
         }
 
         .document-row:last-child {
@@ -177,22 +293,35 @@
         }
 
         .document-header {
-            background: var(--primary);
+            background: linear-gradient(135deg, #0e294f, #2d5a8f);
             color: var(--white);
             font-weight: 700;
         }
 
+        .document-row > div {
+            display: flex;
+            align-items: center;
+        }
+
         .warning-box {
-            background: #fff3e0;
-            border-left: 4px solid #ff9800;
-            padding: var(--spacing-md);
-            margin: var(--spacing-lg) 0;
-            border-radius: 4px;
+            background: linear-gradient(135deg, #fff8e1, #fff3e0);
+            border-left: 5px solid #ff9800;
+            padding: var(--spacing-lg);
+            margin: var(--spacing-xl) 0;
+            border-radius: 16px;
+            box-shadow: 0 5px 15px rgba(255, 152, 0, 0.1);
         }
 
         .warning-box h4 {
-            color: #ff9800;
-            margin-bottom: var(--spacing-xs);
+            color: #f57c00;
+            margin-bottom: var(--spacing-sm);
+            font-weight: 700;
+            font-size: 1.125rem;
+        }
+
+        .warning-box p {
+            color: #795548;
+            line-height: 1.7;
         }
     </style>
 </head>
