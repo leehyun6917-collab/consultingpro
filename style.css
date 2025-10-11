@@ -354,7 +354,7 @@ h1, h2, h3, h4, h5, h6 {
    Hero Section
    ======================================== */
 .hero {
-    padding: 120px 0 80px;
+    padding: 120px 0 150px;
     background: var(--white);
     text-align: center;
     overflow: visible;
