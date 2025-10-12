@@ -514,13 +514,4 @@
     // ========================================
     console.log('컨설팅 프로 - 사이트가 성공적으로 로드되었습니다.');
 
-    // Track page view
-    if (window.gtag) {
-        gtag('event', 'page_view', {
-            'page_title': document.title,
-            'page_location': window.location.href,
-            'page_path': window.location.pathname
-        });
-    }
-
 })();
