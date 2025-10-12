@@ -58,7 +58,7 @@
 
         .program-visual {
             margin: 0 auto;
-            max-width: 1000px;
+            max-width: 700px;
             background: white;
             padding: 40px;
             border-radius: 20px;
@@ -70,6 +70,28 @@
             height: auto;
             display: block;
             max-width: 100%;
+        }
+
+        /* 큰 데스크톱 화면에서 더 제한 */
+        @media (min-width: 1400px) {
+            .program-visual {
+                max-width: 750px;
+            }
+        }
+
+        /* 중간 데스크톱 */
+        @media (min-width: 1024px) and (max-width: 1399px) {
+            .program-visual {
+                max-width: 650px;
+            }
+        }
+
+        /* 태블릿 */
+        @media (min-width: 769px) and (max-width: 1023px) {
+            .program-visual {
+                max-width: 600px;
+                padding: 30px;
+            }
         }
 
         /* Show/Hide for Desktop and Mobile */
@@ -395,7 +417,14 @@
         .partners-image {
             width: 100%;
             height: auto;
+        }
+
+        .partners-image.desktop-only {
             display: block;
+        }
+
+        .partners-image.mobile-only {
+            display: none;
         }
 
         .partners-footer-content {
@@ -576,6 +605,14 @@
             .partners-section {
                 padding: 50px 20px;
                 gap: 40px;
+            }
+
+            .partners-image.desktop-only {
+                display: none;
+            }
+
+            .partners-image.mobile-only {
+                display: block;
             }
 
             .partners-title {
