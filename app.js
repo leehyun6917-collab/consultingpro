@@ -516,6 +516,10 @@
     const KAKAO_CLICK_KEY = 'kakao_cta_clicked';
 
     kakaoLinks.forEach(link => {
+        // Ensure all Kakao links open in new tab
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
+
         link.addEventListener('click', function(e) {
             // Check if already tracked in this session
             const hasClicked = sessionStorage.getItem(KAKAO_CLICK_KEY);
