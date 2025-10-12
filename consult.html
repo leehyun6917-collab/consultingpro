@@ -19,10 +19,19 @@
 
       gtag('config', 'G-6EKJGGCE2B');
 
-      // Track redirect
-      gtag('event', 'click_kakao_cta', {
-        'cta_position': 'consult_page_redirect'
-      });
+      // Track redirect (session-based)
+      const KAKAO_CLICK_KEY = 'kakao_cta_clicked';
+      const hasClicked = sessionStorage.getItem(KAKAO_CLICK_KEY);
+
+      if (!hasClicked) {
+        gtag('event', 'kakao_cta_click', {
+          'button_text': 'consult_page_redirect',
+          'button_class': 'redirect',
+          'page_location': '/consult.html',
+          'session_unique': true
+        });
+        sessionStorage.setItem(KAKAO_CLICK_KEY, 'true');
+      }
     </script>
 
     <style>

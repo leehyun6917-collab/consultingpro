@@ -510,6 +510,39 @@
     }
 
     // ========================================
+    // Kakao CTA Click Tracking (Session-based)
+    // ========================================
+    const kakaoLinks = document.querySelectorAll('a[href*="pf.kakao.com/_cbBxcn"]');
+    const KAKAO_CLICK_KEY = 'kakao_cta_clicked';
+
+    kakaoLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            // Check if already tracked in this session
+            const hasClicked = sessionStorage.getItem(KAKAO_CLICK_KEY);
+
+            if (!hasClicked && window.gtag) {
+                // Get button context information
+                const buttonText = this.textContent.trim();
+                const buttonClass = this.className;
+                const pageLocation = window.location.pathname;
+
+                // Track the event
+                gtag('event', 'kakao_cta_click', {
+                    'button_text': buttonText,
+                    'button_class': buttonClass,
+                    'page_location': pageLocation,
+                    'session_unique': true
+                });
+
+                // Mark as clicked in this session
+                sessionStorage.setItem(KAKAO_CLICK_KEY, 'true');
+
+                console.log('카카오 CTA 클릭 이벤트 추적됨 (세션당 1회)');
+            }
+        });
+    });
+
+    // ========================================
     // Initialize on DOM Ready
     // ========================================
     console.log('컨설팅 프로 - 사이트가 성공적으로 로드되었습니다.');
