@@ -114,7 +114,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-container {
-    padding: 1rem 0;
+    padding: 0.8rem 0;
 }
 
 .nav-wrapper {
@@ -124,17 +124,43 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 var(--spacing-md);
+    padding-left: 10px;
 }
 
 .logo {
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.logo-icon {
+    height: 42px;
+    width: auto;
+}
+
+.logo-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
 }
 
 .logo-text {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: 800;
     color: var(--primary);
     font-family: var(--font-heading);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.logo-tagline {
+    font-size: 0.48rem;
+    font-weight: 600;
+    color: #666;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-top: 1px;
 }
 
 .nav-menu {
@@ -184,8 +210,35 @@ h1, h2, h3, h4, h5, h6 {
 .mobile-logo {
     color: #0e294f;
     text-decoration: none;
-    font-weight: 700;
-    font-size: 1.15rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.mobile-logo-icon {
+    height: 32px;
+    width: auto;
+}
+
+.mobile-logo-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+}
+
+.mobile-logo-text {
+    font-size: 0.95rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.mobile-logo-tagline {
+    font-size: 0.42rem;
+    font-weight: 600;
+    color: #666;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
 }
 
 .menu-close {
