@@ -530,7 +530,7 @@
                 const buttonClass = this.className;
                 const pageLocation = window.location.pathname;
 
-                // Track the event
+                // Track GA4 event
                 gtag('event', 'kakao_cta_click', {
                     'button_text': buttonText,
                     'button_class': buttonClass,
@@ -538,10 +538,15 @@
                     'session_unique': true
                 });
 
+                // Track Google Ads conversion event
+                gtag('event', 'conversion_event_contact', {
+                    'send_to': 'AW-17644734866'
+                });
+
                 // Mark as clicked in this session
                 sessionStorage.setItem(KAKAO_CLICK_KEY, 'true');
 
-                console.log('카카오 CTA 클릭 이벤트 추적됨 (세션당 1회)');
+                console.log('카카오 CTA 클릭 이벤트 추적됨 (GA4 + Google Ads 전환, 세션당 1회)');
             }
         });
     });

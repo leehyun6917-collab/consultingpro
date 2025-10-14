@@ -24,12 +24,19 @@
       const hasClicked = sessionStorage.getItem(KAKAO_CLICK_KEY);
 
       if (!hasClicked) {
+        // Track GA4 event
         gtag('event', 'kakao_cta_click', {
           'button_text': 'consult_page_redirect',
           'button_class': 'redirect',
           'page_location': '/consult.html',
           'session_unique': true
         });
+
+        // Track Google Ads conversion event
+        gtag('event', 'conversion_event_contact', {
+          'send_to': 'AW-17644734866'
+        });
+
         sessionStorage.setItem(KAKAO_CLICK_KEY, 'true');
       }
     </script>
