@@ -7,7 +7,9 @@
       "Bash(open:*)",
       "Bash(git init:*)",
       "Bash(git add:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Read(//Users/jeonghyeonwook/Desktop/부산_작업/Code/컨설팅프로/**)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nGoogle Ads 전환 이벤트 추가 - 카카오톡 CTA 클릭 시 conversion_event_contact 전송\n\n기존 kakao_cta_click 이벤트에 추가로 Google Ads 전환 이벤트를 함께 전송하도록 개선했습니다.\n\n- app.js: 카카오톡 링크 클릭 시 conversion_event_contact 이벤트 추가\n- consult.html: 상담 페이지 리다이렉트 시 conversion_event_contact 이벤트 추가\n- 세션당 1회 전송 로직 유지\n- 새 탭 열기 UX 유지\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"
     ],
     "deny": [],
     "ask": []
