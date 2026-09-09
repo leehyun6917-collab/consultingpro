@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /index_backup.html
+Disallow: /consult.html
+
+Sitemap: https://www.consult-pro.kr/sitemap.xml

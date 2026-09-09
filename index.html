@@ -14,14 +14,46 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>컨설팅프로 소개 | 컨설팅프로</title>
-    <meta name="description" content="컨설팅프로는 당신의 커리어를 체계적으로 설계하고 실현하는 전문 컨설팅 서비스입니다.">
+    <title>구직청원휴가 컨설팅 | 컨설팅 프로</title>
+    <meta name="description" content="현역 장병을 위한 구직청원휴가 제도 활용 컨설팅. 반려없이 안전한 신청부터 대기업 합격까지, 전문 컨설턴트가 1:1로 안내해 드립니다.">
     <link rel="icon" type="image/png" href="assets/images/logo_clean.png">
+    <link rel="canonical" href="https://www.consult-pro.kr/">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="컨설팅프로 소개">
-    <meta property="og:description" content="전문가 팀과 체계적인 프로세스로 최고의 커리어 컨설팅 서비스를 제공합니다.">
+    <meta property="og:title" content="구직청원휴가 컨설팅 | 컨설팅 프로">
+    <meta property="og:description" content="반려없이 안전한 구직청원휴가 신청, 전문 컨설턴트가 1:1로 안내해 드립니다.">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.consult-pro.kr/">
+    <meta property="og:image" content="https://www.consult-pro.kr/assets/images/CP_logo.png">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "컨설팅 프로",
+      "url": "https://www.consult-pro.kr/",
+      "logo": "https://www.consult-pro.kr/assets/images/CP_logo.png",
+      "image": "https://www.consult-pro.kr/assets/images/CP_logo.png",
+      "email": "consultingpro3@gmail.com",
+      "telephone": "+82-10-2843-6917",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "중앙로 1443",
+        "addressLocality": "고양시 일산서구",
+        "addressRegion": "경기도",
+        "addressCountry": "KR"
+      },
+      "areaServed": "KR",
+      "description": "현역 장병을 위한 구직청원휴가 제도 활용 컨설팅. 반려없이 안전한 신청부터 대기업 합격까지 1:1 맞춤 컨설팅을 제공합니다.",
+      "makesOffer": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "구직청원휴가 컨설팅", "url": "https://www.consult-pro.kr/program-job-leave.html" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "입시 컨설팅", "url": "https://www.consult-pro.kr/program-admission.html" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "취업 컨설팅", "url": "https://www.consult-pro.kr/program-employment.html" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "창업 컨설팅", "url": "https://www.consult-pro.kr/program-startup.html" } }
+      ]
+    }
+    </script>
 
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
@@ -30,35 +62,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* Career Program Section */
-        .career-program-section {
-            padding: 180px 0 100px;
-            background: #f8f9fa;
-            text-align: center;
-            position: relative;
-        }
-
-        .program-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .program-title {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: #1a1a1a;
-            margin-bottom: 2rem;
-            letter-spacing: -1px;
-            line-height: 1.2;
-        }
-
-        .program-subtitle {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            color: #555;
-            margin-bottom: 4rem;
-            font-weight: 500;
+        /* Home Hero */
+        .hero-badge {
+            display: inline-block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            color: #ff3b30;
+            background: #fff5f4;
+            border: 1.5px solid #ff8a80;
+            border-radius: 999px;
+            padding: 8px 22px;
+            margin-bottom: 1.5rem;
         }
 
         .highlight-text {
@@ -68,42 +83,16 @@
             padding-bottom: 2px;
         }
 
-        .program-visual {
-            margin: 0 auto;
-            max-width: 700px;
-            background: white;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        .hero-link-more {
+            display: inline-block;
+            margin-left: 1.5rem;
+            font-weight: 600;
+            color: #0e294f;
+            text-decoration: none;
         }
 
-        .program-visual img {
-            width: 100%;
-            height: auto;
-            display: block;
-            max-width: 100%;
-        }
-
-        /* 큰 데스크톱 화면에서 더 제한 */
-        @media (min-width: 1400px) {
-            .program-visual {
-                max-width: 750px;
-            }
-        }
-
-        /* 중간 데스크톱 */
-        @media (min-width: 1024px) and (max-width: 1399px) {
-            .program-visual {
-                max-width: 650px;
-            }
-        }
-
-        /* 태블릿 */
-        @media (min-width: 769px) and (max-width: 1023px) {
-            .program-visual {
-                max-width: 600px;
-                padding: 30px;
-            }
+        .hero-link-more:hover {
+            text-decoration: underline;
         }
 
         /* Show/Hide for Desktop and Mobile */
@@ -472,30 +461,10 @@
 
         /* Mobile Responsive */
         @media (max-width: 768px) {
-            /* Career Program Section Mobile */
-            .career-program-section {
-                padding: 140px 20px 60px;
-            }
-
-            .program-title {
-                font-size: 1.8rem;
-                margin-bottom: 1.5rem;
-                letter-spacing: -0.5px;
-            }
-
-            .program-subtitle {
-                font-size: 1rem;
-                line-height: 1.7;
-                margin-bottom: 3rem;
-            }
-
-            .program-subtitle br {
-                display: none;
-            }
-
-            .program-visual {
-                padding: 20px;
-                border-radius: 15px;
+            .hero-link-more {
+                display: block;
+                margin-left: 0;
+                margin-top: 1rem;
             }
 
             /* Show/Hide for Mobile */
@@ -726,25 +695,27 @@
         </nav>
     </header>
 
-    <!-- Career Program Section -->
-    <section class="career-program-section">
-        <div class="container">
-            <div class="program-content">
-                <h2 class="program-title">컨설팅프로 특화 솔루션</h2>
-                <p class="program-subtitle">
-                    학생부 관리부터 글로벌 취업 준비까지<br>
-                    분야별 전문가를 통해 <span class="highlight-text">차별화된 전략과 솔루션</span>을 제공받는 원스톱 컨설팅 서비스입니다.
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="hero-badge">현역 장병 전용 · 반려없는 신청 지원</span>
+                <h1 class="hero-title">
+                    전역 전 취업 완성<br>
+                    <span class="highlight-text">구직청원휴가</span> 컨설팅
+                </h1>
+                <p class="hero-subtitle">
+                    의무복무기간의 50% 이상을 마친 장병이라면 누구나 사용할 수 있는 구직청원휴가,<br>
+                    신청 서류 준비부터 지휘관 승인까지 반려없이 안전하게 준비해 드립니다.
                 </p>
-
-                <!-- Desktop Version -->
-                <div class="program-visual desktop-only">
-                    <img src="assets/images/picto_m.gif" alt="커리어 개발 프로세스">
+                <div class="hero-actions">
+                    <a href="http://pf.kakao.com/_cbBxcn" target="_blank" class="btn btn-primary btn-xl"
+                       onclick="gtag('event', 'click_kakao_cta', {'cta_position': 'home_hero'});">1분만에 상담 예약하기</a>
+                    <a href="program-job-leave.html" class="hero-link-more">구직청원휴가 과정 자세히 보기 →</a>
                 </div>
-
-                <!-- Mobile Version -->
-                <div class="program-visual mobile-only">
-                    <img src="assets/images/picto_m (1).gif" alt="커리어 개발 프로세스 모바일">
-                </div>
+            </div>
+            <div class="hero-visual">
+                <video src="assets/images/mockup_army_.mp4" class="phone-mockup" autoplay muted loop playsinline></video>
             </div>
         </div>
     </section>
@@ -754,12 +725,12 @@
         <div class="container">
             <div class="content-row">
                 <div class="content-image">
-                    <img src="assets/images/consulting_image_1.jpg" alt="전문 컨설턴트와의 상담">
+                    <img src="assets/images/consulting_image_1.jpg" alt="구직청원휴가 서류 준비 컨설팅">
                 </div>
                 <div class="content-text">
                     <span class="content-number">01</span>
-                    <h3>학생부 종합 토탈 케어</h3>
-                    <p>생활기록부 분석부터 활동 설계, 자소서·면접 준비까지 입시의 모든 과정을 체계적으로 관리합니다. 희망 전공과 연계된 활동 구성으로 전공 적합성과 성공 가능성을 극대화합니다.</p>
+                    <h3>제도 신청부터 활용까지</h3>
+                    <p>구직청원휴가 신청 자격 확인, 필요 서류 준비, 부대장 승인 절차까지 A to Z 가이드를 제공합니다. 전역 6개월 전부터 체계적인 타임라인을 관리해 반려 없이 안전하게 제도를 활용할 수 있도록 돕습니다.</p>
                 </div>
             </div>
         </div>
@@ -770,12 +741,12 @@
         <div class="container">
             <div class="content-row reverse">
                 <div class="content-image">
-                    <img src="assets/images/consulting_image_2.jpg" alt="맞춤형 커리어 설계">
+                    <img src="assets/images/consulting_image_2.jpg" alt="군 경력 강점 전환 컨설팅">
                 </div>
                 <div class="content-text">
                     <span class="content-number">02</span>
-                    <h3>글로벌 취업 서류 완성</h3>
-                    <p>국문 자기소개서부터 영문 Resume·Cover Letter까지 완벽하게 준비합니다. 기업별 인재상 분석과 직무 맞춤형 키워드 활용으로 서류 성공률을 2배 이상 높이는 전략을 제공합니다.</p>
+                    <h3>군 경력을 강점으로 전환</h3>
+                    <p>군 복무 경험을 리더십·책임감·조직 적응력 등 기업이 원하는 역량으로 전환하는 전략을 제공합니다. 군 특화 이력서·자기소개서 작성부터 실전 면접 트레이닝까지 전역과 동시에 합격으로 이어지도록 준비합니다.</p>
                 </div>
             </div>
         </div>
@@ -911,6 +882,45 @@
             </div>
             <p class="partners-text">컨설팅프로는 <strong>60여개가 넘는 외국계 & 국내 기업</strong> 컨설팅 경험을 보유하고 있으며,<br>
             취업 및 이직 준비 시 실전 노하우와 정보를 제공합니다.</p>
+        </div>
+    </section>
+
+    <!-- Other Programs Section -->
+    <section class="consulting-info-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">MORE PROGRAMS</p>
+                <h2 class="section-title">다른 프로그램도 살펴보세요</h2>
+            </div>
+            <div class="info-cards-container">
+                <div class="info-card">
+                    <a href="program-admission.html" style="text-decoration: none; color: inherit;">
+                        <div class="info-card-image" style="background-image: url('assets/images/info01.jpg');">
+                            <div class="info-card-overlay">
+                                <h3 class="info-card-title">입시 과정</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="info-card">
+                    <a href="program-employment.html" style="text-decoration: none; color: inherit;">
+                        <div class="info-card-image" style="background-image: url('assets/images/info02.jpg');">
+                            <div class="info-card-overlay">
+                                <h3 class="info-card-title">취업 과정</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="info-card">
+                    <a href="program-startup.html" style="text-decoration: none; color: inherit;">
+                        <div class="info-card-image" style="background-image: url('assets/images/info03.jpg');">
+                            <div class="info-card-overlay">
+                                <h3 class="info-card-title">창업 과정</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
